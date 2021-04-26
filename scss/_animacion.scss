@@ -1,0 +1,426 @@
+#animacion{
+	margin-top: $alto-header;
+	margin-bottom: 0;
+	padding-bottom: 0;	
+	.headAnimacion {
+		@include bannerSection (250px, url("../media/headAnim.jpg"), $primary-color);
+		.quotes {
+			@include quotesBox (200px, $red-dk, $text-bg-dk-2, $text-bg-dk-1, $text-bg-dk-1);
+		}
+		&:hover .quotes {
+			@include hoverOverlay ($text-bg-dk-2, $red-dk, $text-bg-dk-1);	
+		}
+		.notaPie {
+			@include notaPieQuote ($text-bg-dk-1);
+		}
+	}
+	.titleAnimaDk {
+		color: $text-especial;
+		padding-top: .2em;
+		padding-bottom: .2em;
+	}
+	.titleAnimaLgt {
+		color: $text-bg-lgt-2;
+		padding-top: .2em;
+		padding-bottom: .2em;
+	}	
+	.iframeCap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}		
+	#carousel-gallery {	
+		background-color: darken($violet-lgt-1, 36%);	
+		padding: 20px 15px;
+		.carousel-item {
+			overflow: hidden;
+	    	padding: 0 5px;	    	
+	    	img {
+	    		width: 100%;	    		
+	    	}
+	    	@include media(sm) {
+				padding: 0 2px;
+			}
+			@include media(lg) {
+				padding: 0 3.5px;
+			}		
+	    }
+	    .caption {
+	    	@include caption-img(); 
+	    	.captionContent {
+	      		text-align: center;
+	      		width: 97%;	
+			    h4 {
+			    	padding: .1em .15em;
+			    	margin: 0;
+			    	font-size: 1.2rem;
+			    	font-weight: 500;
+			    	line-height: .8;
+			    	letter-spacing: .5px;
+			    	@include media(sm) {
+						font-size: 1.15rem;
+					}
+					@include media(lg) {
+						font-size: 1.2rem;
+					}   
+			    }
+			}
+		}
+	    .carousel-control-prev {
+		    width: min-content;
+		    margin-left: 1px;
+		    z-index: 5;
+	    }
+	    .carousel-control-next {
+		    width: min-content;
+		    margin-right: 1px;
+		    z-index: 5;
+	    }
+	    i {
+			color: $text-especial;
+			font-size: 45px;
+			&:hover {
+				color: lighten( $text-especial, 15% );
+			}		
+	    }
+		@include carousel-gallery;
+	}
+	.serieCompleta {
+		max-width: $ancho;
+		overflow: hidden;
+		height: min-content;
+		@include media(sm) {
+			height: min-content;
+		}
+		@include media(lg) {
+			min-height: calc(100vh - 100px);			
+		}
+		h3 {
+			display: block;
+			width: $ancho;
+			border: bottom 2px;
+			text-align: center;
+			@include media(sm) {
+				display: none;
+			}		
+			@include media(lg) {
+				display: none;
+			}		
+		}
+		.infoAnim{
+			width: $ancho;
+			overflow: hidden;
+			display: block;
+			padding: 1.2em .5em;
+			font-size: 1rem;
+			line-height: 1.1;
+			text-align: center;	
+			@include media(sm) {
+				font-size: 1.1rem;
+				padding: 1.2em 5%;
+			}			
+			@include media(lg) {
+				
+				font-size: 1.2rem;
+				padding: 1.2em 20%;
+			}						
+		}   
+		.serieHeader {
+			display: none;
+			@include media(sm) {
+				display: block;
+				position: relative;
+				width: 120%;
+				height: 125px;
+				overflow: hidden;	
+				.serieBg {
+				    position: absolute;
+					top: 0;
+					margin: 0 -15px;
+					width: $ancho;
+					height: auto;
+					z-index: 1;	
+					transition: all 500ms ease-in-out;		
+				}
+				.overlay {
+					height: 100%;
+				    width: 100%;
+				    position: absolute;
+				    top: 0;				    
+				    background: rgba(darken($salmon, 50%), .7);
+				    margin: 0;
+				    z-index: 2;				   
+				}
+				.serieTitle {
+					position: absolute;
+					top: 0;
+					margin: 0 -15px;
+					width: $ancho;
+					height: auto;
+					z-index: 3;
+					opacity: .5;
+					transition: all 500ms ease-in-out;		
+				}			
+			}
+			@include media(lg) {
+				height: 220px;
+				width: $ancho;
+				.serieBg { 
+					margin: 0;
+					width: auto;
+					height: 100%;
+				}
+				.overlay {
+				 	background: rgba(darken($salmon, 50%), .8);
+				 	transition: all 500ms ease-in-out;	
+				}
+			 	&:hover .overlay {
+			 		background: rgba(darken($salmon, 50%), .1);
+			 		transition: all 500ms ease-in-out;	
+			 	}				
+				.serieTitle {
+					margin: 0;
+					width: auto;
+					height: 100%;
+					opacity: 1;
+					&:hover {
+						opacity: .3;
+					}
+				}
+			}
+		}
+	}
+	.modal-dialog {
+		margin: 30px auto;	
+		.modal-body {
+			position: relative;		
+		}
+		.close {
+			position: absolute;
+			right: 0; 
+			top: -30px;
+			z-index: 999;
+			font-size: 3rem;
+			font-weight: normal;
+			color: $text-especial;
+			opacity: 2;
+		}
+	}
+	@include media(sm) {
+		margin-right: 0;
+		width: $ancho;
+		transition: width 500ms ease-in-out;
+		&.active {
+			margin-right: $ancho-menu * 1.3;
+			width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.3 ) ) );
+			transition: width 500ms ease-in-out;			
+		}
+	}
+	@include media(lg) {
+		margin-right: 0;
+		width: $ancho;
+		transition: all 500ms ease-in-out;
+		&.active {
+			margin-right: $ancho-menu * 1.6;
+			width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+			transition: all 500ms ease-in-out;
+				.serieHeader .serieBg, .serieHeader .serieTitle, {
+					margin-left: calc(-.5 * ( calc(#{$ancho-menu} * 1.6 ) ) );
+					transition: all 500ms ease-in-out;
+				}
+		}
+	}
+}
+
+#cortos {
+	.animaTitleBox{
+		@include bannerSection (150px, url("../media/headAnim.jpg"), $primary-color);
+	}
+}
+
+#series {
+	.animaTitleBox{
+		@include bannerSection (150px, url("../media/headAnim.jpg"), $primary-color);
+	}
+}
+
+#musicales {
+	.animaTitleBox{
+		@include bannerSection (150px, url("../media/headAnim.jpg"), $primary-color);
+	}
+}
+
+#infantiles {
+	.animaTitleBox{
+		@include bannerSection (150px, url("../media/headAnim.jpg"), $primary-color);
+	}
+}
+
+#institucionales {
+	.animaTitleBox{
+		@include bannerSection (150px, url("../media/headAnim.jpg"), $primary-color);
+	}
+}
+
+
+#cortos, #musicales, #series {
+	h3 {
+		color: saturate($text-bg-dk-1, 15%);
+		background-color: $bg-color-dk;
+	}
+	.infoAnim {
+		color: $text-bg-dk-1;
+		background-color: $primary-color;
+		span {
+			color: $text-bg-dk-2;
+		}
+	}	
+	
+	#carousel-gallery {	
+		background-color: darken($violet-lgt-1, 36%);
+		.caption {
+	    	@include caption-img(); 
+			.captionContent {
+				width: 97.5%;
+				background-color: rgba($primary-color, .7);
+			    h4 {
+			    	color: saturate($text-bg-dk-1, 20%);
+			    }	    
+			}
+		}	
+	}
+}
+
+#infantiles {	
+	background-color: $bg-color-lgt;
+	h3 {
+		color: $text-bg-lgt-1; 
+		background-color: $salmon;		
+	}
+	.infoAnim {
+		color: $text-bg-lgt-1;
+		span {
+			color: $text-especial;
+		}
+	}
+	#carousel-gallery {	
+		background-color: $salmon;
+		.caption {
+		   	@include caption-img(); 
+	    	.captionContent {
+	    		width: 97.5%;
+				background-color: rgba($third-color, .6);
+			    h4 {
+			    	color: $salmon-lgt;
+			    }
+			}
+		}		
+	}	
+}
+#carousel-LuluChiqui {
+	&.carousel {
+		.carousel-indicators {
+		    bottom: -20px;
+	    	li {
+			    width: 16px;
+			    margin-left: 5px;
+			    margin-right: 5px;
+			    border-radius: 10%;
+			    background-color: #5a6268;
+			}			 
+			.carousel-inner {
+			    padding-bottom: 0px;
+			}
+		}
+	}	
+	i {
+		color: $text-especial;
+		font-size: 45px;
+		&:hover {
+			color: lighten( $text-especial, 15% );
+		}		
+    }
+}
+
+#institucionales {
+	background-color: $red-dk;
+	h3 {
+		color: $text-bg-lgt-1; 
+		background-color: $salmon;
+	}
+	.infoAnim {
+		color: $text-bg-lgt-2;		
+	}
+	#carousel-gallery {	
+		background-color: $salmon;	
+ 		.caption {
+ 			@include caption-img();  		
+	 		.captionContent {
+	 			width: 97.5%;
+	 			background-color: rgba($third-color, .6);
+			    h4 {
+			    	color: $salmon-lgt;
+			    }
+			}
+		}
+	}
+}
+
+.tablaPosicion {
+	padding: 2em 0;
+	width: $ancho;
+	display:flex;
+	justify-content: center;
+}
+
+.tablaAnim{
+	display: none;
+	@include media(lg) {
+		width: 80%;
+		font-weight: 300;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-rows: 30px 1fr;	
+		.titleTabla{
+			background-color: $primary-color;
+			width: 100%;
+			font-weight: 700;
+			border: 0;
+			display: grid;
+			grid-template-columns: 20% 20% 10% 50%; 
+			align-items: center;
+			p {
+			 	border: solid 1px $bg-color-dk;
+			 	padding: 0.2em 0.5em;
+			 	box-sizing: border-box;
+			}
+		}
+		.contenidoTabla {
+			background-color: #272727;
+			display: grid;
+			grid-template-columns: 20% 20% 10% 50%; 
+			grid-template-rows: repeat(5, 0fr);
+			align-items: stretch;
+			p {
+				border: solid 1px $bg-color-dk;
+				padding: 3em 0.5em;
+				box-sizing: border-box;
+			}
+			ul {
+				border: solid 1px $bg-color-dk;
+			 	padding: 0.2em 0;
+			 	box-sizing: border-box;
+			 	 li{
+					list-style-position: inside;
+					list-style-type: none;
+					background-color: #202020;
+					margin: 0.2em 0; 
+					padding: 0 0.5em;
+				} 
+			}
+		}
+	}
+}
+
+
+

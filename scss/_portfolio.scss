@@ -1,0 +1,75 @@
+#portfolio {
+    width: $ancho;
+    margin-top: $alto-header;
+    background-color: $bg-color-dk;
+    .portfolioItem {
+        @include portfolioItem;
+         &.hidden { 
+            display: none;
+        }
+    }   
+    @include media(lg) {
+        width: $ancho;
+        margin-right: $ancho-menu * 0;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        margin-left: 0px !important;
+        transition-delay: 0ms;
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+            margin-right: $ancho-menu * 1.6;
+            transition-delay: 500ms;
+            &.container-fluid {
+                padding-right: 5px !important;
+                padding-left: 0 !important;
+                margin-left: 10px !important;
+                transition-delay: 500ms;
+            }
+            .portfolioItem.hidden { 
+                display: block;
+                transition-delay: 500ms;
+            }
+            .col-lg-3 {
+                flex: 0 0 33%;
+                max-width: 33%;
+                transition-delay: 500ms;
+            }
+        }
+    }
+}
+
+#ilustraciones {
+    width: $ancho;
+    margin-top: $alto-header;
+    background-color: $bg-color-dk;
+    .portfolioItem {
+        @include portfolioItem;
+        width: 98%;
+        padding-top: 98%;
+        margin: 0.2em auto;
+        border: 1px solid $third-color;
+        &.hidden { 
+            display: none;
+        }
+    }
+    h5 {
+        color: $text-especial;   
+    }
+    @include media(lg) {
+        width: $ancho;
+        margin-right: $ancho-menu * 0;
+        transition: all 500ms ease-in-out;
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+            margin-right: $ancho-menu * 1.6;
+            transition: all 500ms ease-in-out;
+            .portfolioItem.hidden { 
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+    
