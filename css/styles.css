@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Rock+Salt&display=swap");
 body {
   font-family: "Kalam", cursive;
@@ -631,24 +630,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  #animacion #carousel-gallery {
+  #animacion #gallery-Cortos, #animacion #gallery-LuluChiqui, #animacion #gallery-Markitos, #animacion #gallery-Musica, #animacion #gallery-Comerciales, #animacion #gallery-Mono, #animacion #gallery-Fort, #animacion #gallery-Gamarra, #animacion #gallery-Cyber {
     background-color: #1b1824;
     padding: 20px 15px;
-    /*Carousel Multi-Item que encontré*/
+    /*Carousel Multi-Item*/
     /* MD */
     /* LG */ }
-    #animacion #carousel-gallery .carousel-item {
+    #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
       overflow: hidden;
       padding: 0 5px; }
-      #animacion #carousel-gallery .carousel-item img {
+      #animacion #gallery-Cortos .carousel-item img, #animacion #gallery-LuluChiqui .carousel-item img, #animacion #gallery-Markitos .carousel-item img, #animacion #gallery-Musica .carousel-item img, #animacion #gallery-Comerciales .carousel-item img, #animacion #gallery-Mono .carousel-item img, #animacion #gallery-Fort .carousel-item img, #animacion #gallery-Gamarra .carousel-item img, #animacion #gallery-Cyber .carousel-item img {
         width: 100%; }
       @media (min-width: 540px) {
-        #animacion #carousel-gallery .carousel-item {
+        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
           padding: 0 2px; } }
       @media (min-width: 960px) {
-        #animacion #carousel-gallery .carousel-item {
+        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
           padding: 0 3.5px; } }
-    #animacion #carousel-gallery .caption {
+    #animacion #gallery-Cortos .caption, #animacion #gallery-LuluChiqui .caption, #animacion #gallery-Markitos .caption, #animacion #gallery-Musica .caption, #animacion #gallery-Comerciales .caption, #animacion #gallery-Mono .caption, #animacion #gallery-Fort .caption, #animacion #gallery-Gamarra .caption, #animacion #gallery-Cyber .caption {
       display: flex;
       height: 100%;
       width: 100%;
@@ -658,19 +657,19 @@ body {
       top: 0;
       bottom: 0;
       z-index: 2; }
-      #animacion #carousel-gallery .caption .captionContent {
+      #animacion #gallery-Cortos .caption .captionContent, #animacion #gallery-LuluChiqui .caption .captionContent, #animacion #gallery-Markitos .caption .captionContent, #animacion #gallery-Musica .caption .captionContent, #animacion #gallery-Comerciales .caption .captionContent, #animacion #gallery-Mono .caption .captionContent, #animacion #gallery-Fort .caption .captionContent, #animacion #gallery-Gamarra .caption .captionContent, #animacion #gallery-Cyber .caption .captionContent {
         width: 100%;
         color: #D8CBFF;
         overflow: hidden;
         background-color: rgba(32, 27, 48, 0.8);
         padding: 0.2em 0.5em;
         margin: auto 0em 0.5em; }
-        #animacion #carousel-gallery .caption .captionContent p {
+        #animacion #gallery-Cortos .caption .captionContent p, #animacion #gallery-LuluChiqui .caption .captionContent p, #animacion #gallery-Markitos .caption .captionContent p, #animacion #gallery-Musica .caption .captionContent p, #animacion #gallery-Comerciales .caption .captionContent p, #animacion #gallery-Mono .caption .captionContent p, #animacion #gallery-Fort .caption .captionContent p, #animacion #gallery-Gamarra .caption .captionContent p, #animacion #gallery-Cyber .caption .captionContent p {
           line-height: 1.1; }
-      #animacion #carousel-gallery .caption .captionContent {
+      #animacion #gallery-Cortos .caption .captionContent, #animacion #gallery-LuluChiqui .caption .captionContent, #animacion #gallery-Markitos .caption .captionContent, #animacion #gallery-Musica .caption .captionContent, #animacion #gallery-Comerciales .caption .captionContent, #animacion #gallery-Mono .caption .captionContent, #animacion #gallery-Fort .caption .captionContent, #animacion #gallery-Gamarra .caption .captionContent, #animacion #gallery-Cyber .caption .captionContent {
         text-align: center;
         width: 97%; }
-        #animacion #carousel-gallery .caption .captionContent h4 {
+        #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
           padding: .1em .15em;
           margin: 0;
           font-size: 1.2rem;
@@ -678,28 +677,28 @@ body {
           line-height: .8;
           letter-spacing: .5px; }
           @media (min-width: 540px) {
-            #animacion #carousel-gallery .caption .captionContent h4 {
+            #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.15rem; } }
           @media (min-width: 960px) {
-            #animacion #carousel-gallery .caption .captionContent h4 {
+            #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.2rem; } }
-    #animacion #carousel-gallery .carousel-control-prev {
+    #animacion #gallery-Cortos .carousel-control-prev, #animacion #gallery-LuluChiqui .carousel-control-prev, #animacion #gallery-Markitos .carousel-control-prev, #animacion #gallery-Musica .carousel-control-prev, #animacion #gallery-Comerciales .carousel-control-prev, #animacion #gallery-Mono .carousel-control-prev, #animacion #gallery-Fort .carousel-control-prev, #animacion #gallery-Gamarra .carousel-control-prev, #animacion #gallery-Cyber .carousel-control-prev {
       width: min-content;
       margin-left: 1px;
       z-index: 5; }
-    #animacion #carousel-gallery .carousel-control-next {
+    #animacion #gallery-Cortos .carousel-control-next, #animacion #gallery-LuluChiqui .carousel-control-next, #animacion #gallery-Markitos .carousel-control-next, #animacion #gallery-Musica .carousel-control-next, #animacion #gallery-Comerciales .carousel-control-next, #animacion #gallery-Mono .carousel-control-next, #animacion #gallery-Fort .carousel-control-next, #animacion #gallery-Gamarra .carousel-control-next, #animacion #gallery-Cyber .carousel-control-next {
       width: min-content;
       margin-right: 1px;
       z-index: 5; }
-    #animacion #carousel-gallery i {
+    #animacion #gallery-Cortos i, #animacion #gallery-LuluChiqui i, #animacion #gallery-Markitos i, #animacion #gallery-Musica i, #animacion #gallery-Comerciales i, #animacion #gallery-Mono i, #animacion #gallery-Fort i, #animacion #gallery-Gamarra i, #animacion #gallery-Cyber i {
       color: #E33D47;
       font-size: 45px; }
-      #animacion #carousel-gallery i:hover {
+      #animacion #gallery-Cortos i:hover, #animacion #gallery-LuluChiqui i:hover, #animacion #gallery-Markitos i:hover, #animacion #gallery-Musica i:hover, #animacion #gallery-Comerciales i:hover, #animacion #gallery-Mono i:hover, #animacion #gallery-Fort i:hover, #animacion #gallery-Gamarra i:hover, #animacion #gallery-Cyber i:hover {
         color: #ed8086; }
     @media (min-width: 720px) and (max-width: 960px) {
-      #animacion #carousel-gallery {
+      #animacion #gallery-Cortos, #animacion #gallery-LuluChiqui, #animacion #gallery-Markitos, #animacion #gallery-Musica, #animacion #gallery-Comerciales, #animacion #gallery-Mono, #animacion #gallery-Fort, #animacion #gallery-Gamarra, #animacion #gallery-Cyber {
         /* Habilita el 4to Item en col-md-4*/ }
-        #animacion #carousel-gallery .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
           position: absolute;
           top: 0;
           right: -33.3333%;
@@ -707,9 +706,9 @@ body {
           display: block;
           visibility: visible; } }
     @media (min-width: 540px) and (max-width: 720px) {
-      #animacion #carousel-gallery {
+      #animacion #gallery-Cortos, #animacion #gallery-LuluChiqui, #animacion #gallery-Markitos, #animacion #gallery-Musica, #animacion #gallery-Comerciales, #animacion #gallery-Mono, #animacion #gallery-Fort, #animacion #gallery-Gamarra, #animacion #gallery-Cyber {
         /* Habilita el 4to Item en sm if col-sm-6*/ }
-        #animacion #carousel-gallery .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
           position: absolute;
           top: 0;
           right: -50%;
@@ -717,76 +716,116 @@ body {
           display: block;
           visibility: visible; } }
     @media (min-width: 540px) {
-      #animacion #carousel-gallery {
+      #animacion #gallery-Cortos, #animacion #gallery-LuluChiqui, #animacion #gallery-Markitos, #animacion #gallery-Musica, #animacion #gallery-Comerciales, #animacion #gallery-Mono, #animacion #gallery-Fort, #animacion #gallery-Gamarra, #animacion #gallery-Cyber {
         /* Muestra 2 items */
         /* left or forward direction */
         /* farthest right hidden item must be also positioned for animations */
         /* right or prev direction */ }
-        #animacion #carousel-gallery .carousel-item {
+        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
           padding: 0 5px;
           margin-right: 0; }
-        #animacion #carousel-gallery .carousel-inner .active + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .active + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active + .carousel-item, #animacion #gallery-Musica .carousel-inner .active + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active + .carousel-item, #animacion #gallery-Mono .carousel-inner .active + .carousel-item, #animacion #gallery-Fort .carousel-inner .active + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active + .carousel-item {
           display: block; }
-        #animacion #carousel-gallery .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-        #animacion #carousel-gallery .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Cortos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-LuluChiqui .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-Markitos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Markitos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-Musica .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Musica .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Comerciales .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-Mono .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Mono .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-Fort .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Fort .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Gamarra .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, #animacion #gallery-Cyber .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        #animacion #gallery-Cyber .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
           transition: none; }
-        #animacion #carousel-gallery .carousel-inner .carousel-item-next {
+        #animacion #gallery-Cortos .carousel-inner .carousel-item-next, #animacion #gallery-LuluChiqui .carousel-inner .carousel-item-next, #animacion #gallery-Markitos .carousel-inner .carousel-item-next, #animacion #gallery-Musica .carousel-inner .carousel-item-next, #animacion #gallery-Comerciales .carousel-inner .carousel-item-next, #animacion #gallery-Mono .carousel-inner .carousel-item-next, #animacion #gallery-Fort .carousel-inner .carousel-item-next, #animacion #gallery-Gamarra .carousel-inner .carousel-item-next, #animacion #gallery-Cyber .carousel-inner .carousel-item-next {
           position: relative;
           transform: translate3d(0, 0, 0); }
-        #animacion #carousel-gallery .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-        #animacion #carousel-gallery .carousel-item-next.carousel-item-left + .carousel-item,
-        #animacion #carousel-gallery .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Cortos .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Cortos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-LuluChiqui .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-LuluChiqui .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-Markitos .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Markitos .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Markitos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-Musica .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Musica .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Musica .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Comerciales .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Comerciales .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-Mono .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Mono .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Mono .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-Fort .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Fort .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Fort .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Gamarra .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Gamarra .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, #animacion #gallery-Cyber .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        #animacion #gallery-Cyber .carousel-item-next.carousel-item-left + .carousel-item,
+        #animacion #gallery-Cyber .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
           position: relative;
           transform: translate3d(-100%, 0, 0);
           visibility: visible; }
-        #animacion #carousel-gallery .carousel-inner .carousel-item-prev.carousel-item-right {
+        #animacion #gallery-Cortos .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-LuluChiqui .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-Markitos .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-Musica .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-Comerciales .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-Mono .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-Fort .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-Gamarra .carousel-inner .carousel-item-prev.carousel-item-right, #animacion #gallery-Cyber .carousel-inner .carousel-item-prev.carousel-item-right {
           position: absolute;
           top: 0;
           left: 0;
           z-index: -1;
           display: block;
           visibility: visible; }
-        #animacion #carousel-gallery .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-        #animacion #carousel-gallery .carousel-item-prev.carousel-item-right + .carousel-item,
-        #animacion #carousel-gallery .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Cortos .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Cortos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-LuluChiqui .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-LuluChiqui .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-Markitos .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Markitos .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Markitos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-Musica .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Musica .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Musica .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Comerciales .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Comerciales .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-Mono .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Mono .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Mono .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-Fort .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Fort .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Fort .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Gamarra .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Gamarra .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, #animacion #gallery-Cyber .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        #animacion #gallery-Cyber .carousel-item-prev.carousel-item-right + .carousel-item,
+        #animacion #gallery-Cyber .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
           position: relative;
           transform: translate3d(100%, 0, 0);
           visibility: visible;
           display: block;
           visibility: visible; } }
     @media (min-width: 720px) {
-      #animacion #carousel-gallery {
+      #animacion #gallery-Cortos, #animacion #gallery-LuluChiqui, #animacion #gallery-Markitos, #animacion #gallery-Musica, #animacion #gallery-Comerciales, #animacion #gallery-Mono, #animacion #gallery-Fort, #animacion #gallery-Gamarra, #animacion #gallery-Cyber {
         /* Habilita el 4to Item */
         /* left or forward direction */
         /* right or prev direction */ }
-        #animacion #carousel-gallery .carousel-inner .active + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active + .carousel-item + .carousel-item {
           display: block; }
-        #animacion #carousel-gallery .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
           transition: none; }
-        #animacion #carousel-gallery .carousel-inner .carousel-item-next {
+        #animacion #gallery-Cortos .carousel-inner .carousel-item-next, #animacion #gallery-LuluChiqui .carousel-inner .carousel-item-next, #animacion #gallery-Markitos .carousel-inner .carousel-item-next, #animacion #gallery-Musica .carousel-inner .carousel-item-next, #animacion #gallery-Comerciales .carousel-inner .carousel-item-next, #animacion #gallery-Mono .carousel-inner .carousel-item-next, #animacion #gallery-Fort .carousel-inner .carousel-item-next, #animacion #gallery-Gamarra .carousel-inner .carousel-item-next, #animacion #gallery-Cyber .carousel-inner .carousel-item-next {
           position: relative;
           transform: translate3d(0, 0, 0); }
-        #animacion #carousel-gallery .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
           position: relative;
           transform: translate3d(-100%, 0, 0);
           visibility: visible; }
-        #animacion #carousel-gallery .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
           position: relative;
           transform: translate3d(100%, 0, 0);
           visibility: visible;
           display: block;
           visibility: visible; } }
     @media (min-width: 960px) {
-      #animacion #carousel-gallery {
+      #animacion #gallery-Cortos, #animacion #gallery-LuluChiqui, #animacion #gallery-Markitos, #animacion #gallery-Musica, #animacion #gallery-Comerciales, #animacion #gallery-Mono, #animacion #gallery-Fort, #animacion #gallery-Gamarra, #animacion #gallery-Cyber {
         /* Habilita el 4to Item*/
         /* Habilita el 5to Item en lg if col-lg-3 */
         /* left or forward direction */
         /* right or prev direction //t - previous slide direction last item animation fix */ }
-        #animacion #carousel-gallery .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
           display: block; }
-        #animacion #carousel-gallery .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
           transition: none; }
-        #animacion #carousel-gallery .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
           position: absolute;
           top: 0;
           right: -25%;
@@ -794,18 +833,18 @@ body {
           z-index: -1;
           display: block;
           visibility: visible; }
-        #animacion #carousel-gallery .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
           position: relative;
           transform: translate3d(-100%, 0, 0);
           visibility: visible; }
-        #animacion #carousel-gallery .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        #animacion #gallery-Cortos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-LuluChiqui .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Markitos .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Musica .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Comerciales .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Mono .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Fort .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Gamarra .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item, #animacion #gallery-Cyber .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
           position: relative;
           transform: translate3d(100%, 0, 0);
           visibility: visible;
           display: block;
           visibility: visible; } }
     @media (min-width: 991px) {
-      #animacion #carousel-gallery {
+      #animacion #gallery-Cortos, #animacion #gallery-LuluChiqui, #animacion #gallery-Markitos, #animacion #gallery-Musica, #animacion #gallery-Comerciales, #animacion #gallery-Mono, #animacion #gallery-Fort, #animacion #gallery-Gamarra, #animacion #gallery-Cyber {
         /* show 5th and 6th item */
         /* .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
         .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
@@ -882,6 +921,24 @@ body {
         #animacion .serieCompleta .infoAnim {
           font-size: 1.2rem;
           padding: 1.2em 20%; } }
+    #animacion .serieCompleta .sinopsisAnim {
+      width: 100%;
+      min-height: 130px;
+      overflow: hidden;
+      display: block;
+      padding: 1em .5em;
+      font-size: .8rem;
+      line-height: 1.2;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      @media (min-width: 540px) {
+        #animacion .serieCompleta .sinopsisAnim {
+          font-size: .9rem; } }
+      @media (min-width: 960px) {
+        #animacion .serieCompleta .sinopsisAnim {
+          font-size: 1rem; } }
     #animacion .serieCompleta .serieHeader {
       display: none; }
       @media (min-width: 540px) {
@@ -937,19 +994,24 @@ body {
             opacity: 1; }
             #animacion .serieCompleta .serieHeader .serieTitle:hover {
               opacity: .3; } }
-  #animacion .modal-dialog {
-    margin: 30px auto; }
-    #animacion .modal-dialog .modal-body {
-      position: relative; }
-    #animacion .modal-dialog .close {
-      position: absolute;
-      right: 0;
-      top: -30px;
-      z-index: 999;
-      font-size: 3rem;
-      font-weight: normal;
-      color: #E33D47;
-      opacity: 2; }
+  #animacion .modal-dialog .modal-body {
+    position: relative; }
+  #animacion .modal-dialog .close {
+    position: absolute;
+    right: 0;
+    top: -35px;
+    z-index: 999;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #E33D47;
+    opacity: 2;
+    text-shadow: 0 1px 0 #591216; }
+  @media (min-width: 540px) {
+    #animacion .modal-dialog {
+      max-width: 700px; } }
+  @media (min-width: 960px) {
+    #animacion .modal-dialog {
+      max-width: 800px; } }
   @media (min-width: 540px) {
     #animacion {
       margin-right: 0;
@@ -982,7 +1044,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 150px; }
+  min-height: 250px; }
   #cortos .animaTitleBox .titleOverlay {
     height: 100%;
     width: 100%;
@@ -1080,7 +1142,7 @@ body {
       background: rgba(0, 0, 0, 0);
       transition: all 500ms ease-in-out; } }
 
-#institucionales .animaTitleBox {
+#comerciales .animaTitleBox {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1091,7 +1153,7 @@ body {
   background-size: cover;
   width: 100%;
   min-height: 150px; }
-  #institucionales .animaTitleBox .titleOverlay {
+  #comerciales .animaTitleBox .titleOverlay {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -1100,10 +1162,10 @@ body {
     margin: 0;
     z-index: 2; }
   @media (min-width: 960px) {
-    #institucionales .animaTitleBox .titleOverlay {
+    #comerciales .animaTitleBox .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
-    #institucionales .animaTitleBox:hover .titleOverlay {
+    #comerciales .animaTitleBox:hover .titleOverlay {
       background: rgba(0, 0, 0, 0);
       transition: all 500ms ease-in-out; } }
 
@@ -1111,15 +1173,22 @@ body {
   color: #6550a4;
   background-color: #0F0F0F; }
 
-#cortos .infoAnim, #musicales .infoAnim, #series .infoAnim {
+@media (min-width: 960px) {
+  #cortos .serieCompleta, #musicales .serieCompleta, #series .serieCompleta {
+    min-height: content; } }
+
+#cortos .serieCompleta .infoAnim, #cortos .serieCompleta .sinopsisAnim, #musicales .serieCompleta .infoAnim, #musicales .serieCompleta .sinopsisAnim, #series .serieCompleta .infoAnim, #series .serieCompleta .sinopsisAnim {
   color: #6E6292;
   background-color: #201B30; }
-  #cortos .infoAnim span, #musicales .infoAnim span, #series .infoAnim span {
+  #cortos .serieCompleta .infoAnim span, #cortos .serieCompleta .sinopsisAnim span, #musicales .serieCompleta .infoAnim span, #musicales .serieCompleta .sinopsisAnim span, #series .serieCompleta .infoAnim span, #series .serieCompleta .sinopsisAnim span {
     color: #D8CBFF; }
+  #cortos .serieCompleta .infoAnim a, #cortos .serieCompleta .sinopsisAnim a, #musicales .serieCompleta .infoAnim a, #musicales .serieCompleta .sinopsisAnim a, #series .serieCompleta .infoAnim a, #series .serieCompleta .sinopsisAnim a {
+    color: #6E6292;
+    font-weight: 700; }
 
-#cortos #carousel-gallery, #musicales #carousel-gallery, #series #carousel-gallery {
+#cortos #gallery-Cortos, #cortos #gallery-Musica, #cortos #gallery-Mono, #cortos #gallery-Fort, #cortos #gallery-Gamarra, #cortos #gallery-Cyber, #musicales #gallery-Cortos, #musicales #gallery-Musica, #musicales #gallery-Mono, #musicales #gallery-Fort, #musicales #gallery-Gamarra, #musicales #gallery-Cyber, #series #gallery-Cortos, #series #gallery-Musica, #series #gallery-Mono, #series #gallery-Fort, #series #gallery-Gamarra, #series #gallery-Cyber {
   background-color: #1b1824; }
-  #cortos #carousel-gallery .caption, #musicales #carousel-gallery .caption, #series #carousel-gallery .caption {
+  #cortos #gallery-Cortos .caption, #cortos #gallery-Musica .caption, #cortos #gallery-Mono .caption, #cortos #gallery-Fort .caption, #cortos #gallery-Gamarra .caption, #cortos #gallery-Cyber .caption, #musicales #gallery-Cortos .caption, #musicales #gallery-Musica .caption, #musicales #gallery-Mono .caption, #musicales #gallery-Fort .caption, #musicales #gallery-Gamarra .caption, #musicales #gallery-Cyber .caption, #series #gallery-Cortos .caption, #series #gallery-Musica .caption, #series #gallery-Mono .caption, #series #gallery-Fort .caption, #series #gallery-Gamarra .caption, #series #gallery-Cyber .caption {
     display: flex;
     height: 100%;
     width: 100%;
@@ -1129,20 +1198,20 @@ body {
     top: 0;
     bottom: 0;
     z-index: 2; }
-    #cortos #carousel-gallery .caption .captionContent, #musicales #carousel-gallery .caption .captionContent, #series #carousel-gallery .caption .captionContent {
+    #cortos #gallery-Cortos .caption .captionContent, #cortos #gallery-Musica .caption .captionContent, #cortos #gallery-Mono .caption .captionContent, #cortos #gallery-Fort .caption .captionContent, #cortos #gallery-Gamarra .caption .captionContent, #cortos #gallery-Cyber .caption .captionContent, #musicales #gallery-Cortos .caption .captionContent, #musicales #gallery-Musica .caption .captionContent, #musicales #gallery-Mono .caption .captionContent, #musicales #gallery-Fort .caption .captionContent, #musicales #gallery-Gamarra .caption .captionContent, #musicales #gallery-Cyber .caption .captionContent, #series #gallery-Cortos .caption .captionContent, #series #gallery-Musica .caption .captionContent, #series #gallery-Mono .caption .captionContent, #series #gallery-Fort .caption .captionContent, #series #gallery-Gamarra .caption .captionContent, #series #gallery-Cyber .caption .captionContent {
       width: 100%;
       color: #D8CBFF;
       overflow: hidden;
       background-color: rgba(32, 27, 48, 0.8);
       padding: 0.2em 0.5em;
       margin: auto 0em 0.5em; }
-      #cortos #carousel-gallery .caption .captionContent p, #musicales #carousel-gallery .caption .captionContent p, #series #carousel-gallery .caption .captionContent p {
+      #cortos #gallery-Cortos .caption .captionContent p, #cortos #gallery-Musica .caption .captionContent p, #cortos #gallery-Mono .caption .captionContent p, #cortos #gallery-Fort .caption .captionContent p, #cortos #gallery-Gamarra .caption .captionContent p, #cortos #gallery-Cyber .caption .captionContent p, #musicales #gallery-Cortos .caption .captionContent p, #musicales #gallery-Musica .caption .captionContent p, #musicales #gallery-Mono .caption .captionContent p, #musicales #gallery-Fort .caption .captionContent p, #musicales #gallery-Gamarra .caption .captionContent p, #musicales #gallery-Cyber .caption .captionContent p, #series #gallery-Cortos .caption .captionContent p, #series #gallery-Musica .caption .captionContent p, #series #gallery-Mono .caption .captionContent p, #series #gallery-Fort .caption .captionContent p, #series #gallery-Gamarra .caption .captionContent p, #series #gallery-Cyber .caption .captionContent p {
         line-height: 1.1; }
-    #cortos #carousel-gallery .caption .captionContent, #musicales #carousel-gallery .caption .captionContent, #series #carousel-gallery .caption .captionContent {
+    #cortos #gallery-Cortos .caption .captionContent, #cortos #gallery-Musica .caption .captionContent, #cortos #gallery-Mono .caption .captionContent, #cortos #gallery-Fort .caption .captionContent, #cortos #gallery-Gamarra .caption .captionContent, #cortos #gallery-Cyber .caption .captionContent, #musicales #gallery-Cortos .caption .captionContent, #musicales #gallery-Musica .caption .captionContent, #musicales #gallery-Mono .caption .captionContent, #musicales #gallery-Fort .caption .captionContent, #musicales #gallery-Gamarra .caption .captionContent, #musicales #gallery-Cyber .caption .captionContent, #series #gallery-Cortos .caption .captionContent, #series #gallery-Musica .caption .captionContent, #series #gallery-Mono .caption .captionContent, #series #gallery-Fort .caption .captionContent, #series #gallery-Gamarra .caption .captionContent, #series #gallery-Cyber .caption .captionContent {
       width: 97.5%;
       background-color: rgba(32, 27, 48, 0.7); }
-      #cortos #carousel-gallery .caption .captionContent h4, #musicales #carousel-gallery .caption .captionContent h4, #series #carousel-gallery .caption .captionContent h4 {
-        color: #624aaa; }
+      #cortos #gallery-Cortos .caption .captionContent h4, #cortos #gallery-Musica .caption .captionContent h4, #cortos #gallery-Mono .caption .captionContent h4, #cortos #gallery-Fort .caption .captionContent h4, #cortos #gallery-Gamarra .caption .captionContent h4, #cortos #gallery-Cyber .caption .captionContent h4, #musicales #gallery-Cortos .caption .captionContent h4, #musicales #gallery-Musica .caption .captionContent h4, #musicales #gallery-Mono .caption .captionContent h4, #musicales #gallery-Fort .caption .captionContent h4, #musicales #gallery-Gamarra .caption .captionContent h4, #musicales #gallery-Cyber .caption .captionContent h4, #series #gallery-Cortos .caption .captionContent h4, #series #gallery-Musica .caption .captionContent h4, #series #gallery-Mono .caption .captionContent h4, #series #gallery-Fort .caption .captionContent h4, #series #gallery-Gamarra .caption .captionContent h4, #series #gallery-Cyber .caption .captionContent h4 {
+        color: #d8cbff; }
 
 #infantiles {
   background-color: #FFF; }
@@ -1153,9 +1222,9 @@ body {
     color: #831B21; }
     #infantiles .infoAnim span {
       color: #E33D47; }
-  #infantiles #carousel-gallery {
+  #infantiles #gallery-LuluChiqui, #infantiles #gallery-Markitos {
     background-color: #FF7A7A; }
-    #infantiles #carousel-gallery .caption {
+    #infantiles #gallery-LuluChiqui .caption, #infantiles #gallery-Markitos .caption {
       display: flex;
       height: 100%;
       width: 100%;
@@ -1165,71 +1234,96 @@ body {
       top: 0;
       bottom: 0;
       z-index: 2; }
-      #infantiles #carousel-gallery .caption .captionContent {
+      #infantiles #gallery-LuluChiqui .caption .captionContent, #infantiles #gallery-Markitos .caption .captionContent {
         width: 100%;
         color: #D8CBFF;
         overflow: hidden;
         background-color: rgba(32, 27, 48, 0.8);
         padding: 0.2em 0.5em;
         margin: auto 0em 0.5em; }
-        #infantiles #carousel-gallery .caption .captionContent p {
+        #infantiles #gallery-LuluChiqui .caption .captionContent p, #infantiles #gallery-Markitos .caption .captionContent p {
           line-height: 1.1; }
-      #infantiles #carousel-gallery .caption .captionContent {
+      #infantiles #gallery-LuluChiqui .caption .captionContent, #infantiles #gallery-Markitos .caption .captionContent {
         width: 97.5%;
         background-color: rgba(131, 27, 33, 0.6); }
-        #infantiles #carousel-gallery .caption .captionContent h4 {
+        #infantiles #gallery-LuluChiqui .caption .captionContent h4, #infantiles #gallery-Markitos .caption .captionContent h4 {
           color: #FCE9E9; }
 
-#carousel-LuluChiqui.carousel .carousel-indicators {
+#comerciales {
+  background-color: #831B21; }
+  #comerciales h3 {
+    color: #831B21;
+    background-color: #FF7A7A; }
+  #comerciales .infoAnim, #comerciales .sinopsisAnim {
+    color: #831B21; }
+    #comerciales .infoAnim span, #comerciales .sinopsisAnim span {
+      color: #E33D47; }
+    #comerciales .infoAnim a, #comerciales .sinopsisAnim a {
+      color: #831B21;
+      font-weight: 700; }
+  #comerciales #gallery-Comerciales {
+    background-color: #FF7A7A; }
+    #comerciales #gallery-Comerciales .caption {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      bottom: 0;
+      z-index: 2; }
+      #comerciales #gallery-Comerciales .caption .captionContent {
+        width: 100%;
+        color: #D8CBFF;
+        overflow: hidden;
+        background-color: rgba(32, 27, 48, 0.8);
+        padding: 0.2em 0.5em;
+        margin: auto 0em 0.5em; }
+        #comerciales #gallery-Comerciales .caption .captionContent p {
+          line-height: 1.1; }
+      #comerciales #gallery-Comerciales .caption .captionContent {
+        width: 97.5%;
+        background-color: rgba(131, 27, 33, 0.6); }
+        #comerciales #gallery-Comerciales .caption .captionContent h4 {
+          color: #FCE9E9; }
+
+#carousel-LuluChiqui.carousel .carousel-indicators, #carousel-Markitos.carousel .carousel-indicators, #carousel-Musica.carousel .carousel-indicators, #carousel-Mono.carousel .carousel-indicators, #carousel-Fort.carousel .carousel-indicators, #carousel-Gamarra.carousel .carousel-indicators, #carousel-Cyber.carousel .carousel-indicators {
   bottom: -20px; }
-  #carousel-LuluChiqui.carousel .carousel-indicators li {
+  #carousel-LuluChiqui.carousel .carousel-indicators li, #carousel-Markitos.carousel .carousel-indicators li, #carousel-Musica.carousel .carousel-indicators li, #carousel-Mono.carousel .carousel-indicators li, #carousel-Fort.carousel .carousel-indicators li, #carousel-Gamarra.carousel .carousel-indicators li, #carousel-Cyber.carousel .carousel-indicators li {
     width: 16px;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 10%;
     background-color: #5a6268; }
-  #carousel-LuluChiqui.carousel .carousel-indicators .carousel-inner {
+  #carousel-LuluChiqui.carousel .carousel-indicators .carousel-inner, #carousel-Markitos.carousel .carousel-indicators .carousel-inner, #carousel-Musica.carousel .carousel-indicators .carousel-inner, #carousel-Mono.carousel .carousel-indicators .carousel-inner, #carousel-Fort.carousel .carousel-indicators .carousel-inner, #carousel-Gamarra.carousel .carousel-indicators .carousel-inner, #carousel-Cyber.carousel .carousel-indicators .carousel-inner {
     padding-bottom: 0px; }
 
-#carousel-LuluChiqui i {
+#carousel-LuluChiqui.carousel .carousel-control-prev i, #carousel-LuluChiqui.carousel .carousel-control-next i, #carousel-Markitos.carousel .carousel-control-prev i, #carousel-Markitos.carousel .carousel-control-next i, #carousel-Musica.carousel .carousel-control-prev i, #carousel-Musica.carousel .carousel-control-next i, #carousel-Mono.carousel .carousel-control-prev i, #carousel-Mono.carousel .carousel-control-next i, #carousel-Fort.carousel .carousel-control-prev i, #carousel-Fort.carousel .carousel-control-next i, #carousel-Gamarra.carousel .carousel-control-prev i, #carousel-Gamarra.carousel .carousel-control-next i, #carousel-Cyber.carousel .carousel-control-prev i, #carousel-Cyber.carousel .carousel-control-next i {
   color: #E33D47;
   font-size: 45px; }
-  #carousel-LuluChiqui i:hover {
+  #carousel-LuluChiqui.carousel .carousel-control-prev i:hover, #carousel-LuluChiqui.carousel .carousel-control-next i:hover, #carousel-Markitos.carousel .carousel-control-prev i:hover, #carousel-Markitos.carousel .carousel-control-next i:hover, #carousel-Musica.carousel .carousel-control-prev i:hover, #carousel-Musica.carousel .carousel-control-next i:hover, #carousel-Mono.carousel .carousel-control-prev i:hover, #carousel-Mono.carousel .carousel-control-next i:hover, #carousel-Fort.carousel .carousel-control-prev i:hover, #carousel-Fort.carousel .carousel-control-next i:hover, #carousel-Gamarra.carousel .carousel-control-prev i:hover, #carousel-Gamarra.carousel .carousel-control-next i:hover, #carousel-Cyber.carousel .carousel-control-prev i:hover, #carousel-Cyber.carousel .carousel-control-next i:hover {
     color: #ed8086; }
 
-#institucionales {
-  background-color: #831B21; }
-  #institucionales h3 {
-    color: #831B21;
-    background-color: #FF7A7A; }
-  #institucionales .infoAnim {
-    color: #FF7A7A; }
-  #institucionales #carousel-gallery {
-    background-color: #FF7A7A; }
-    #institucionales #carousel-gallery .caption {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      background-color: transparent;
-      position: absolute;
-      overflow: hidden;
-      top: 0;
-      bottom: 0;
-      z-index: 2; }
-      #institucionales #carousel-gallery .caption .captionContent {
-        width: 100%;
-        color: #D8CBFF;
-        overflow: hidden;
-        background-color: rgba(32, 27, 48, 0.8);
-        padding: 0.2em 0.5em;
-        margin: auto 0em 0.5em; }
-        #institucionales #carousel-gallery .caption .captionContent p {
-          line-height: 1.1; }
-      #institucionales #carousel-gallery .caption .captionContent {
-        width: 97.5%;
-        background-color: rgba(131, 27, 33, 0.6); }
-        #institucionales #carousel-gallery .caption .captionContent h4 {
-          color: #FCE9E9; }
+#carousel-Cortos.carousel .carousel-indicators, #carousel-Comerciales.carousel .carousel-indicators {
+  bottom: 130px; }
+  #carousel-Cortos.carousel .carousel-indicators li, #carousel-Comerciales.carousel .carousel-indicators li {
+    width: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10%;
+    background-color: #5a6268; }
+  #carousel-Cortos.carousel .carousel-indicators .carousel-inner, #carousel-Comerciales.carousel .carousel-indicators .carousel-inner {
+    padding-bottom: 0px; }
+
+#carousel-Cortos.carousel .carousel-control-prev span, #carousel-Cortos.carousel .carousel-control-next span, #carousel-Comerciales.carousel .carousel-control-prev span, #carousel-Comerciales.carousel .carousel-control-next span {
+  margin-bottom: 130px; }
+
+#carousel-Cortos.carousel .carousel-control-prev i, #carousel-Cortos.carousel .carousel-control-next i, #carousel-Comerciales.carousel .carousel-control-prev i, #carousel-Comerciales.carousel .carousel-control-next i {
+  color: #E33D47;
+  font-size: 45px; }
+  #carousel-Cortos.carousel .carousel-control-prev i:hover, #carousel-Cortos.carousel .carousel-control-next i:hover, #carousel-Comerciales.carousel .carousel-control-prev i:hover, #carousel-Comerciales.carousel .carousel-control-next i:hover {
+    color: #ed8086; }
 
 .tablaPosicion {
   padding: 2em 0;

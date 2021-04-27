@@ -29,7 +29,7 @@
 		flex-direction: column;
 		align-items: center;
 	}		
-	#carousel-gallery {	
+	#gallery-Cortos, #gallery-LuluChiqui, #gallery-Markitos, #gallery-Musica, #gallery-Comerciales, #gallery-Mono, #gallery-Fort, #gallery-Gamarra, #gallery-Cyber {	
 		background-color: darken($violet-lgt-1, 36%);	
 		padding: 20px 15px;
 		.carousel-item {
@@ -107,7 +107,7 @@
 				display: none;
 			}		
 		}
-		.infoAnim{
+		.infoAnim {
 			width: $ancho;
 			overflow: hidden;
 			display: block;
@@ -119,11 +119,30 @@
 				font-size: 1.1rem;
 				padding: 1.2em 5%;
 			}			
-			@include media(lg) {
-				
+			@include media(lg) {				
 				font-size: 1.2rem;
 				padding: 1.2em 20%;
 			}						
+		}
+		.sinopsisAnim {
+			width: $ancho;
+			min-height: 130px;
+			overflow: hidden;
+			display: block;
+			padding: 1em .5em;
+			font-size: .8rem;
+			line-height: 1.2;			
+			text-align: center;	
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			@include media(sm) {
+				font-size: .9rem;				
+			}			
+			@include media(lg) {				
+				font-size: 1rem;
+
+			}					
 		}   
 		.serieHeader {
 			display: none;
@@ -190,20 +209,26 @@
 			}
 		}
 	}
-	.modal-dialog {
-		margin: 30px auto;	
+	.modal-dialog {		
 		.modal-body {
 			position: relative;		
 		}
 		.close {
 			position: absolute;
 			right: 0; 
-			top: -30px;
+			top: -35px;
 			z-index: 999;
 			font-size: 3rem;
 			font-weight: normal;
 			color: $text-especial;
 			opacity: 2;
+			text-shadow: 0 1px 0 darken( $third-color, 10% );			
+		}
+		@include media(sm) {
+			max-width: 700px;
+		}
+		@include media(lg) {
+			max-width: 800px;
 		}
 	}
 	@include media(sm) {
@@ -224,17 +249,17 @@
 			margin-right: $ancho-menu * 1.6;
 			width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
 			transition: all 500ms ease-in-out;
-				.serieHeader .serieBg, .serieHeader .serieTitle, {
-					margin-left: calc(-.5 * ( calc(#{$ancho-menu} * 1.6 ) ) );
-					transition: all 500ms ease-in-out;
-				}
+			.serieHeader .serieBg, .serieHeader .serieTitle, {
+				margin-left: calc(-.5 * ( calc(#{$ancho-menu} * 1.6 ) ) );
+				transition: all 500ms ease-in-out;
+			}
 		}
 	}
 }
 
 #cortos {
 	.animaTitleBox{
-		@include bannerSection (150px, url("../media/headAnim.jpg"), $primary-color);
+		@include bannerSection (250px, url("../media/headAnim.jpg"), $primary-color);
 	}
 }
 
@@ -256,7 +281,7 @@
 	}
 }
 
-#institucionales {
+#comerciales {
 	.animaTitleBox{
 		@include bannerSection (150px, url("../media/headAnim.jpg"), $primary-color);
 	}
@@ -268,15 +293,24 @@
 		color: saturate($text-bg-dk-1, 15%);
 		background-color: $bg-color-dk;
 	}
-	.infoAnim {
-		color: $text-bg-dk-1;
-		background-color: $primary-color;
-		span {
-			color: $text-bg-dk-2;
+	.serieCompleta {
+		@include media(lg) {
+			min-height: content;			
 		}
-	}	
+		.infoAnim, .sinopsisAnim {
+			color: $text-bg-dk-1;
+			background-color: $primary-color;
+			span {
+				color: $text-bg-dk-2;
+			}
+			a {
+				color:$text-bg-dk-1;
+				font-weight: $font-bold;			
+			}
+		}	
+	}
 	
-	#carousel-gallery {	
+	#gallery-Cortos, #gallery-Musica, #gallery-Mono, #gallery-Fort, #gallery-Gamarra, #gallery-Cyber {	
 		background-color: darken($violet-lgt-1, 36%);
 		.caption {
 	    	@include caption-img(); 
@@ -284,7 +318,7 @@
 				width: 97.5%;
 				background-color: rgba($primary-color, .7);
 			    h4 {
-			    	color: saturate($text-bg-dk-1, 20%);
+			    	color: saturate($text-bg-dk-2, 20%);
 			    }	    
 			}
 		}	
@@ -303,7 +337,7 @@
 			color: $text-especial;
 		}
 	}
-	#carousel-gallery {	
+	#gallery-LuluChiqui, #gallery-Markitos {	
 		background-color: $salmon;
 		.caption {
 		   	@include caption-img(); 
@@ -317,7 +351,39 @@
 		}		
 	}	
 }
-#carousel-LuluChiqui {
+
+#comerciales {
+	background-color: $red-dk;
+	h3 {
+		color: $text-bg-lgt-1; 
+		background-color: $salmon;
+	}
+	.infoAnim, .sinopsisAnim {
+		color: $text-bg-lgt-1;
+		span {
+			color: $text-especial;
+		}
+		a {
+			color: $text-bg-lgt-1;
+			font-weight: $font-bold;			
+		}		
+	}
+	#gallery-Comerciales {	
+		background-color: $salmon;	
+ 		.caption {
+ 			@include caption-img();  		
+	 		.captionContent {
+	 			width: 97.5%;
+	 			background-color: rgba($third-color, .6);
+			    h4 {
+			    	color: $salmon-lgt;
+			    }
+			}
+		}
+	}
+}
+
+#carousel-LuluChiqui, #carousel-Markitos, #carousel-Musica, #carousel-Mono, #carousel-Fort, #carousel-Gamarra, #carousel-Cyber {
 	&.carousel {
 		.carousel-indicators {
 		    bottom: -20px;
@@ -332,39 +398,48 @@
 			    padding-bottom: 0px;
 			}
 		}
+		.carousel-control-prev, .carousel-control-next {
+			i {
+				color: $text-especial;
+				font-size: 45px;
+				&:hover {
+					color: lighten( $text-especial, 15% );
+				}		
+		    }
+		}
 	}	
-	i {
-		color: $text-especial;
-		font-size: 45px;
-		&:hover {
-			color: lighten( $text-especial, 15% );
-		}		
-    }
 }
 
-#institucionales {
-	background-color: $red-dk;
-	h3 {
-		color: $text-bg-lgt-1; 
-		background-color: $salmon;
-	}
-	.infoAnim {
-		color: $text-bg-lgt-2;		
-	}
-	#carousel-gallery {	
-		background-color: $salmon;	
- 		.caption {
- 			@include caption-img();  		
-	 		.captionContent {
-	 			width: 97.5%;
-	 			background-color: rgba($third-color, .6);
-			    h4 {
-			    	color: $salmon-lgt;
-			    }
+#carousel-Cortos, #carousel-Comerciales {
+	&.carousel {
+		.carousel-indicators {
+		    bottom: 130px;
+	    	li {
+			    width: 16px;
+			    margin-left: 5px;
+			    margin-right: 5px;
+			    border-radius: 10%;
+			    background-color: #5a6268;
+			}			 
+			.carousel-inner {
+			    padding-bottom: 0px;
 			}
 		}
-	}
+		.carousel-control-prev, .carousel-control-next {
+			span {
+				margin-bottom: 130px;
+			}
+			i {
+				color: $text-especial;
+				font-size: 45px;
+				&:hover {
+					color: lighten( $text-especial, 15% );
+				}		
+		    }
+		}		
+	}		
 }
+
 
 .tablaPosicion {
 	padding: 2em 0;

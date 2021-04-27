@@ -178,7 +178,7 @@
 }
 
 @mixin carousel-gallery {
-		 /*Carousel Multi-Item que encontré*/
+		 /*Carousel Multi-Item*/
     @media (min-width: 720px) and (max-width: 960px) {
         /* Habilita el 4to Item en col-md-4*/
         .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
@@ -319,8 +319,7 @@
           transition: none;
         }
     */
-        
-      
+              
       /*show 7th slide for animation when its a 6 slides carousel */
      /*      .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item  + .carousel-item {
             position: absolute;
