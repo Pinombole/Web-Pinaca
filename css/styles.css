@@ -621,11 +621,13 @@ body {
   #animacion .titleAnimaDk {
     color: #E33D47;
     padding-top: .2em;
-    padding-bottom: .2em; }
+    padding-bottom: .2em;
+    text-align: center; }
   #animacion .titleAnimaLgt {
     color: #FF7A7A;
     padding-top: .2em;
-    padding-bottom: .2em; }
+    padding-bottom: .2em;
+    text-align: center; }
   #animacion .iframeCap {
     display: flex;
     flex-direction: column;
@@ -1098,7 +1100,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 150px; }
+  min-height: 250px; }
   #musicales .animaTitleBox .titleOverlay {
     height: 100%;
     width: 100%;
@@ -1173,10 +1175,6 @@ body {
   color: #6550a4;
   background-color: #0F0F0F; }
 
-@media (min-width: 960px) {
-  #cortos .serieCompleta, #musicales .serieCompleta, #series .serieCompleta {
-    min-height: auto; } }
-
 #cortos .serieCompleta .infoAnim, #cortos .serieCompleta .sinopsisAnim, #musicales .serieCompleta .infoAnim, #musicales .serieCompleta .sinopsisAnim, #series .serieCompleta .infoAnim, #series .serieCompleta .sinopsisAnim {
   color: #6E6292;
   background-color: #201B30; }
@@ -1222,6 +1220,9 @@ body {
     color: #831B21; }
     #infantiles .infoAnim span {
       color: #E33D47; }
+    #infantiles .infoAnim a {
+      color: #831B21;
+      font-weight: 700; }
   #infantiles #gallery-LuluChiqui, #infantiles #gallery-Markitos {
     background-color: #FF7A7A; }
     #infantiles #gallery-LuluChiqui .caption, #infantiles #gallery-Markitos .caption {
@@ -1287,6 +1288,11 @@ body {
         background-color: rgba(131, 27, 33, 0.6); }
         #comerciales #gallery-Comerciales .caption .captionContent h4 {
           color: #FCE9E9; }
+
+@media (min-width: 960px) {
+  #cortos .serieCompleta, #musicales .serieCompleta, #comerciales .serieCompleta {
+    min-height: auto;
+    margin-bottom: 50px; } }
 
 #carousel-LuluChiqui.carousel .carousel-indicators, #carousel-Markitos.carousel .carousel-indicators, #carousel-Musica.carousel .carousel-indicators, #carousel-Mono.carousel .carousel-indicators, #carousel-Fort.carousel .carousel-indicators, #carousel-Gamarra.carousel .carousel-indicators, #carousel-Cyber.carousel .carousel-indicators {
   bottom: -20px; }
