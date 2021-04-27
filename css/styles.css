@@ -1175,7 +1175,7 @@ body {
 
 @media (min-width: 960px) {
   #cortos .serieCompleta, #musicales .serieCompleta, #series .serieCompleta {
-    min-height: content; } }
+    min-height: auto; } }
 
 #cortos .serieCompleta .infoAnim, #cortos .serieCompleta .sinopsisAnim, #musicales .serieCompleta .infoAnim, #musicales .serieCompleta .sinopsisAnim, #series .serieCompleta .infoAnim, #series .serieCompleta .sinopsisAnim {
   color: #6E6292;
@@ -1183,7 +1183,7 @@ body {
   #cortos .serieCompleta .infoAnim span, #cortos .serieCompleta .sinopsisAnim span, #musicales .serieCompleta .infoAnim span, #musicales .serieCompleta .sinopsisAnim span, #series .serieCompleta .infoAnim span, #series .serieCompleta .sinopsisAnim span {
     color: #D8CBFF; }
   #cortos .serieCompleta .infoAnim a, #cortos .serieCompleta .sinopsisAnim a, #musicales .serieCompleta .infoAnim a, #musicales .serieCompleta .sinopsisAnim a, #series .serieCompleta .infoAnim a, #series .serieCompleta .sinopsisAnim a {
-    color: #6E6292;
+    color: #831B21;
     font-weight: 700; }
 
 #cortos #gallery-Cortos, #cortos #gallery-Musica, #cortos #gallery-Mono, #cortos #gallery-Fort, #cortos #gallery-Gamarra, #cortos #gallery-Cyber, #musicales #gallery-Cortos, #musicales #gallery-Musica, #musicales #gallery-Mono, #musicales #gallery-Fort, #musicales #gallery-Gamarra, #musicales #gallery-Cyber, #series #gallery-Cortos, #series #gallery-Musica, #series #gallery-Mono, #series #gallery-Fort, #series #gallery-Gamarra, #series #gallery-Cyber {

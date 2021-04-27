@@ -295,7 +295,7 @@
 	}
 	.serieCompleta {
 		@include media(lg) {
-			min-height: content;			
+			min-height: auto;			
 		}
 		.infoAnim, .sinopsisAnim {
 			color: $text-bg-dk-1;
@@ -304,7 +304,7 @@
 				color: $text-bg-dk-2;
 			}
 			a {
-				color:$text-bg-dk-1;
+				color: $text-bg-lgt-1;
 				font-weight: $font-bold;			
 			}
 		}	
