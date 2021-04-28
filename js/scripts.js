@@ -85,7 +85,6 @@ jQuery(document).ready(function() {
 	
 });
 
-
 //Carrousel Modal Lulu y Chiqui//
 jQuery(document).ready(function() { 
     /*
@@ -145,7 +144,6 @@ jQuery(document).ready(function() {
 	
 });
 
-
 //Carrousel Modal Markitos//
 jQuery(document).ready(function() { 
     /*
@@ -175,3 +173,123 @@ jQuery(document).ready(function() {
     });
  
 });
+
+
+/* Carousel Multi Item Musica*/	
+jQuery(document).ready(function() {		
+	$('#gallery-Musica').on('slide.bs.carousel', function (e) {
+	    /*
+	        CC 2.0 License Iatek LLC 2018
+	        Attribution required
+	    */
+	    var $e = $(e.relatedTarget);
+	    var idx = $e.index();
+	    var itemsPerSlide = 4;
+	    var totalItems = $('#gallery-Musica .carousel-item').length;
+	    
+	    if (idx >= totalItems-(itemsPerSlide-1)) {
+	        var it = itemsPerSlide - (totalItems - idx);
+	        for (var i=0; i<it; i++) {
+	            // append slides to end
+	            if (e.direction=="left") {
+	                $('#gallery-Musica .carousel-item').eq(i).appendTo('#gallery-Musica .carousel-inner');
+	            }
+	            else {
+	                $('#gallery-Musica .carousel-item').eq(0).appendTo('#gallery-Musica .carousel-inner');
+	            }
+	        }
+	    }
+	});
+	
+});
+
+//Carrousel Modal Musica//
+jQuery(document).ready(function() { 
+    /*
+        Stop video playing when the MODAL is being closed (has finished closing)
+    */
+    $('#modal-Musica').on('hidden.bs.modal', function(e) {
+        $('#modal-Musica iframe').each(function() {
+            var videoURL = $(this).attr('src');
+            $(this).attr('src', videoURL);
+        });
+    });
+ 
+});
+
+jQuery(document).ready(function() { 
+    /*
+        Stop video playing when the CAROUSEL slides to another element
+    */
+    $('#carousel-Musica').on('slid.bs.carousel', function(e) {
+        var currentSlide = $('#carousel-Musica .carousel-item').eq(e.from);
+        var currentSlideEmbed = currentSlide.children('.embed-responsive');
+        if(currentSlideEmbed.length > 0) {
+            var videoIFrame = currentSlideEmbed.children('iframe');
+            var videoURL = videoIFrame.attr('src');
+            videoIFrame.attr('src', videoURL);
+        }
+    });
+ 
+});
+
+
+/* Carousel Multi Item Comerciales*/	
+jQuery(document).ready(function() {		
+	$('#gallery-Comerciales').on('slide.bs.carousel', function (e) {
+	    /*
+	        CC 2.0 License Iatek LLC 2018
+	        Attribution required
+	    */
+	    var $e = $(e.relatedTarget);
+	    var idx = $e.index();
+	    var itemsPerSlide = 4;
+	    var totalItems = $('#gallery-Comerciales .carousel-item').length;
+	    
+	    if (idx >= totalItems-(itemsPerSlide-1)) {
+	        var it = itemsPerSlide - (totalItems - idx);
+	        for (var i=0; i<it; i++) {
+	            // append slides to end
+	            if (e.direction=="left") {
+	                $('#gallery-Comerciales .carousel-item').eq(i).appendTo('#gallery-Comerciales .carousel-inner');
+	            }
+	            else {
+	                $('#gallery-Comerciales .carousel-item').eq(0).appendTo('#gallery-Comerciales .carousel-inner');
+	            }
+	        }
+	    }
+	});
+	
+});
+
+//Carrousel Modal Comerciales//
+jQuery(document).ready(function() { 
+    /*
+        Stop video playing when the MODAL is being closed (has finished closing)
+    */
+    $('#modal-Comerciales').on('hidden.bs.modal', function(e) {
+        $('#modal-Comerciales iframe').each(function() {
+            var videoURL = $(this).attr('src');
+            $(this).attr('src', videoURL);
+        });
+    });
+ 
+});
+
+jQuery(document).ready(function() { 
+    /*
+        Stop video playing when the CAROUSEL slides to another element
+    */
+    $('#carousel-Comerciales').on('slid.bs.carousel', function(e) {
+        var currentSlide = $('#carousel-Comerciales .carousel-item').eq(e.from);
+        var currentSlideEmbed = currentSlide.children('.embed-responsive');
+        if(currentSlideEmbed.length > 0) {
+            var videoIFrame = currentSlideEmbed.children('iframe');
+            var videoURL = videoIFrame.attr('src');
+            videoIFrame.attr('src', videoURL);
+        }
+    });
+ 
+});
+
+

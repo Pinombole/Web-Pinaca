@@ -90,12 +90,12 @@
 	.serieCompleta {
 		max-width: $ancho;
 		overflow: hidden;
-		height: min-content;
-		@include media(sm) {
-			height: min-content;
-		}
+		height: auto;		
 		@include media(lg) {
 			min-height: calc(100vh - 100px);			
+		}
+		@include media(sm) {
+			min-height: auto;
 		}
 		h3 {
 			display: block;
@@ -124,9 +124,17 @@
 			@include media(lg) {				
 				font-size: 1.2rem;
 				padding: 1.2em 20%;
-			}						
+			}
+			.title {
+				display: inline-block;
+				font-weight: $font-bold;
+				padding: 0;
+				margin-bottom: .5em;
+			    text-align: center;
+				letter-spacing: .5rem;
+			}							
 		}
-		.sinopsisAnim {
+		.infoModalAnim {
 			width: $ancho;
 			min-height: 130px;
 			overflow: hidden;
@@ -151,64 +159,67 @@
 			@include media(sm) {
 				display: block;
 				position: relative;
-				width: 120%;
+				width: $ancho;
 				height: 125px;
 				overflow: hidden;	
 				.serieBg {
 				    position: absolute;
-					top: 0;
-					margin: 0 -15px;
+					top: 0;				
 					width: $ancho;
 					height: auto;
 					z-index: 1;	
 					transition: all 500ms ease-in-out;		
 				}
 				.overlay {
-					height: 100%;
-				    width: 100%;
-				    position: absolute;
-				    top: 0;				    
-				    background: rgba(darken($salmon, 50%), .7);
-				    margin: 0;
-				    z-index: 2;				   
+					display: none;					   			    					   
 				}
 				.serieTitle {
 					position: absolute;
-					top: 0;
-					margin: 0 -15px;
+					top: 0;				
 					width: $ancho;
 					height: auto;
 					z-index: 3;
-					opacity: .5;
+					opacity: 1;
 					transition: all 500ms ease-in-out;		
 				}			
-			}
+			}			
 			@include media(lg) {
-				height: 220px;
+				height: 142px;			
 				width: $ancho;
 				.serieBg { 
-					margin: 0;
-					width: auto;
-					height: 100%;
+					width: $ancho;				
+					height: auto;										
 				}
 				.overlay {
+					display: none;
+				}				
+			}
+			@include media(xl) {
+				height: 220px;					
+				.overlay {
+					display: block;
+					height: 100%;
+				    width: 100%;
+				    position: absolute;
+				    top: 0;	
+				    margin: 0;
+				    z-index: 2;	
 				 	background: rgba(darken($salmon, 50%), .8);
 				 	transition: all 500ms ease-in-out;	
 				}
 			 	&:hover .overlay {
 			 		background: rgba(darken($salmon, 50%), .1);
-			 		transition: all 500ms ease-in-out;	
+			 		transition: all 500ms ease-in-out;				 		
 			 	}				
-				.serieTitle {
-					margin: 0;
-					width: auto;
-					height: 100%;
+				.serieTitle {					
+					width: $ancho;					
+					height: auto;				
 					opacity: 1;
 					&:hover {
 						opacity: .3;
 					}
 				}
-			}
+			}						
 		}
 	}
 	.modal-dialog {		
@@ -296,7 +307,7 @@
 		background-color: $bg-color-dk;
 	}
 	.serieCompleta {		
-		.infoAnim, .sinopsisAnim {
+		.infoAnim, .infoModalAnim {
 			color: $text-bg-dk-1;
 			background-color: $primary-color;
 			span {
@@ -306,8 +317,11 @@
 				color: $text-bg-lgt-1;
 				font-weight: $font-bold;			
 			}
+			.title {
+				color: $text-bg-dk-2;			
 		}	
-	}
+	}	
+}
 	
 	#gallery-Cortos, #gallery-Musica, #gallery-Mono, #gallery-Fort, #gallery-Gamarra, #gallery-Cyber {	
 		background-color: darken($violet-lgt-1, 36%);
@@ -338,6 +352,9 @@
 		a {
 			color: $text-bg-lgt-1;
 			font-weight: $font-bold;			
+		}
+		.title {
+			color: $text-especial;			
 		}	
 	}
 	#gallery-LuluChiqui, #gallery-Markitos {	
@@ -356,12 +373,12 @@
 }
 
 #comerciales {
-	background-color: $red-dk;
+	background-color:$bg-color-lgt;
 	h3 {
 		color: $text-bg-lgt-1; 
 		background-color: $salmon;
 	}
-	.infoAnim, .sinopsisAnim {
+	.infoAnim, .infoModalAnim {
 		color: $text-bg-lgt-1;
 		span {
 			color: $text-especial;
@@ -369,7 +386,10 @@
 		a {
 			color: $text-bg-lgt-1;
 			font-weight: $font-bold;			
-		}		
+		}
+		.title {
+			color: $text-especial;			
+		}			
 	}
 	#gallery-Comerciales {	
 		background-color: $salmon;	
@@ -394,7 +414,7 @@
 	}
 }
 
-#carousel-LuluChiqui, #carousel-Markitos, #carousel-Musica, #carousel-Mono, #carousel-Fort, #carousel-Gamarra, #carousel-Cyber {
+#carousel-LuluChiqui, #carousel-Markitos, #carousel-Mono, #carousel-Fort, #carousel-Gamarra, #carousel-Cyber {
 	&.carousel {
 		.carousel-indicators {
 		    bottom: -20px;
@@ -410,6 +430,11 @@
 			}
 		}
 		.carousel-control-prev, .carousel-control-next {
+			bottom: auto;
+			height: 85%;
+			span {
+				margin-top: 50px;
+			}
 			i {
 				color: $text-especial;
 				font-size: 45px;
@@ -421,7 +446,7 @@
 	}	
 }
 
-#carousel-Cortos, #carousel-Comerciales {
+#carousel-Cortos, #carousel-Musica, #carousel-Comerciales {
 	&.carousel {
 		.carousel-indicators {
 		    bottom: 130px;
@@ -437,8 +462,10 @@
 			}
 		}
 		.carousel-control-prev, .carousel-control-next {
+			bottom: auto;
+			height: 65%;
 			span {
-				margin-bottom: 130px;
+				margin-top: 50px;
 			}
 			i {
 				color: $text-especial;
@@ -507,6 +534,3 @@
 		}
 	}
 }
-
-
-

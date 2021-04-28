@@ -19,6 +19,21 @@
   }
 }
 
+//Agregado Orientación//
+@mixin orientation($direction) { 
+
+  $orientation-landscape: "(orientation:landscape)"; 
+  $orientation-portrait: "(orientation:portrait)";
+
+  @if $direction == landscape {
+    @media #{$orientation-landscape} { @content; } 
+  }
+  @if $direction == portrait {
+    @media #{$orientation-portrait} { @content; } 
+  }
+} 
+
+
 //Encabezados Secciones
 @mixin bannerSection ($alto-banner, $fondo-banner, $bg-overlay) {
 	position: relative;
@@ -179,7 +194,7 @@
 
 @mixin carousel-gallery {
 		 /*Carousel Multi-Item*/
-    @media (min-width: 720px) and (max-width: 960px) {
+    @media (min-width: 768px) and (max-width: 991px) {
         /* Habilita el 4to Item en col-md-4*/
         .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
             position: absolute;
@@ -190,7 +205,7 @@
             visibility: visible;
         }
     }
-    @media (min-width: 540px) and (max-width: 720px) {
+    @media (min-width: 576px) and (max-width: 767px) {
         /* Habilita el 4to Item en sm if col-sm-6*/
         .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
             position: absolute;
@@ -201,7 +216,7 @@
             visibility: visible;
         }
     }
-    @media (min-width: 540px) {		
+    @media (min-width: 576px) {		
         .carousel-item {
         	padding: 0 5px;
             margin-right: 0;
@@ -247,7 +262,7 @@
         }
     }
     /* MD */
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         /* Habilita el 4to Item */
         .carousel-inner .active + .carousel-item + .carousel-item {
             display: block;
@@ -275,7 +290,7 @@
         }
     }
     /* LG */
-    @media (min-width: 960px) {
+    @media (min-width: 991px) {
         /* Habilita el 4to Item*/
         .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
             display: block;
