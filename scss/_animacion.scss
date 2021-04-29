@@ -314,7 +314,7 @@
 				color: $text-bg-dk-2;
 			}
 			a {
-				color: $text-bg-lgt-1;
+				color: $text-bg-dk-2;
 				font-weight: $font-bold;			
 			}
 			.title {
@@ -409,7 +409,7 @@
 	.serieCompleta {
 		@include media(lg) {
 			min-height: auto;
-			margin-bottom: 50px;			
+			padding-bottom: 50px;			
 		}
 	}
 }
