@@ -164,8 +164,7 @@
     overflow: hidden;
     width: 98%;
     padding-top: 55%;
-    margin: 0.2em auto;
-    border: 1px solid $violet-lgt-1;
+    margin: 0.2em auto;  
     .caption {
     	@include caption-img ();
     }    

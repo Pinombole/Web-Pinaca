@@ -1,7 +1,7 @@
 #portfolio {
     width: $ancho;
     margin-top: $alto-header;
-    background-color: $bg-color-dk;
+    background-color: darken($primary-color, 5);
     .portfolioItem {
         @include portfolioItem;
          &.hidden { 
@@ -46,8 +46,7 @@
         @include portfolioItem;
         width: 98%;
         padding-top: 98%;
-        margin: 0.2em auto;
-        border: 1px solid $third-color;
+        margin: 0.2em auto;        
         &.hidden { 
             display: none;
         }
