@@ -469,6 +469,10 @@ jQuery(document).ready(function() {
  
 });
 
+$('a.portfolioItem').click(function (e) {
+	    $('#modal-Portfolio img').attr('src', $(this).attr('data-img-url'));
+});
+
 
 
 

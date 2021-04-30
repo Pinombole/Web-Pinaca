@@ -5,7 +5,7 @@
     .portfolioItem {
         @include portfolioItem;
          &.hidden { 
-            display: none;
+            display: block;
         }
     }   
     @include media(lg) {
@@ -15,6 +15,11 @@
         padding-left: 15px !important;
         margin-left: 0px !important;
         transition-delay: 0ms;
+        .portfolioItem {
+            &.hidden { 
+                display: none;
+            }
+        }
         &.active {
             width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
             margin-right: $ancho-menu * 1.6;
@@ -48,7 +53,7 @@
         padding-top: 98%;
         margin: 0.2em auto;        
         &.hidden { 
-            display: none;
+            display: block;
         }
     }
     h5 {
@@ -58,6 +63,11 @@
         width: $ancho;
         margin-right: $ancho-menu * 0;
         transition: all 500ms ease-in-out;
+        .portfolioItem {
+            &.hidden { 
+                display: none;
+            }
+        }
         &.active {
             width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
             margin-right: $ancho-menu * 1.6;
@@ -70,5 +80,17 @@
 }
 
 
-
+#modal-Portfolio {    
+    .close {
+        position: absolute;
+        right: 0; 
+        top: -35px;
+        z-index: 999;
+        font-size: 3rem;
+        font-weight: normal;
+        color: $text-especial;
+        opacity: 2;
+        text-shadow: 0 1px 0 darken( $third-color, 10% );           
+    }
+}
     
