@@ -1,7 +1,7 @@
 #portfolio {
     width: $ancho;
     margin-top: $alto-header;
-    background-color: darken($primary-color, 5);
+    background-color: darken($violet-lgt-1, 36%);
     .portfolioItem {
         @include portfolioItem;
          &.hidden { 
@@ -18,6 +18,12 @@
         .portfolioItem {
             &.hidden { 
                 display: none;
+            }
+            img {
+                transition: all 500ms ease-in-out;
+            }
+            &:hover img{
+                transform: scale(1.1);
             }
         }
         &.active {
@@ -46,7 +52,7 @@
 #ilustraciones {
     width: $ancho;
     margin-top: $alto-header;
-    background-color: $bg-color-dk;
+    background-color: darken($violet-lgt-1, 36%);
     .portfolioItem {
         @include portfolioItem;
         width: 98%;
@@ -56,8 +62,9 @@
             display: block;
         }
     }
-    h5 {
-        color: $text-especial;   
+    h4 {
+        color: $text-especial;  
+
     }
     @include media(lg) {
         width: $ancho;
@@ -66,6 +73,43 @@
         .portfolioItem {
             &.hidden { 
                 display: none;
+            }
+            .caption {
+                transform: translate(-100%);
+                transition: all 250ms ease-in-out;
+                .captionContent p {
+                    opacity: 0;
+                }
+                .captionContent h4 {
+                    opacity: 0;
+                }
+                .captionContent .raya{
+                    width: 0%;
+                }    
+                &:hover .captionContent p{
+                    opacity: 1;
+                    transition: all 250ms ease-in-out;                    
+                }
+                &:hover .captionContent h4{
+                    opacity: 1;
+                    transition: all 250ms ease-in-out;                  
+                }
+                &:hover .captionContent .raya{
+                    width: 60%;
+                    transition: all 250ms ease-in-out; 
+                }                   
+            }
+            &:hover {
+                .caption {                   
+                    transform: translate(0);                        
+                    transition: all 250ms ease-in-out;                   
+                }
+            }
+            img {
+                transition: all 500ms ease-in-out;
+            }
+            &:hover img{
+                transform: scale(1.1);
             }
         }
         &.active {

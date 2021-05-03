@@ -90,7 +90,7 @@ body {
         font-size: 1.75rem; } }
   body h5 {
     font-size: 1.2rem;
-    padding: .1em .2em; }
+    padding: 0 .2em; }
     @media (min-width: 540px) {
       body h5 {
         font-size: 1.2rem; } }
@@ -105,7 +105,8 @@ body {
   position: fixed;
   z-index: 50;
   top: 0;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  border-bottom: solid 2px #831B21; }
   #header .logo img {
     height: 50px; }
     @media (min-width: 540px) {
@@ -242,17 +243,18 @@ body {
   #menu .buttonMenu {
     border-bottom: 2px solid #831B21;
     padding: .1em 1em; }
-    #menu .buttonMenu h4 {
+    #menu .buttonMenu h3 {
       font-size: 1.2rem;
       line-height: 1.3;
-      margin: 0; }
+      margin: 0;
+      font-weight: 400; }
       @media (min-width: 540px) {
-        #menu .buttonMenu h4 {
+        #menu .buttonMenu h3 {
           font-size: 1.3rem; } }
       @media (min-width: 960px) {
-        #menu .buttonMenu h4 {
+        #menu .buttonMenu h3 {
           font-size: 1.5rem; } }
-      #menu .buttonMenu h4:hover {
+      #menu .buttonMenu h3:hover {
         transform: scale(1.05);
         margin-top: .1em;
         padding-left: .3em;
@@ -391,7 +393,7 @@ body {
 #portfolio {
   width: 100%;
   margin-top: 90px;
-  background-color: #151220; }
+  background-color: #1b1824; }
   #portfolio .portfolioItem {
     display: block;
     position: relative;
@@ -401,6 +403,7 @@ body {
     margin: 0.2em auto; }
     #portfolio .portfolioItem .caption {
       display: flex;
+      justify-content: center;
       height: 100%;
       width: 100%;
       background-color: transparent;
@@ -408,6 +411,8 @@ body {
       overflow: hidden;
       top: 0;
       bottom: 0;
+      left: 0;
+      right: 0;
       z-index: 2; }
       #portfolio .portfolioItem .caption .captionContent {
         width: 100%;
@@ -415,9 +420,31 @@ body {
         overflow: hidden;
         background-color: rgba(32, 27, 48, 0.8);
         padding: 0.2em 0.5em;
-        margin: auto 0em 0.5em; }
+        margin: auto 0em 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #portfolio .portfolioItem .caption .captionContent .raya {
+          display: inline-block;
+          height: 1px;
+          width: 60%;
+          margin: 0 auto;
+          margin-bottom: 0.4em;
+          background-color: #E33D47; }
+        #portfolio .portfolioItem .caption .captionContent h4 {
+          margin: 0 auto;
+          line-height: 1;
+          text-align: center;
+          font-size: 1.2rem;
+          padding: 0 .2em; }
+          @media (min-width: 540px) {
+            #portfolio .portfolioItem .caption .captionContent h4 {
+              font-size: 1.2rem; } }
+          @media (min-width: 960px) {
+            #portfolio .portfolioItem .caption .captionContent h4 {
+              font-size: 1.2rem; } }
         #portfolio .portfolioItem .caption .captionContent p {
-          line-height: 1.1; }
+          line-height: 1; }
     #portfolio .portfolioItem img {
       position: absolute;
       top: 0; }
@@ -448,6 +475,10 @@ body {
       transition-delay: 0ms; }
       #portfolio .portfolioItem.hidden {
         display: none; }
+      #portfolio .portfolioItem img {
+        transition: all 500ms ease-in-out; }
+      #portfolio .portfolioItem:hover img {
+        transform: scale(1.1); }
       #portfolio.active {
         width: calc(100% - ( calc(250px * 1.6 ) ));
         margin-right: 400px;
@@ -468,7 +499,7 @@ body {
 #ilustraciones {
   width: 100%;
   margin-top: 90px;
-  background-color: #0F0F0F; }
+  background-color: #1b1824; }
   #ilustraciones .portfolioItem {
     display: block;
     position: relative;
@@ -481,6 +512,7 @@ body {
     margin: 0.2em auto; }
     #ilustraciones .portfolioItem .caption {
       display: flex;
+      justify-content: center;
       height: 100%;
       width: 100%;
       background-color: transparent;
@@ -488,6 +520,8 @@ body {
       overflow: hidden;
       top: 0;
       bottom: 0;
+      left: 0;
+      right: 0;
       z-index: 2; }
       #ilustraciones .portfolioItem .caption .captionContent {
         width: 100%;
@@ -495,9 +529,31 @@ body {
         overflow: hidden;
         background-color: rgba(32, 27, 48, 0.8);
         padding: 0.2em 0.5em;
-        margin: auto 0em 0.5em; }
+        margin: auto 0em 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #ilustraciones .portfolioItem .caption .captionContent .raya {
+          display: inline-block;
+          height: 1px;
+          width: 60%;
+          margin: 0 auto;
+          margin-bottom: 0.4em;
+          background-color: #E33D47; }
+        #ilustraciones .portfolioItem .caption .captionContent h4 {
+          margin: 0 auto;
+          line-height: 1;
+          text-align: center;
+          font-size: 1.2rem;
+          padding: 0 .2em; }
+          @media (min-width: 540px) {
+            #ilustraciones .portfolioItem .caption .captionContent h4 {
+              font-size: 1.2rem; } }
+          @media (min-width: 960px) {
+            #ilustraciones .portfolioItem .caption .captionContent h4 {
+              font-size: 1.2rem; } }
         #ilustraciones .portfolioItem .caption .captionContent p {
-          line-height: 1.1; }
+          line-height: 1; }
     #ilustraciones .portfolioItem img {
       position: absolute;
       top: 0; }
@@ -518,7 +574,7 @@ body {
       z-index: 2; }
     #ilustraciones .portfolioItem.hidden {
       display: block; }
-  #ilustraciones h5 {
+  #ilustraciones h4 {
     color: #E33D47; }
   @media (min-width: 960px) {
     #ilustraciones {
@@ -527,6 +583,31 @@ body {
       transition: all 500ms ease-in-out; }
       #ilustraciones .portfolioItem.hidden {
         display: none; }
+      #ilustraciones .portfolioItem .caption {
+        transform: translate(-100%);
+        transition: all 250ms ease-in-out; }
+        #ilustraciones .portfolioItem .caption .captionContent p {
+          opacity: 0; }
+        #ilustraciones .portfolioItem .caption .captionContent h4 {
+          opacity: 0; }
+        #ilustraciones .portfolioItem .caption .captionContent .raya {
+          width: 0%; }
+        #ilustraciones .portfolioItem .caption:hover .captionContent p {
+          opacity: 1;
+          transition: all 250ms ease-in-out; }
+        #ilustraciones .portfolioItem .caption:hover .captionContent h4 {
+          opacity: 1;
+          transition: all 250ms ease-in-out; }
+        #ilustraciones .portfolioItem .caption:hover .captionContent .raya {
+          width: 60%;
+          transition: all 250ms ease-in-out; }
+      #ilustraciones .portfolioItem:hover .caption {
+        transform: translate(0);
+        transition: all 250ms ease-in-out; }
+      #ilustraciones .portfolioItem img {
+        transition: all 500ms ease-in-out; }
+      #ilustraciones .portfolioItem:hover img {
+        transform: scale(1.1); }
       #ilustraciones.active {
         width: calc(100% - ( calc(250px * 1.6 ) ));
         margin-right: 400px;
@@ -651,18 +732,13 @@ body {
     /* MD */
     /* LG */ }
     #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
-      overflow: hidden;
-      padding: 0 5px; }
+      padding: 0 5px;
+      margin-right: 0; }
       #animacion #gallery-Cortos .carousel-item img, #animacion #gallery-LuluChiqui .carousel-item img, #animacion #gallery-Markitos .carousel-item img, #animacion #gallery-Musica .carousel-item img, #animacion #gallery-Comerciales .carousel-item img, #animacion #gallery-Mono .carousel-item img, #animacion #gallery-Fort .carousel-item img, #animacion #gallery-Gamarra .carousel-item img, #animacion #gallery-Cyber .carousel-item img {
         width: 100%; }
-      @media (min-width: 540px) {
-        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
-          padding: 0 2px; } }
-      @media (min-width: 960px) {
-        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
-          padding: 0 3.5px; } }
     #animacion #gallery-Cortos .caption, #animacion #gallery-LuluChiqui .caption, #animacion #gallery-Markitos .caption, #animacion #gallery-Musica .caption, #animacion #gallery-Comerciales .caption, #animacion #gallery-Mono .caption, #animacion #gallery-Fort .caption, #animacion #gallery-Gamarra .caption, #animacion #gallery-Cyber .caption {
       display: flex;
+      justify-content: center;
       height: 100%;
       width: 100%;
       background-color: transparent;
@@ -670,6 +746,8 @@ body {
       overflow: hidden;
       top: 0;
       bottom: 0;
+      left: 0;
+      right: 0;
       z-index: 2; }
       #animacion #gallery-Cortos .caption .captionContent, #animacion #gallery-LuluChiqui .caption .captionContent, #animacion #gallery-Markitos .caption .captionContent, #animacion #gallery-Musica .caption .captionContent, #animacion #gallery-Comerciales .caption .captionContent, #animacion #gallery-Mono .caption .captionContent, #animacion #gallery-Fort .caption .captionContent, #animacion #gallery-Gamarra .caption .captionContent, #animacion #gallery-Cyber .caption .captionContent {
         width: 100%;
@@ -677,12 +755,34 @@ body {
         overflow: hidden;
         background-color: rgba(32, 27, 48, 0.8);
         padding: 0.2em 0.5em;
-        margin: auto 0em 0.5em; }
+        margin: auto 0em 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #animacion #gallery-Cortos .caption .captionContent .raya, #animacion #gallery-LuluChiqui .caption .captionContent .raya, #animacion #gallery-Markitos .caption .captionContent .raya, #animacion #gallery-Musica .caption .captionContent .raya, #animacion #gallery-Comerciales .caption .captionContent .raya, #animacion #gallery-Mono .caption .captionContent .raya, #animacion #gallery-Fort .caption .captionContent .raya, #animacion #gallery-Gamarra .caption .captionContent .raya, #animacion #gallery-Cyber .caption .captionContent .raya {
+          display: inline-block;
+          height: 1px;
+          width: 60%;
+          margin: 0 auto;
+          margin-bottom: 0.4em;
+          background-color: #E33D47; }
+        #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
+          margin: 0 auto;
+          line-height: 1;
+          text-align: center;
+          font-size: 1.2rem;
+          padding: 0 .2em; }
+          @media (min-width: 540px) {
+            #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
+              font-size: 1.2rem; } }
+          @media (min-width: 960px) {
+            #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
+              font-size: 1.2rem; } }
         #animacion #gallery-Cortos .caption .captionContent p, #animacion #gallery-LuluChiqui .caption .captionContent p, #animacion #gallery-Markitos .caption .captionContent p, #animacion #gallery-Musica .caption .captionContent p, #animacion #gallery-Comerciales .caption .captionContent p, #animacion #gallery-Mono .caption .captionContent p, #animacion #gallery-Fort .caption .captionContent p, #animacion #gallery-Gamarra .caption .captionContent p, #animacion #gallery-Cyber .caption .captionContent p {
-          line-height: 1.1; }
+          line-height: 1; }
       #animacion #gallery-Cortos .caption .captionContent, #animacion #gallery-LuluChiqui .caption .captionContent, #animacion #gallery-Markitos .caption .captionContent, #animacion #gallery-Musica .caption .captionContent, #animacion #gallery-Comerciales .caption .captionContent, #animacion #gallery-Mono .caption .captionContent, #animacion #gallery-Fort .caption .captionContent, #animacion #gallery-Gamarra .caption .captionContent, #animacion #gallery-Cyber .caption .captionContent {
         text-align: center;
-        width: 97%; }
+        max-width: 97.5%; }
         #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
           padding: .1em .15em;
           margin: 0;
@@ -735,9 +835,6 @@ body {
         /* left or forward direction */
         /* farthest right hidden item must be also positioned for animations */
         /* right or prev direction */ }
-        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
-          padding: 0 5px;
-          margin-right: 0; }
         #animacion #gallery-Cortos .carousel-inner .active + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active + .carousel-item, #animacion #gallery-Musica .carousel-inner .active + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active + .carousel-item, #animacion #gallery-Mono .carousel-inner .active + .carousel-item, #animacion #gallery-Fort .carousel-inner .active + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active + .carousel-item {
           display: block; }
         #animacion #gallery-Cortos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
@@ -942,6 +1039,8 @@ body {
         margin-bottom: .5em;
         text-align: center;
         letter-spacing: .5rem; }
+      #animacion .serieCompleta .infoAnim p {
+        margin-bottom: 0.4em; }
     #animacion .serieCompleta .infoModalAnim {
       width: 100%;
       min-height: 130px;
@@ -964,7 +1063,8 @@ body {
       display: none; }
       @media (min-width: 540px) {
         #animacion .serieCompleta .serieHeader {
-          display: block;
+          display: flex;
+          justify-content: center;
           position: relative;
           width: 100%;
           height: 125px;
@@ -1035,15 +1135,6 @@ body {
   @media (min-width: 960px) {
     #animacion .modal-dialog {
       max-width: 800px; } }
-  @media (min-width: 540px) {
-    #animacion {
-      margin-right: 0;
-      width: 100%;
-      transition: width 500ms ease-in-out; }
-      #animacion.active {
-        margin-right: 325px;
-        width: calc(100% - ( calc(250px * 1.3 ) ));
-        transition: width 500ms ease-in-out; } }
   @media (min-width: 960px) {
     #animacion {
       margin-right: 0;
@@ -1054,7 +1145,7 @@ body {
         width: calc(100% - ( calc(250px * 1.6 ) ));
         transition: all 500ms ease-in-out; }
         #animacion.active .serieHeader .serieBg, #animacion.active .serieHeader .serieTitle {
-          margin-left: calc(-.5 * ( calc(250px * 1.6 ) ));
+          width: 133.33%;
           transition: all 500ms ease-in-out; } }
 
 #cortos .animaTitleBox {
@@ -1197,42 +1288,22 @@ body {
   background-color: #0F0F0F; }
 
 #cortos .serieCompleta .infoAnim, #cortos .serieCompleta .infoModalAnim, #musicales .serieCompleta .infoAnim, #musicales .serieCompleta .infoModalAnim, #series .serieCompleta .infoAnim, #series .serieCompleta .infoModalAnim {
-  color: #6E6292;
+  color: #D8CBFF;
   background-color: #201B30; }
   #cortos .serieCompleta .infoAnim span, #cortos .serieCompleta .infoModalAnim span, #musicales .serieCompleta .infoAnim span, #musicales .serieCompleta .infoModalAnim span, #series .serieCompleta .infoAnim span, #series .serieCompleta .infoModalAnim span {
-    color: #D8CBFF; }
+    color: #6E6292; }
   #cortos .serieCompleta .infoAnim a, #cortos .serieCompleta .infoModalAnim a, #musicales .serieCompleta .infoAnim a, #musicales .serieCompleta .infoModalAnim a, #series .serieCompleta .infoAnim a, #series .serieCompleta .infoModalAnim a {
-    color: #D8CBFF;
+    color: #E33D47;
     font-weight: 700; }
   #cortos .serieCompleta .infoAnim .title, #cortos .serieCompleta .infoModalAnim .title, #musicales .serieCompleta .infoAnim .title, #musicales .serieCompleta .infoModalAnim .title, #series .serieCompleta .infoAnim .title, #series .serieCompleta .infoModalAnim .title {
-    color: #D8CBFF; }
+    color: #E33D47; }
 
 #cortos #gallery-Cortos, #cortos #gallery-Musica, #cortos #gallery-Mono, #cortos #gallery-Fort, #cortos #gallery-Gamarra, #cortos #gallery-Cyber, #musicales #gallery-Cortos, #musicales #gallery-Musica, #musicales #gallery-Mono, #musicales #gallery-Fort, #musicales #gallery-Gamarra, #musicales #gallery-Cyber, #series #gallery-Cortos, #series #gallery-Musica, #series #gallery-Mono, #series #gallery-Fort, #series #gallery-Gamarra, #series #gallery-Cyber {
   background-color: #1b1824; }
-  #cortos #gallery-Cortos .caption, #cortos #gallery-Musica .caption, #cortos #gallery-Mono .caption, #cortos #gallery-Fort .caption, #cortos #gallery-Gamarra .caption, #cortos #gallery-Cyber .caption, #musicales #gallery-Cortos .caption, #musicales #gallery-Musica .caption, #musicales #gallery-Mono .caption, #musicales #gallery-Fort .caption, #musicales #gallery-Gamarra .caption, #musicales #gallery-Cyber .caption, #series #gallery-Cortos .caption, #series #gallery-Musica .caption, #series #gallery-Mono .caption, #series #gallery-Fort .caption, #series #gallery-Gamarra .caption, #series #gallery-Cyber .caption {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    z-index: 2; }
-    #cortos #gallery-Cortos .caption .captionContent, #cortos #gallery-Musica .caption .captionContent, #cortos #gallery-Mono .caption .captionContent, #cortos #gallery-Fort .caption .captionContent, #cortos #gallery-Gamarra .caption .captionContent, #cortos #gallery-Cyber .caption .captionContent, #musicales #gallery-Cortos .caption .captionContent, #musicales #gallery-Musica .caption .captionContent, #musicales #gallery-Mono .caption .captionContent, #musicales #gallery-Fort .caption .captionContent, #musicales #gallery-Gamarra .caption .captionContent, #musicales #gallery-Cyber .caption .captionContent, #series #gallery-Cortos .caption .captionContent, #series #gallery-Musica .caption .captionContent, #series #gallery-Mono .caption .captionContent, #series #gallery-Fort .caption .captionContent, #series #gallery-Gamarra .caption .captionContent, #series #gallery-Cyber .caption .captionContent {
-      width: 100%;
-      color: #D8CBFF;
-      overflow: hidden;
-      background-color: rgba(32, 27, 48, 0.8);
-      padding: 0.2em 0.5em;
-      margin: auto 0em 0.5em; }
-      #cortos #gallery-Cortos .caption .captionContent p, #cortos #gallery-Musica .caption .captionContent p, #cortos #gallery-Mono .caption .captionContent p, #cortos #gallery-Fort .caption .captionContent p, #cortos #gallery-Gamarra .caption .captionContent p, #cortos #gallery-Cyber .caption .captionContent p, #musicales #gallery-Cortos .caption .captionContent p, #musicales #gallery-Musica .caption .captionContent p, #musicales #gallery-Mono .caption .captionContent p, #musicales #gallery-Fort .caption .captionContent p, #musicales #gallery-Gamarra .caption .captionContent p, #musicales #gallery-Cyber .caption .captionContent p, #series #gallery-Cortos .caption .captionContent p, #series #gallery-Musica .caption .captionContent p, #series #gallery-Mono .caption .captionContent p, #series #gallery-Fort .caption .captionContent p, #series #gallery-Gamarra .caption .captionContent p, #series #gallery-Cyber .caption .captionContent p {
-        line-height: 1.1; }
-    #cortos #gallery-Cortos .caption .captionContent, #cortos #gallery-Musica .caption .captionContent, #cortos #gallery-Mono .caption .captionContent, #cortos #gallery-Fort .caption .captionContent, #cortos #gallery-Gamarra .caption .captionContent, #cortos #gallery-Cyber .caption .captionContent, #musicales #gallery-Cortos .caption .captionContent, #musicales #gallery-Musica .caption .captionContent, #musicales #gallery-Mono .caption .captionContent, #musicales #gallery-Fort .caption .captionContent, #musicales #gallery-Gamarra .caption .captionContent, #musicales #gallery-Cyber .caption .captionContent, #series #gallery-Cortos .caption .captionContent, #series #gallery-Musica .caption .captionContent, #series #gallery-Mono .caption .captionContent, #series #gallery-Fort .caption .captionContent, #series #gallery-Gamarra .caption .captionContent, #series #gallery-Cyber .caption .captionContent {
-      width: 97.5%;
-      background-color: rgba(32, 27, 48, 0.7); }
-      #cortos #gallery-Cortos .caption .captionContent h4, #cortos #gallery-Musica .caption .captionContent h4, #cortos #gallery-Mono .caption .captionContent h4, #cortos #gallery-Fort .caption .captionContent h4, #cortos #gallery-Gamarra .caption .captionContent h4, #cortos #gallery-Cyber .caption .captionContent h4, #musicales #gallery-Cortos .caption .captionContent h4, #musicales #gallery-Musica .caption .captionContent h4, #musicales #gallery-Mono .caption .captionContent h4, #musicales #gallery-Fort .caption .captionContent h4, #musicales #gallery-Gamarra .caption .captionContent h4, #musicales #gallery-Cyber .caption .captionContent h4, #series #gallery-Cortos .caption .captionContent h4, #series #gallery-Musica .caption .captionContent h4, #series #gallery-Mono .caption .captionContent h4, #series #gallery-Fort .caption .captionContent h4, #series #gallery-Gamarra .caption .captionContent h4, #series #gallery-Cyber .caption .captionContent h4 {
-        color: #d8cbff; }
+  #cortos #gallery-Cortos .caption .captionContent, #cortos #gallery-Musica .caption .captionContent, #cortos #gallery-Mono .caption .captionContent, #cortos #gallery-Fort .caption .captionContent, #cortos #gallery-Gamarra .caption .captionContent, #cortos #gallery-Cyber .caption .captionContent, #musicales #gallery-Cortos .caption .captionContent, #musicales #gallery-Musica .caption .captionContent, #musicales #gallery-Mono .caption .captionContent, #musicales #gallery-Fort .caption .captionContent, #musicales #gallery-Gamarra .caption .captionContent, #musicales #gallery-Cyber .caption .captionContent, #series #gallery-Cortos .caption .captionContent, #series #gallery-Musica .caption .captionContent, #series #gallery-Mono .caption .captionContent, #series #gallery-Fort .caption .captionContent, #series #gallery-Gamarra .caption .captionContent, #series #gallery-Cyber .caption .captionContent {
+    background-color: rgba(32, 27, 48, 0.7); }
+    #cortos #gallery-Cortos .caption .captionContent h4, #cortos #gallery-Musica .caption .captionContent h4, #cortos #gallery-Mono .caption .captionContent h4, #cortos #gallery-Fort .caption .captionContent h4, #cortos #gallery-Gamarra .caption .captionContent h4, #cortos #gallery-Cyber .caption .captionContent h4, #musicales #gallery-Cortos .caption .captionContent h4, #musicales #gallery-Musica .caption .captionContent h4, #musicales #gallery-Mono .caption .captionContent h4, #musicales #gallery-Fort .caption .captionContent h4, #musicales #gallery-Gamarra .caption .captionContent h4, #musicales #gallery-Cyber .caption .captionContent h4, #series #gallery-Cortos .caption .captionContent h4, #series #gallery-Musica .caption .captionContent h4, #series #gallery-Mono .caption .captionContent h4, #series #gallery-Fort .caption .captionContent h4, #series #gallery-Gamarra .caption .captionContent h4, #series #gallery-Cyber .caption .captionContent h4 {
+      color: #d8cbff; }
 
 #infantiles {
   background-color: #FFF; }
@@ -1250,30 +1321,10 @@ body {
       color: #E33D47; }
   #infantiles #gallery-LuluChiqui, #infantiles #gallery-Markitos {
     background-color: #FF7A7A; }
-    #infantiles #gallery-LuluChiqui .caption, #infantiles #gallery-Markitos .caption {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      background-color: transparent;
-      position: absolute;
-      overflow: hidden;
-      top: 0;
-      bottom: 0;
-      z-index: 2; }
-      #infantiles #gallery-LuluChiqui .caption .captionContent, #infantiles #gallery-Markitos .caption .captionContent {
-        width: 100%;
-        color: #D8CBFF;
-        overflow: hidden;
-        background-color: rgba(32, 27, 48, 0.8);
-        padding: 0.2em 0.5em;
-        margin: auto 0em 0.5em; }
-        #infantiles #gallery-LuluChiqui .caption .captionContent p, #infantiles #gallery-Markitos .caption .captionContent p {
-          line-height: 1.1; }
-      #infantiles #gallery-LuluChiqui .caption .captionContent, #infantiles #gallery-Markitos .caption .captionContent {
-        width: 97.5%;
-        background-color: rgba(131, 27, 33, 0.6); }
-        #infantiles #gallery-LuluChiqui .caption .captionContent h4, #infantiles #gallery-Markitos .caption .captionContent h4 {
-          color: #FCE9E9; }
+    #infantiles #gallery-LuluChiqui .caption .captionContent, #infantiles #gallery-Markitos .caption .captionContent {
+      background-color: rgba(131, 27, 33, 0.6); }
+      #infantiles #gallery-LuluChiqui .caption .captionContent h4, #infantiles #gallery-Markitos .caption .captionContent h4 {
+        color: #FCE9E9; }
 
 #comerciales {
   background-color: #FFF; }
@@ -1291,30 +1342,10 @@ body {
       color: #E33D47; }
   #comerciales #gallery-Comerciales {
     background-color: #FF7A7A; }
-    #comerciales #gallery-Comerciales .caption {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      background-color: transparent;
-      position: absolute;
-      overflow: hidden;
-      top: 0;
-      bottom: 0;
-      z-index: 2; }
-      #comerciales #gallery-Comerciales .caption .captionContent {
-        width: 100%;
-        color: #D8CBFF;
-        overflow: hidden;
-        background-color: rgba(32, 27, 48, 0.8);
-        padding: 0.2em 0.5em;
-        margin: auto 0em 0.5em; }
-        #comerciales #gallery-Comerciales .caption .captionContent p {
-          line-height: 1.1; }
-      #comerciales #gallery-Comerciales .caption .captionContent {
-        width: 97.5%;
-        background-color: rgba(131, 27, 33, 0.6); }
-        #comerciales #gallery-Comerciales .caption .captionContent h4 {
-          color: #FCE9E9; }
+    #comerciales #gallery-Comerciales .caption .captionContent {
+      background-color: rgba(131, 27, 33, 0.6); }
+      #comerciales #gallery-Comerciales .caption .captionContent h4 {
+        color: #FCE9E9; }
 
 @media (min-width: 960px) {
   #cortos .serieCompleta, #musicales .serieCompleta, #comerciales .serieCompleta {
@@ -1364,54 +1395,6 @@ body {
     font-size: 45px; }
     #carousel-Cortos.carousel .carousel-control-prev i:hover, #carousel-Cortos.carousel .carousel-control-next i:hover, #carousel-Musica.carousel .carousel-control-prev i:hover, #carousel-Musica.carousel .carousel-control-next i:hover, #carousel-Comerciales.carousel .carousel-control-prev i:hover, #carousel-Comerciales.carousel .carousel-control-next i:hover {
       color: #ed8086; }
-
-.tablaPosicion {
-  padding: 2em 0;
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-
-.tablaAnim {
-  display: none; }
-  @media (min-width: 960px) {
-    .tablaAnim {
-      width: 80%;
-      font-weight: 300;
-      box-sizing: border-box;
-      display: grid;
-      grid-template-rows: 30px 1fr; }
-      .tablaAnim .titleTabla {
-        background-color: #201B30;
-        width: 100%;
-        font-weight: 700;
-        border: 0;
-        display: grid;
-        grid-template-columns: 20% 20% 10% 50%;
-        align-items: center; }
-        .tablaAnim .titleTabla p {
-          border: solid 1px #0F0F0F;
-          padding: 0.2em 0.5em;
-          box-sizing: border-box; }
-      .tablaAnim .contenidoTabla {
-        background-color: #272727;
-        display: grid;
-        grid-template-columns: 20% 20% 10% 50%;
-        grid-template-rows: repeat(5, 0fr);
-        align-items: stretch; }
-        .tablaAnim .contenidoTabla p {
-          border: solid 1px #0F0F0F;
-          padding: 3em 0.5em;
-          box-sizing: border-box; }
-        .tablaAnim .contenidoTabla ul {
-          border: solid 1px #0F0F0F;
-          padding: 0.2em 0;
-          box-sizing: border-box; }
-          .tablaAnim .contenidoTabla ul li {
-            list-style-position: inside;
-            list-style-type: none;
-            background-color: #202020;
-            margin: 0.2em 0;
-            padding: 0 0.5em; } }
 
 #textos {
   width: 100%;
@@ -1519,6 +1502,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0s;
     margin-bottom: .5em;
     padding: .5em 0;
     z-index: 5; }

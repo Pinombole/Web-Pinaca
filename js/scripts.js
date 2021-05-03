@@ -150,7 +150,7 @@ jQuery(document).ready(function() {
         Stop video playing when the MODAL is being closed (has finished closing)
     */
     $('#modal-Markitos').on('hidden.bs.modal', function(e) {
-        $('#modal-LuluChiqui iframe').each(function() {
+        $('#modal-Markitos iframe').each(function() {
             var videoURL = $(this).attr('src');
             $(this).attr('src', videoURL);
         });
