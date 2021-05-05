@@ -133,6 +133,9 @@
 	color: $color-notaPie-head;
 	width: $ancho;
 	text-align: right;
+    position: absolute;
+    bottom: 1em;
+    right: .5em;
 }
 
 @mixin caption-img () {

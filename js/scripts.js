@@ -474,7 +474,61 @@ $('a.portfolioItem').click(function (e) {
 });
 
 
+//Textos Read More//
+
+function leerMas(titulo) {
+	let dots = document.querySelector(`.texto[data-titulo="${titulo}"] .dots`);
+	let moreText = document.querySelector(`.texto[data-titulo="${titulo}"] .masTexto`); 
+	let btnText = document.querySelector(`.texto[data-titulo="${titulo}"] .btn-leer-mas`);
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Leer más"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Leer menos"; 
+    moreText.style.display = "inline";
+  }
+}
 
 
 
+var ensayos = document.querySelectorAll('.ensayo');
+var cuentos = document.querySelectorAll('.cuento');
+var liricas = document.querySelectorAll('.lirica');
+var alls = document.querySelectorAll('.item');
 
+
+function hide_init(){
+   for (var i = 0; i < alls.length; ++i) { 
+   	alls[i].style.display = 'none'; 
+	}
+}
+
+function show_ensayos(){ 
+	hide_init();
+	for (var i = 0; i < ensayos.length; ++i) { 
+	ensayos[i].style.display = 'inline-block'; 
+	} 
+}
+
+function show_cuentos(){
+	hide_init();
+	for (var i = 0; i < cuentos.length; ++i) { 
+	cuentos[i].style.display = 'inline-block'; 
+	} 
+}
+
+function show_poesia(){
+	hide_init();
+	for (var i = 0; i < liricas.length; ++i) { 
+	liricas[i].style.display = 'inline-block'; 
+	} 
+}
+
+function show_all_texts(){  
+	for (var i = 0; i < alls.length; ++i) { 
+	alls[i].style.display = 'inline-block'; 
+	} 
+}

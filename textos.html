@@ -26,7 +26,7 @@
 </head> 
 <body>
 	<header id="header" class="navbar align-items-center">
-		<a href="index.html" class="logo wow animate__animated animate__flash">
+		<a href="index.html" class="logo">
 			<img src="media/logo-pinaca-header-violeta.png" alt="Home">
 		</a>
 		<div class="logoCentral border rounded-circle wow animate__animated animate__pulse">
@@ -142,60 +142,73 @@
 				<p class="quotesTexto">"Llega un momento en que uno no escribe a los personajes, sino que los personajes lo escriben a uno"</p>
 				<p class="quotesTexto quotesTexto--especial">-Pinaca<span>*</span></p>
 			</div>
-			<p class="notaPie">*Y después lo internaron.</p>	
+			<p class="notaPie">*¿Y a eso le llaman pensar?</p>	
 			<div class="categorias">
-				<h5>Categorías</h5> 
+				<button type="button" class="btn btn-link categoriasTitle" id="show_all" onclick="show_all_texts()">Categoría </button> 
 			    <ul>
-			        <li><a href="#" alt="Cuentos">Cuentos <span>(y algunos robos)</span></a></li>
-			        <li><a href="#" alt="Ensayos">Ensayos <span>(y todo tipo de reflexiones inconclusas)</span></a></li>
-			        <li><a href="#" alt="Lírica">Poesia <span>(y sobretodo de rima)</span></a></li>
+			        <li><button  type="button" class="btn btn-link" id="show_cuentos" onclick="show_cuentos()">Cuentos <span>(y algunos robos)</span></button></li>
+			        <li><button type="button" class="btn btn-link" id="show_ensayos" onclick="show_ensayos()">Ensayos <span>(y todo tipo de reflexiones inconclusas)</span></button></li>
+			        <li><button type="button" class="btn btn-link" id="show_poesia" onclick="show_poesia()">Poesia <span>(y sobretodo de rima)</span></button></li>
 			    </ul>
 			</div>
 		</div>
-		<div class="contTextos">
-			<article class="prosa">
-				<h3>Magia</h3>
-				<p>'No busqués mas, tu magia no existe' ya lo dijo el mago gurú que maneja los corazones. Quizás por esa creencia él esté tan sólo, pero al menos sabe bien lo que hace, lo que hará, y en parte, lo que quiere. En cambio, esa criaturita de blanca tez y mirada de cristal, depende de la magia. De un click. Y, difícilmente, le caiga de arriba algo así. Y aunque ella, con su ternura desinteresada, sin duda lo merezca, difícilmente lo consiga por arte de magia. Quien espere magia en esta jungla de cartón terciado, llena de muerte, sudor y lágrimas, quizás termine sus días enloqueciendo en la fragilidad del tick anhelado.</p><div class="textHidden"><p>Quizás quede ciega en su soledad, y los amores más profundos de su existencia ronden a su alrededor como simples cariños, sin que ella los note. Y el día menos pensado despierte sin apreciar esa verdad que el gurú sostiene, y una lágrima caiga de su ojo, empapando su equivocación de años. De años esperando la magia que no encanta, el destino que no está destinado, y el amor que no enamora. Quizás respire el arte y se salve con él, pero en las noches, el humo desolador cubrirá sus amplios pulmones y marchitará su saludable ser. El gurú loco, por su lado ve oportunidades en las cercanías certeras y nunca en futuros inciertos; inexistentes, tal vez.</p>
-				<p>'¿Hace cuánto que reprimo esto?' le dice el mago a su mente, y planea una confesión que abrume la niebla de ese rostro lácteo. Lácteo como la galaxia mas profunda y misteriosa, como la única galaxia que le interesa al mago-brujo. Y cuando percibe la frialdad enternecedora de esos ojos claros, el mago se retuerce, relame heridas pasadas y finalmente decide: Son esos rayos penetrantes, disfrazados de pupilas, lo que realmente quiere.</p>
-				<p>Cansado, el Mago-Gurú que maneja los corazones, se presentó ante ella, la doncella de blanca palidez e infinita mirada, trayéndose un hechizo entre manos. Ella se sorprendió al verlo con un semblante que nunca antes había notado. ¿Estaba el mago realmente allí o era apenas una proyección de su cuerpo astral? Al fin de cuentas. Nada de eso importará. Desde lo albores del lenguaje, las palabras pueden transformar el mundo: generar odios donde ante había amores, generar amores donde antes había indiferencia. ¿Qué son los hechizos sino palabras sofisticadas? Es el dogma que, para bien o para mal, guio siempre los pasos del Brujo. Este fue el hechizó que el gurú tímido, soltó aquel dia:</p>
-				<p>'¿Sufriríamos tantos con darnos un tiro de suerte?'</p>
-				<p>Se confiesa y el contragolpe es letal. Tan letal como in-imaginado, tan letal como la incertidumbre que rodea esa respuesta. Partiendo de raíces distantes, los dos hechizan de maneras diferentes. El mago espera encantar en las cercanías solo a seres que lo afecten psíquico-sentimentalmente y engrandece las pequeñas cosas. Ella espera un hechizo gigante que salga de algún agüjero, que aparezca por azar, y le sacuda la cabeza... Cada uno está convencido de sus maneras, de sus formas incompatiblemente abstractas... Se ven y lloran... El uno por el otro... Y tal vez deberán retirarse, alejarse... El brujo la quiere, quiere algo más pero, de inseguro, anticipa la respuesta... Y ella lo taladra con sus hermosos faroles de energía vital... Se tienen el uno al otro de manera, cuasi-supeficial, equidistante, pero con un gran afecto cierto... Ni el mago, ni la de los ojos, saben qué les deparará el futuro... No saben si cada uno va a morir en la suya... No saben si van a coincidir...</p>
-				<p>'Quizás ahi, en la dulce sensación del futuro incierto, radique la verdadera magia'</p>
-				<p>El mago duda y se ríe...</p></div>
+		<div class="contTextos item_wrapper">
+			<article class="item texto cuento" data-titulo="hechizo">
+				<h3>HECHIZOS DE INCERTIDUMBRE</h3>
+				<div class="raya"></div>
+				<p><span class="type-light type-large-120">'No busqués mas, tu magia no existe'</span> ya lo dijo <span class="type-bold type-large-120">el mago gurú que maneja los corazones.</span> Quizás por esa creencia él esté tan sólo, pero al menos sabe bien lo que hace, lo que hará, y en parte, lo que quiere. En cambio, esa criaturita de blanca tez y mirada de cristal, depende de la magia. De un click. Y, difícilmente, le caiga de arriba algo así. Y aunque ella, con su ternura desinteresada, sin duda lo merezca, difícilmente lo consiga por arte de magia. Quien espere magia en esta jungla de cartón terciado, llena de muerte, sudor y lágrimas, quizás termine sus días enloqueciendo en la fragilidad del tick anhelado<span class="dots">...</span></p>
+				<div class="masTexto">
+					<p>Quizás quede ciega en su soledad, y los amores más profundos de su existencia ronden a su alrededor como simples cariños, sin que ella los note. Y el día menos pensado despierte sin apreciar <span class="type-bold">esa verdad que el gurú</span>, y una lágrima caiga de su ojo, empapando su equivocación de años. De años esperando la magia que no encanta, el destino que no está destinado, y el amor que no enamora. Quizás respire el arte y se salve con él, pero en las noches, el humo desolador cubrirá sus amplios pulmones y marchitará su saludable ser. <span class="type-bold">El gurú loco</span>, por su lado ve oportunidades en las cercanías certeras y nunca en futuros inciertos; inexistentes, tal vez.</p>
+					<p><span class="type-light type-large-120">'¿Hace cuánto que reprimo esto?'</span> le dice el mago a su mente, y planea una confesión que abrume la niebla de ese rostro lácteo. Lácteo como la galaxia mas profunda y misteriosa, como la única galaxia que le interesa al mago-brujo. Y cuando percibe la frialdad enternecedora de esos ojos claros, <span class="type-bold">el mago</span>se retuerce, relame heridas pasadas y finalmente decide: Son <span class="type-bold">esos rayos penetrantes</span>, disfrazados de pupilas, lo que realmente quiere.</p>
+					<p>Cansado, el Mago-Gurú que maneja los corazones, se presentó ante ella, la <span class="type-bold">doncella de blanca palidez e infinita mirada</span>, trayéndose <span class="type-bold">un hechizo</span> entre manos. Ella se sorprendió al verlo con un semblante que nunca antes había notado. <span class="type-bold">¿Estaba el mago realmente allí o era apenas una proyección de su cuerpo astral?</span> Al fin de cuentas, nada de eso importará, pues desde lo albores del lenguaje las palabras pueden transformar el mundo: generar odios donde ante había amores, generar amores donde antes había indiferencia. <span class="type-light">¿Qué son los hechizos sino palabras sofisticadas?</span> Es el dogma que, para bien o para mal, guio siempre los pasos de un Brujo. Este fue el hechizo que el gurú tímido, soltó aquel dia:</p>
+					<p><span class="type-light type-large-120">-¿Sufriríamos tantos con darnos un tiro de suerte?</span></p>
+					<p>Se confiesa y el contragolpe es letal. Tan letal como in-imaginado, tan letal como la incertidumbre que rodea esa respuesta. Partiendo de raíces distantes, los dos hechizan de maneras diferentes. <span class="type-bold type-large-120">El mago</span> espera encantar en las cercanías solo a seres que lo afecten psíquico-sentimentalmente y engrandece las pequeñas cosas. <span class="type-bold type-large-120">Ella</span> espera un hechizo gigante que salga de algún agüjero, que aparezca por azar, y le sacuda la cabeza... Cada uno está convencido de sus maneras, de sus formas incompatiblemente abstractas... Se ven y lloran... El uno por el otro... Y tal vez deberán retirarse, alejarse... El brujo la quiere, quiere algo más pero, de inseguro, anticipa una negativa y calla, mientras ella lo taladra con sus hermosos faroles de energía vital... Se tienen el uno al otro de manera, equidistante, pero con un gran afecto cierto...  <span class="type-bold">Ni el mago, ni la de los ojos, saben qué les deparará el futuro...</span> No saben si cada uno va a morir en la suya... No saben si algún día van a coincidir...</p>
+					<p><span class="type-light type-large-120">'Quizás ahi, en la dulce sensación del futuro incierto, radique la verdadera magia'</span></p>
+					<p class="type-right mb-3">El mago duda y se ríe...</p>
+				</div>
+				<button onclick="leerMas('hechizo')" class="btn btn-outline-danger btn-leer-mas">Leer más</button>
 			</article>
 
-			<article class="prosa dark">
-				<h3>La nostalgia de los desalmados</h3>
-				<p>Es difícil levantarse a vivir sin alma cada día. No me faltan energías, optimismo o esperanzas. No escasean afectos o compañeros de ruta. Los proyectos y los sueños por suerte me siguen emocionando e ilusionando. La inteligencia y la fuerza creadora del mundo, como siempre, me cautivan. Pero el alma no la tengo. Creo que me la olvidé en las bellas manos de la persona que más amé durante esos años que creímos infinitos (he ahí el truco).</p><div class="textHidden">
-				<p>Es difícil medir, para alguien como yo que carece de una memoria privilegiada, cuánto di y cuanto faltó dar, cuanto cedí y cuanto debí ceder, cuanto me brindaste, cuanto te brindé o cuanto brindamos (chin chin), pero una cosa es segura: mi alma la dejé allá, lejos, en algún rincón, abrasándose y abrazándote, panza arriba, riendo o llorando con vos.</p>
-				<p>El alma quedatela, te la regalo.</p>
-				<p>Allá o donde sea que vayas, mi alma va a ser feliz con vos al lado. Tengo la certeza de que a mi alma, alegre y soñadora, la vas a saber cuidar mejor vos que yo (he ahí el truco).</p>
-				<p>Son simplemente los ecos de esa alma ausente (la nostalgia de los desalmados) los que me hacen soñar con una vida que nunca tuve: una en que al fin volviste y nos animamos a concretar eso que no alcanzamos a vivir. O tal vez un día alguien me vea sin alma y me comparta un poco la suya. Quizás de eso se trate el amor: De personas regalándose almas unas a las otras hasta el punto en el que ya nadie conserve la suya propia.</p>
-				<p>Tal vez no nos quede otra que aferrarnos bien fuerte al alma que hoy (o mañana) nos toque en suerte.</p>
-				<p>He ahí el truco.</p></div>
+			<article class="item texto ensayo dark" data-titulo="desalmados">
+				<h3>LA NOSTALGIA DE LOS DESALMADOS</h3>
+				<div class="raya"></div>
+				<p>Es difícil levantarse a vivir <span class="type-bold type-large-120">sin alma</span> cada día. No me faltan energías, optimismo o esperanzas. No escasean afectos o compañeros de ruta. Los proyectos y los sueños por suerte me siguen emocionando e ilusionando. La inteligencia y la fuerza creadora del mundo, como siempre, me cautivan. Pero el <span class="type-bold">alma no la tengo</span>. Creo que <span class="type-bold">me la olvidé en las bellas manos de la persona que más amé</span> durante esos años que creímos infinitos <span class="type-light">(he ahí el truco)</span><span class="dots">...</span></p>
+				<div class="masTexto">
+					<p>Es difícil medir, para alguien como yo que carece de una memoria privilegiada, cuánto di y cuanto faltó dar, cuanto cedí y cuanto debí ceder, cuanto me brindaste, cuanto te brindé o cuanto brindamos (chin chin), pero una cosa es segura: mi alma la dejé allá, <span class="type-light">lejos, en algún rincón,</span> abrasándose y abrazándote, <span class="type-light">panza arriba</span>, riendo o llorando con vos.</p>
+					<p><span class="type-large-120">El alma quedatela, <span class="type-bold">te la regalo</span></span>.</p>
+					<p>Allá o donde sea que vayas, mi alma va a ser feliz con vos al lado. Tengo la certeza de que a <span class="type-bold">mi alma, alegre y soñadora,</span> la vas a saber cuidar mejor vos que yo <span class="type-light">(he ahí el truco)</span>.</p>
+					<p>Son simplemente <span class="type-large-120"><span class="type-bold">los ecos de esa alma ausente </span>(la nostalgia de los desalmados)</span> los que me hacen soñar con una vida que nunca tuve: una en que por fin nos animamos a concretar eso que no alcanzamos a vivir.<br> O tal vez un día <span class="type-bold">alguien me vea sin alma</span> y me comparta un poco la suya. <span class="type-light">Quizás de eso se trate el amor:</span> <span class="type-bold">De personas regalándose almas unas a las otras</span> hasta el punto en el que ya nadie conserve la suya propia.</p>
+					<p>Tal vez no nos quede otra que <span class="type-bold">aferrarnos bien fuerte al alma que hoy (o mañana) nos toque en suerte.</span></p>
+					<p class="mb-3 type-right">He ahí el truco.</p>
+				</div>
+				<button onclick="leerMas('desalmados')" class="btn btn-outline-danger btn-leer-mas">Leer más</button>
 			</article>
 
-			<article class="lirica">
-				<h3>Eterna Compañia</h3>
-				<p><span>Te preguntas por qué es esto</span><br>
-					<span>i! Yo te mandé a llamar!</span><br>
+			<article class="item texto lirica" data-titulo="compania">
+				<h3>ETERNA COMPAÑIA</h3>
+				<div class="raya"></div>
+				<p>
+					<span>Te preguntas por qué es esto</span><br>
+					<span>Si! Yo te mandé a llamar!</span><br>
 					<span>Es que no estamos satisfechos</span><br>
 					<span>con tu rendimiento, flojo.</span><br>
 					<span>Y en esta empresa, Tierra,</span><br>
 					<span>vos ya no tenés lugar</span><br>
 					<span>'Voy a echarte a la mierda</span><br>
-					<span>por tu tiempo malgastar'</span>
+					<span>por tu tiempo malgastar'</span><br>
+					<span class="dots">...</span>
 				</p>
-				<p><span>Sé que llevas varios años</span><br>
-					<span>en esta eterna compañia</span><br>
-					<span>Si te pones a contarlos</span><br>
-					<span>diez mil es lo que dirías</span><br>
-					<span>Hace tanto que empezaste</span><br>
-					<span>extrañando dinosaurios</span><br>
-					<span>bajo una árbol consumiste</span><br>
-					<span>al primer fuego temerario</span>
-				</p>
-				<div class="textHidden">
+				<div class="masTexto">	
+					<p>
+						<span>Sé que llevas varios años</span><br>
+						<span>en esta eterna compañia</span><br>
+						<span>Si te pones a contarlos</span><br>
+						<span>diez mil es lo que dirías</span><br>
+						<span>Hace tanto que empezaste</span><br>
+						<span>extrañando dinosaurios</span><br>
+						<span>bajo una árbol consumiste</span><br>
+						<span>al primer fuego temerario</span>
+					</p>			
 					<p>
 						<span>Tu asistencia fue perfecta</span><br>
 						<span>como bien, leal sirviente</span><br>
@@ -222,10 +235,12 @@
 						<span>Que no merecen terrores, ni facismo o tiranía</span><br>
 						<span>solo juegos en la Tierra, su futura compañía...</span>
 					</p>
-					<p><span>Yo diría, yo diría que podés hacerlo bien</span><br>
+					<p>
+						<span>Yo diría, yo diría que podés hacerlo bien</span><br>
 						<span>por tanto que le pifiés, mové rápido tus pies...</span>
 					</p>
-					<p><span>Que no queden impostores</span><br>
+					<p class="mb-3">
+						<span>Que no queden impostores</span><br>
 						<span>ni retrógrados de antes</span><br>
 						<span>Ni avalados por un voto</span><br>
 						<span>que los llene de poder...</span><br>
@@ -234,7 +249,92 @@
 						<span>ya perdiste varios siglos</span><br>
 						<span>pero el futuro es hoy...</span>
 					</p>
-				 <div>
+				</div>
+				<button onclick="leerMas('compania')" class="btn btn-outline-danger btn-leer-mas">Leer más</button>
+			</article>
+
+			<article class="item texto cuento dark" data-titulo="equis">
+				<h3>UNA CHICA LLAMADA EQUIS</h3>
+				<div class="raya"></div>
+				<p>Yo estuve muy enamorado de una chica a la que le decían <span class="type-bold type-large-120">“Equis”</span>, como la letra. El origen de su apodo nunca fue claro. <span class="type-light ">Algunos decían que era la abreviatura de <span class="type-bold">Equidistante</span>, que es como te hacía sentir; otros me contaron que era aun más despectivo ya que, dada su frialdad, una relación con "Equis" difícilmente llegara a ser una <span class="type-bold">"Triple Equis”</span></span> y ella misma me dijo, tal vez tomándome el pelo, que el origen de su apodo era <span class="type-bold">una incógnita</span>, como los mapas del tesoro o <span class="type-light type-large-120">la firma del que no sabe escribir</span>. Me acuerdo cuando la conocí. Bah, creo que me acuerdo, porque estaba bastante borracho. Siempre estoy bastante borracho cuando conozco a alguien y se enojan porque no me acuerdo, pero sino no podría ni hablarles. <span class="type-light">Y además sobrio tampoco me acordaría</span>. En fin, me gusta “Equis” y me gusta llamar a las personas por una letra <span class="type-bold">Nada puede salir mal de una relación que llega al nivel de intimidad en que alcanza con una letra</span><span class="dots">...</span></p>
+
+				<div class="masTexto">
+					<p>Cuando la conocí a X, hace un tiempo, fue en el recital de la banda de unos amigos. Nunca supe <span class="type-light">una J de música</span>, pero siempre me gustó el rock (tal vez por eso mismo). Y siempre tuve amigos, así que allá estaba yo, con una cerveza en la mano y unos amigos <span class="type-light type-large-120">desafinando en el escenario</span>. Y entre toda la gente, tomando algo, en un grupito numeroso de pibas y pibes, estaba <span class="type-bold type-large-120">ella.</span> Ya de movida me gustó que “Equis” no hacía esfuerzos para ser el centro de atención del grupete pero, cada vez que hablaba, el mundo se paraba. Me gustó que le prestara atención a la banda de mis amigos y que los suyos tuvieran que repetirle vaya uno a saber qué pregunta, porque <span class="type-light type-large-120">se colgaba escuchando</span>. Y no creo que le gustaran todos los temas de mis amigos (a nadie en su sano juicio) pero siempre, por respeto o lo que sea, aplaudía al final de cada uno de ellos.</p>
+					<p>Observé minuciosamente a ver si algunos de los que estaban en su mesa era un novio, una novia, un chongo o algo. Y no me pareció tal cosa. Cada tanto hablaba con alguno y le sonreía (ya hablaré de su sonrisa) pero no más que eso. <span class="type-bold">Tenía los ojos con mucha sombra, muchísima. Casi diría que demasiado, pero le daban el marco perfecto a sus ojos negros</span>. No sé si era linda, no creo que haya sido la más linda en ese bar. Pero yo no podía dejar de mirarla. Me imaginaba qué le diría, como la abordaría, si acaso daba hacerlo. Y mi mente estaba en blanco, como su piel. Me acuerdo que su palidez contrastaba con el abundante pelo castaño que le rodeaba la cara, la remera negra, la sombra de sus ojos. <span class="type-bold type-large-120">Era como ver</span> una pequeña puerta abierta <span class="type-bold type-large-120">en una inmensa oscuridad</span>. No pasó nada interesante hasta que mis amigos dejaron de tocar. Que, otra vez, no sé si tocaran bien pero a mí me gustan. Cuando terminaron, la gente aplaudió, las mesas se desacomodaron un toque. Mis amigos desarmaron el escenario y la banda de “Equis”, se aprestó a armar. Eran los siguientes. <span class="type-bold">Ella, me di cuenta al rato, era la bajista</span>.</p>
+					<p><span class="type-light type-large-120">-Cagué</span>, pensé. <span class="type-light type-large-120">Esta mina está buena, tiene magnetismo, es música (encima toca re bien).</span> Debe tener 1200 babosos alrededor. El recital de la banda de “X”  <span class="type-bold type-large-120">lo cambió todo</span>. No paraban de mirarla tipos, a mi criterio muchos más copados e interesantes que yo, otros músicos, hippies veteranos con muchos tatuajes, esos barmans que parecen <span class="type-light">esculpidos por Dios</span> y me llenan de birra mientas se ríen por dentro (lo sé, aunque no lo demuestren sus esbeltos rostros). El recital estuvo bueno, creo, <span class="type-bold">porque no paré de contemplarla en silencio</span>. Terminaron de tocar y el público no paraba de felicitarla. Al final, mientras todos desarmaban, medio que se empezó a hacer ojitos con un flaco <span class="type-bold">y se me fue todo aún más a la mierda</span>. Me seguí empedando y me negué a irme pese a que algunos amigos insistían en que ya fue. La remé, les saqué charla a todos para que se queden y yo seguir espiando el destino de “X”.	En una de esas, tratando aflojar con la obsesión, me voy a fumar un pucho a la vereda. Odiándome por fumar, como siempre. <span class="type-bold">Y también odiándome por obsesionarme, como siempre.</span> Casi sin darme cuenta, me tocan el hombro. <span class="type-bold type-large-120">Era "Equis”.</span></p>
+					<p class="mb-3"> Me pide fuego. Su voz jamás la voy a olvidar. Mientras saco el encendedor, levanto la vista y la veo. Más atrás estaba el flaco, esperándola, como para irse. No me importó. Un chiste creo que le metí, y se rio. No me acuerdo que le dije pero sé que la hice reir. Me agradeció el fuego y se fue con el chabón.  <span class="type-bold">Y “X” se fue de mi vida</span>, sin siquiera conocerla. Es cierto. No <span class="type-bold type-large-120">LA CONOCI</span>, asi con mayúsculas. Los supuestos orígenes sobre su apodo, los inventé. En realidad, le digo <span class="type-bold">"X”</span> porque nunca supe su nombre. Ella ni siquiera sabe el mio.  <span class="type-light type-large-120">No soy nada</span>. Soy el fuego de un encendedor de un cigarrillo que se fumó una vez. Pero a mí la sonrisa de X <span class="type-bold">todavía me da escalofríos.</span></p>
+				</div>
+				<button onclick="leerMas('equis')" class="btn btn-outline-danger btn-leer-mas">Leer más</button>
+			</article>
+
+			<article class="item texto ensayo" data-titulo="amorPropio">
+				<h3>EL AMOR PROPIO NO EXISTE</h3>
+				<div class="raya"></div>
+				<p><span class="type-bold type-large-120">Amarse a uno mismo</span> es el truco del sistema para gastar <span class="type-bold">más en nosotros y poco en los demás</span>. Así el dinero sobra. Así satisfacemos todo tipo de caprichos egoístas. No solo de gastar dinero se trata, claro. Viene con otro precio, acaso el que más me inquieta: <span class="type-bold">invertimos sentimientos solo en nosotros</span>. Amar siempre tiene un velo de miopía, pues disimula las imperfecciones. Valoro más a los que se aceptan a sí mismos aun sabiendo <span class="type-light">sus peores bajezas</span> que a los que ignoran sus falencias por amarse incondicionalmente. Y mucho más valoro a quienes sueñan en la vida con alguien que los ame y que ame, incluso, <span class="type-light">lo peor de uno mismo</span>. Y estén deseosos de amar incluso hasta los defectos del otro. Me refiero, vale aclarar, <span class="type-light">a esos pequeños defectos, a esos detalles cotidianos soportables</span>; no a maltratos inaceptables (ahí sí, rajá)<span class="dots">...</span></p>
+				<div class="masTexto">
+					<p>No nos mintamos a nosotros mismos. En nombre del <span class="type-bold">"Amarse uno mismo"</span>, <span class="type-light">ese mantra de hoy</span>, se cometen todo tipo de <span class="type-bold">egoísmos</span>. En su nombre, la opinión y el sentir diferente del otro es mierda, es merecedora de odio, es indignante en tanto me contradice a mí, <span class="type-light">la persona que más amo</span>. En su nombre sacamos selfies, construimos personalidades virtuales, <span class="type-light">cools de cartón</span>. Pasamos semáforos en rojo, estacionamos en cualquier lado, nos quedamos con el vuelto. En su nombre violamos. Invadimos países. <span class="type-bold">Puteamos al que no tiene y quiere lo mío</span>. En su nombre, <span class="type-bold">la solidaridad no tiene sentido</span> o se reduce a sacarse de encima consumos que ya no alimenten mi ego. En su nombre, no llamamos para ver como están los demás, no nos involucramos en los problemas del otro, no nos contaminamos con su<span class="type-bold">"mala vibra"</span>. En su nombre damos consejos políticamente correctos, nadamos en un mar de auto-referencia, nos lucimos con el chiste más genial en el momento más inoportuno. <span class="type-bold">En su nombre no nos "rebajamos" a decirle a la persona que amamos que la amamos. En su nombre, buscamos excusas para no amar a alguien más.</span></p>					
+					<p><span class="type-bold">Nadie está diciendo que está mal quererse a uno mismo</span>, conocerse, respetarse, aceptarse, ser fiel a los momentos (siempre cambiantes) de la propia personalidad; pero eso no puede ir en desmedro de ESE otro tipo de amor. El que vale. <span class="type-light type-large-120">El que transforma. El que nos hace mejorar. El que nos trasciende.</span>  Sentirlo es siempre una bendición. Y alcanza con no frustrarnos cuando no se da, con eso solo. Claro que se corren riesgos, claro que nos exponemos, claro que no todas las relaciones llegan a ese tipo de amor, claro que a veces, <span class="type-light">situaciones cotidianas superfluas fagocitan esa conexión</span>. Por supuesto que amarse a uno mismo es más seguro, es más económico, es más pragmático. Pero <span class="type-bold">no alcanza</span>. No transforma el mundo, no transforma al otro, no nos hace cambiar, crecer. La senda del amor al otro es incierta, <span class="type-light">aleatoria, inmanejable</span> y da miedo, sí. ¡Pero no seamos cagones! El <span class="type-bold">único momento no-egocéntrico</span> de la vida de un ser humano es cuando ama a alguien, cuando la individualidad deja de ser una opción, cuando el ego se disuelve y se funde con el del otro.</p>
+					<p class="mb-3">Por eso, <span class="type-bold"><span class="type-large-120">"Amarse a uno mismo"</span> no es amar</span>, es un oxímoron, una engañosa contradicción.</p>
+				</div>			
+				<button onclick="leerMas('amorPropio')" class="btn btn-outline-danger btn-leer-mas">Leer más</button>
+			</article>
+
+			<article class="item texto lirica dark" data-titulo="blusito">
+				<h3>BLUSITO OLVIDABLE</h3>
+				<div class="raya"></div>
+				<p>
+					<span>Pensando sola en su valle</span><br>
+					<span>un alma en pena espera</span><br>
+					<span>alcanzar aquel viaje</span><br>
+					<span class="ml-5">que apague su dolor...</span><br>
+					<span>que apague su dolor</span><br>
+					<span class="ml-5">(que salve esta colmena)</span><br>
+					<span class="dots">...</span>
+				</p>
+				<div class="masTexto">	
+					<p>
+						<span>Cansado (¡al fin!) llegó</span><br>
+						<span>a ese néctar perdido,</span><br>
+						<span>y un  fuego consumió</span><br>
+						<span>todo lo conseguido...</span><br>
+					</p>
+					<p>
+						<span>¡Ay! Pobre, su dolor...</span><br>
+						<span>¡Pobre! tras cruel mujer,</span><br>
+						<span>bestia, que devoró</span><br>
+						<span>a su ser como era ayer</span><br>
+					</p>			
+					<p>
+						<span>La bestia lo abarcó</span><br>
+						<span>lo ahorcó, lo sofocó, </span><br>
+						<span>y en un lugar, perdido,</span><br>
+						<span class="ml-5">sin ángel lo dejó...</span><br>
+					</p>
+					<p>			
+						<span>Su ángel se notó</span><br>
+						<span>cansado y aturdido,</span><br>
+						<span class="ml-5">en este rock de amor</span><br>
+						<span class="ml-5">(en este blues de olvido).</span>
+					</p>
+					<p><span>-'No es bueno el olvidar</span><br>
+						<span class="ml-5">todo lo acontecido'</span><br>
+						<span>¿Es bueno así pensar</span><br>
+						<span>  si estamos consumidos?</span>	
+					</p>
+					<p><span>La noche lo tragó</span><br>
+						<span>(y ese néctar prohibido)</span><br>
+						<span class="ml-5">su ángel lo arrastró</span><br>						
+						<span class="ml-5">al viaje del olvido...</span>
+					</p>				
+					<p class="mb-3">
+						<span>Su ángel vengador,</span><br>					
+						<span>su ángel protegido,</span><br>
+						<span>tan solo lo cuidó</span><br>
+						<span class="ml-5">en este rock de amor</span><br>
+						<span class="ml-5">(en este blues de olvido).</span>
+					</p>
+				</div>
+				<button onclick="leerMas('blusito')" class="btn btn-outline-danger btn-leer-mas">Leer más</button>
 			</article>
 		</div>
 	</main>

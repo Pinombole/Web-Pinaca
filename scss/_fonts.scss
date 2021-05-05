@@ -35,6 +35,18 @@ strong {
 	font-weight: $font-bold;
 }
 
+.type-center { 
+	text-align: center;
+}
+
+.type-right {
+	text-align: right;
+}
+
+.type-large-120 {
+	font-size: 120%;
+}
+
 #menu h4 {
 	font-family: $font;
 	font-weight: $font-regular;

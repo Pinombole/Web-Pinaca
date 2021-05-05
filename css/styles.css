@@ -27,6 +27,15 @@ strong {
   font-family: "Kalam", cursive;
   font-weight: 700; }
 
+.type-center {
+  text-align: center; }
+
+.type-right {
+  text-align: right; }
+
+.type-large-120 {
+  font-size: 120%; }
+
 #menu h4 {
   font-family: "Kalam", cursive;
   font-weight: 400; }
@@ -93,10 +102,10 @@ body {
     padding: 0 .2em; }
     @media (min-width: 540px) {
       body h5 {
-        font-size: 1.2rem; } }
+        font-size: 1.3rem; } }
     @media (min-width: 960px) {
       body h5 {
-        font-size: 1.2rem; } }
+        font-size: 1.4rem; } }
 
 #header {
   height: 90px;
@@ -308,7 +317,7 @@ body {
   font-size: 0.8rem;
   text-align: center;
   margin: 0;
-  padding-right: 0; }
+  padding: auto 0; }
   #footer ul {
     margin: 1em 0; }
     #footer ul li {
@@ -317,20 +326,21 @@ body {
       font-size: 1rem;
       color: #FFF; }
   #footer .row {
-    margin: auto 0; }
+    margin: auto 0;
+    width: 100% !important; }
   #footer p {
     color: #E33D47;
     margin-bottom: .2em; }
   @media (min-width: 540px) {
     #footer {
-      padding-right: 0;
+      padding: auto 0;
       transition: all 500ms ease-in-out; }
       #footer.active {
         padding-right: 325px;
         transition: all 500ms ease-in-out; } }
   @media (min-width: 960px) {
     #footer {
-      padding-right: 0;
+      padding: auto 0;
       transition: all 500ms ease-in-out; }
       #footer.active {
         padding-right: 400px;
@@ -389,6 +399,9 @@ body {
   background-color: #2C2743; }
   #contacto h2 {
     background-color: #831B21; }
+
+.btn {
+  cursor: pointer; }
 
 #portfolio {
   width: 100%;
@@ -710,7 +723,10 @@ body {
       padding-top: 1em;
       color: #6E6292;
       width: 100%;
-      text-align: right; }
+      text-align: right;
+      position: absolute;
+      bottom: 1em;
+      right: .5em; }
   #animacion .titleAnimaDk {
     color: #E33D47;
     padding-top: .2em;
@@ -1403,6 +1419,13 @@ body {
   padding-bottom: 0;
   background-color: #FFF;
   color: #831B21; }
+  #textos .masTexto, #textos .masTexto2 {
+    display: none; }
+  #textos .btn-leer-mas {
+    float: right;
+    position: relative;
+    bottom: 10px;
+    right: 0; }
   @media (min-width: 960px) {
     #textos {
       width: 100%;
@@ -1410,8 +1433,19 @@ body {
       #textos.active {
         width: calc(100% - ( calc(250px * 1.6 ) ));
         transition: all 500ms ease-in-out; }
-        #textos.active .contTextos h3 {
-          font-size: 1.5rem; } }
+        #textos.active .categorias button {
+          margin: 0 .1em; }
+          #textos.active .categorias button button span {
+            font-size: .9em; } }
+  #textos .btn {
+    line-height: 1.2; }
+    #textos .btn:focus {
+      outline: none;
+      box-shadow: none;
+      filter: brightness(125%); }
+    #textos .btn:hover {
+      filter: brightness(150%);
+      transition: all 100ms ease-in-out; }
 
 .headTextos {
   position: relative;
@@ -1423,7 +1457,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 350px; }
+  min-height: 350px;
+  justify-content: space-between; }
   .headTextos .titleOverlay {
     height: 100%;
     width: 100%;
@@ -1493,120 +1528,157 @@ body {
     padding-top: 1em;
     color: #E33D47;
     width: 100%;
-    text-align: right; }
+    text-align: right;
+    position: absolute;
+    bottom: 1em;
+    right: .5em;
+    bottom: 11em; }
+    @media (min-width: 540px) {
+      .headTextos .notaPie {
+        bottom: 9em; } }
+    @media (min-width: 960px) {
+      .headTextos .notaPie {
+        bottom: 11em; } }
   .headTextos .categorias {
     width: 100%;
     color: #FCE9E9;
     background: rgba(131, 27, 33, 0.7);
+    margin: 0;
+    margin-bottom: .5em;
+    padding: 0 1%;
+    position: relative;
+    z-index: 10;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 0s;
-    margin-bottom: .5em;
-    padding: .5em 0;
-    z-index: 5; }
-    .headTextos .categorias h5 {
+    align-items: center; }
+    .headTextos .categorias .categoriasTitle {
+      font-size: 1.2rem;
+      padding: 0 .2em;
       margin-bottom: 0;
-      color: #FF7A7A; }
+      color: #FCE9E9;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none; }
     .headTextos .categorias ul {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center; }
-      .headTextos .categorias ul li {
+      .headTextos .categorias ul button {
+        padding: .4em 0;
+        margin: 0 .5em;
         font-size: 1em;
-        margin: .2em .5em; }
-    .headTextos .categorias a {
-      color: #FCE9E9; }
-    .headTextos .categorias span {
-      color: rgba(252, 233, 233, 0.8);
-      font-weight: 300; }
+        transition: all 500ms ease-in-out;
+        text-decoration: none;
+        color: #FF7A7A; }
+        .headTextos .categorias ul button span {
+          color: rgba(255, 122, 122, 0.8);
+          font-weight: 300;
+          transition: all 500ms ease-in-out; }
     @media (min-width: 540px) {
-      .headTextos .categorias ul {
-        flex-direction: row; }
-        .headTextos .categorias ul li {
-          font-size: 1.2em;
-          margin: 0 1em;
-          text-align: center; }
-        .headTextos .categorias ul span {
-          display: block; } }
-    @media (min-width: 960px) {
       .headTextos .categorias {
-        padding: .5em 1em; }
+        margin-bottom: .5em;
+        padding: .2em 1%; }
+        .headTextos .categorias .categoriasTitle {
+          font-size: 1.3rem; }
         .headTextos .categorias ul {
           flex-direction: row; }
-          .headTextos .categorias ul li {
-            font-size: 1.3em;
-            margin: .2em 1em;
-            display: block;
-            text-align: left; }
+          .headTextos .categorias ul button {
+            font-size: 1.2em;
+            margin: 0 1em;
+            padding: 0;
+            text-align: center; }
           .headTextos .categorias ul span {
-            display: inline; } }
+            display: block; } }
+    @media (min-width: 960px) {
+      .headTextos .categorias {
+        margin-bottom: .5em;
+        padding: .5em 20%; }
+        .headTextos .categorias .categoriasTitle {
+          font-size: 1.6rem; }
+        .headTextos .categorias ul {
+          flex-direction: row; }
+          .headTextos .categorias ul button {
+            font-size: 1.3em;
+            margin: .2em 1em; } }
+  @media (min-width: 540px) {
+    .headTextos {
+      justify-content: space-around; } }
 
 .contTextos {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-  .contTextos .prosa {
+  padding: .5em 0 0 0; }
+  .contTextos .cuento, .contTextos .ensayo {
     width: 100%;
-    margin: .2em;
-    border: 1px solid #831B21;
+    padding: 2em 5%;
+    margin: 0;
     box-sizing: border-box; }
-    .contTextos .prosa h3 {
-      color: #FF7A7A;
-      background-color: #831B21;
-      border-bottom: 2px solid #FF7A7A;
+    .contTextos .cuento h3, .contTextos .ensayo h3 {
+      text-align: center;
+      color: #E33D47;
+      margin: 0;
       padding-top: .2em; }
-    .contTextos .prosa p {
-      line-height: 1.2;
-      Padding: .5em .5em; }
-    .contTextos .prosa.dark {
+    .contTextos .cuento p, .contTextos .ensayo p {
+      line-height: 1.5;
+      Padding: .5em .0; }
+    .contTextos .cuento.dark, .contTextos .ensayo.dark {
       color: #6E6292;
-      background-color: #0F0F0F; }
-      .contTextos .prosa.dark h3 {
-        color: #E33D47;
-        background-color: #201B30;
-        border-bottom: 2px solid #E33D47; }
+      background-color: #201B30; }
+      .contTextos .cuento.dark h3, .contTextos .ensayo.dark h3 {
+        color: #E33D47; }
   .contTextos .lirica {
+    padding: 2em 5%;
     width: 100%;
-    margin: 0.2em;
-    border: 1px solid #831B21;
     box-sizing: border-box; }
     .contTextos .lirica p {
-      line-height: 1.2;
-      padding: 1em 1.5em; }
+      line-height: 1.3;
+      padding: 1em;
+      padding-left: 2%; }
     .contTextos .lirica h3 {
+      text-align: left;
       color: #E33D47;
-      background-color: #201B30;
-      border-bottom: 2px solid #E33D47;
-      padding-top: .2em; }
-  .contTextos .textHidden {
-    display: none; }
+      margin: 0;
+      padding-top: .2em;
+      padding-left: 2%; }
+  .contTextos .dark {
+    color: #6E6292;
+    background-color: #201B30; }
+    .contTextos .dark h3 {
+      color: #E33D47; }
+  .contTextos .raya {
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: .4em auto;
+    background-color: #E33D47; }
   @media (min-width: 540px) {
-    .contTextos {
-      justify-content: flex-start; }
-      .contTextos .prosa {
-        width: 46%;
-        margin-left: 1em; }
-      .contTextos .lirica {
-        width: 46%;
-        margin-left: 1em; } }
+    .contTextos .cuento, .contTextos .ensayo {
+      padding: 3em 10%; }
+      .contTextos .cuento p, .contTextos .ensayo p {
+        font-size: 1.1rem; }
+    .contTextos .lirica {
+      padding: 3em 10%; }
+      .contTextos .lirica p {
+        font-size: 1.1rem;
+        padding-left: 30%; }
+      .contTextos .lirica h3 {
+        padding-left: 30%; } }
   @media (min-width: 960px) {
-    .contTextos {
-      justify-content: space-around;
-      padding: 0 .6em; }
-      .contTextos h3 {
-        font-size: 1.5rem;
-        transition: all 500ms ease-in-out; }
-      .contTextos .prosa {
-        width: 32%;
-        margin: .2em .2em; }
-      .contTextos .lirica {
-        width: 32%;
-        margin: .2em .2em; } }
+    .contTextos .cuento, .contTextos .ensayo {
+      padding: 3em 20%; }
+      .contTextos .cuento p, .contTextos .ensayo p {
+        font-size: 1.1rem; }
+    .contTextos .lirica {
+      padding: 3em 20%; }
+      .contTextos .lirica h3 {
+        padding-left: 33%; }
+      .contTextos .lirica p {
+        font-size: 1.1rem;
+        padding-left: 33%; } }
 
 #variedad {
   margin-top: 90px; }
