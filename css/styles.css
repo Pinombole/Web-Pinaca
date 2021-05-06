@@ -1649,12 +1649,21 @@ body {
     background-color: #201B30; }
     .contTextos .dark h3 {
       color: #E33D47; }
+
+@keyframes aparece {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
   .contTextos .raya {
     display: block;
     height: 2px;
-    width: 100%;
     margin: .4em auto;
-    background-color: #E33D47; }
+    background-color: #E33D47;
+    animation-name: aparece;
+    animation-iteration-count: 1;
+    animation-duration: 250ms;
+    amimation-timing-function: ease-in-out; }
   @media (min-width: 540px) {
     .contTextos .cuento, .contTextos .ensayo {
       padding: 3em 10%; }
