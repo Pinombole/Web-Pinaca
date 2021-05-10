@@ -71,7 +71,7 @@ body {
     letter-spacing: .2em;
     line-height: 1;
     padding: .2em 0; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       body h1 {
         font-size: 1.9rem; } }
     @media (min-width: 960px) {
@@ -82,7 +82,7 @@ body {
     letter-spacing: 0.2em;
     line-height: 1.5;
     padding: 0 .5em; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       body h2 {
         font-size: 1.5rem; } }
     @media (min-width: 960px) {
@@ -91,7 +91,7 @@ body {
   body h3 {
     font-size: 1.5rem;
     padding: 0.1em 0.3em; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       body h3 {
         font-size: 1.6rem; } }
     @media (min-width: 960px) {
@@ -100,7 +100,7 @@ body {
   body h5 {
     font-size: 1.2rem;
     padding: 0 .2em; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       body h5 {
         font-size: 1.3rem; } }
     @media (min-width: 960px) {
@@ -118,7 +118,7 @@ body {
   border-bottom: solid 2px #831B21; }
   #header .logo img {
     height: 50px; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       #header .logo img {
         height: 80px; } }
     @media (min-width: 960px) {
@@ -130,7 +130,7 @@ body {
     max-width: 90px;
     margin-top: 0;
     overflow: hidden; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       #header .logoCentral {
         margin-top: 10px;
         max-height: 100px;
@@ -219,7 +219,7 @@ body {
   align-items: stretch;
   transform: translate(250px);
   transition: all 500ms ease-in-out; }
-  @media (min-width: 540px) {
+  @media (min-width: 576px) {
     #menu {
       width: 325px;
       transform: translate(325px); } }
@@ -236,7 +236,7 @@ body {
     #menu #accordionMenu ul li {
       font-size: 1rem;
       padding: .2em 1.5em; }
-      @media (min-width: 540px) {
+      @media (min-width: 576px) {
         #menu #accordionMenu ul li {
           font-size: 1.2rem; } }
       @media (min-width: 960px) {
@@ -257,7 +257,7 @@ body {
       line-height: 1.3;
       margin: 0;
       font-weight: 400; }
-      @media (min-width: 540px) {
+      @media (min-width: 576px) {
         #menu .buttonMenu h3 {
           font-size: 1.3rem; } }
       @media (min-width: 960px) {
@@ -270,21 +270,27 @@ body {
         color: #e96a71; }
     #menu .buttonMenu:hover {
       background-color: #362d51; }
-  #menu #flechaMenu-1, #menu #flechaMenu-2, #menu #flechaMenu-3 {
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    transform: rotateX(0deg);
-    transition: all 500ms ease-in-out; }
-    #menu #flechaMenu-1 i, #menu #flechaMenu-2 i, #menu #flechaMenu-3 i {
-      font-size: 1.5rem; }
-    #menu #flechaMenu-1:hover, #menu #flechaMenu-2:hover, #menu #flechaMenu-3:hover {
-      transform: scale(1.5);
-      color: #e96a71;
-      transition: all 0ms linear; }
-    #menu #flechaMenu-1.active, #menu #flechaMenu-2.active, #menu #flechaMenu-3.active {
-      transform: rotateX(180deg);
-      transition: all 500ms ease-in-out; }
+    #menu .buttonMenu .flecha {
+      font-size: 1.5rem;
+      line-height: 1;
+      display: inline-block;
+      width: 20px;
+      text-align: center;
+      border-radius: 50%;
+      color: #831B21;
+      transition: all 250ms ease-in-out; }
+      #menu .buttonMenu .flecha:hover {
+        transform: scale(1.5);
+        color: #e96a71;
+        transition: all 250ms linear; }
+      @media (min-width: 960px) {
+        #menu .buttonMenu .flecha {
+          line-height: 1.5; } }
+    #menu .buttonMenu .flecha::after {
+      content: "\f107";
+      font-family: "FontAwesome"; }
+    #menu .buttonMenu .flecha[aria-expanded="true"]::after {
+      content: "\f106"; }
   #menu .redesNav ul {
     width: 100%; }
     #menu .redesNav ul li {
@@ -304,13 +310,12 @@ body {
     #menu .filtrosNav a {
       color: #6E6292; }
   #menu .fa {
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    color: #831B21; }
+    color: #831B21;
+    transition: all 250ms ease-in-out; }
     #menu .fa:hover {
-      color: #d43039; }
+      transform: scale(1.5);
+      color: #e96a71;
+      transition: all 250ms linear; }
 
 #footer {
   background-color: #201B30;
@@ -331,7 +336,7 @@ body {
   #footer p {
     color: #E33D47;
     margin-bottom: .2em; }
-  @media (min-width: 540px) {
+  @media (min-width: 576px) {
     #footer {
       padding: auto 0;
       transition: all 500ms ease-in-out; }
@@ -363,16 +368,16 @@ body {
     font-size: 1rem;
     border-bottom: solid 2px;
     padding: .4em; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       #personal h2 {
         font-size: 1.1rem; } }
 
 #acerca {
   margin-top: 90px;
-  min-height: calc( 80vh - $alto-header); }
+  min-height: calc(100vh - 90px); }
   #acerca .bloqueAcerca {
-    min-height: 100vh; }
-    @media (min-width: 540px) {
+    min-height: calc(100vh - 90px); }
+    @media (min-width: 576px) {
       #acerca .bloqueAcerca {
         background-image: url("../media/pinacaCircularDer.png");
         background-repeat: no-repeat;
@@ -384,7 +389,7 @@ body {
   #acerca .parrafoAcerca {
     width: 100%;
     display: inline-block; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       #acerca .parrafoAcerca {
         width: 75%; } }
   @media (min-width: 960px) {
@@ -392,6 +397,7 @@ body {
       font-size: 1.1rem; } }
 
 #contacto {
+  min-height: calc(100vh - 90px);
   width: 100%;
   overflow: hidden;
   font-size: 1.1rem;
@@ -450,7 +456,7 @@ body {
           text-align: center;
           font-size: 1.2rem;
           padding: 0 .2em; }
-          @media (min-width: 540px) {
+          @media (min-width: 576px) {
             #portfolio .portfolioItem .caption .captionContent h4 {
               font-size: 1.2rem; } }
           @media (min-width: 960px) {
@@ -559,7 +565,7 @@ body {
           text-align: center;
           font-size: 1.2rem;
           padding: 0 .2em; }
-          @media (min-width: 540px) {
+          @media (min-width: 576px) {
             #ilustraciones .portfolioItem .caption .captionContent h4 {
               font-size: 1.2rem; } }
           @media (min-width: 960px) {
@@ -692,7 +698,7 @@ body {
         padding-bottom: .5em;
         text-align: right;
         color: #6E6292; }
-      @media (min-width: 540px) {
+      @media (min-width: 576px) {
         #animacion .headAnimacion .quotes {
           width: 80%;
           font-size: 1.2em; } }
@@ -788,7 +794,7 @@ body {
           text-align: center;
           font-size: 1.2rem;
           padding: 0 .2em; }
-          @media (min-width: 540px) {
+          @media (min-width: 576px) {
             #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.2rem; } }
           @media (min-width: 960px) {
@@ -806,7 +812,7 @@ body {
           font-weight: 500;
           line-height: .8;
           letter-spacing: .5px; }
-          @media (min-width: 540px) {
+          @media (min-width: 576px) {
             #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.15rem; } }
           @media (min-width: 960px) {
@@ -1018,7 +1024,7 @@ body {
     @media (min-width: 960px) {
       #animacion .serieCompleta {
         min-height: calc(100vh - 100px); } }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       #animacion .serieCompleta {
         min-height: auto; } }
     #animacion .serieCompleta h3 {
@@ -1026,7 +1032,7 @@ body {
       width: 100%;
       border: bottom 2px;
       text-align: center; }
-      @media (min-width: 540px) {
+      @media (min-width: 576px) {
         #animacion .serieCompleta h3 {
           display: none; } }
       @media (min-width: 960px) {
@@ -1040,7 +1046,7 @@ body {
       font-size: 1rem;
       line-height: 1.1;
       text-align: center; }
-      @media (min-width: 540px) {
+      @media (min-width: 576px) {
         #animacion .serieCompleta .infoAnim {
           font-size: 1.1rem;
           padding: 1.2em 5%; } }
@@ -1069,7 +1075,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center; }
-      @media (min-width: 540px) {
+      @media (min-width: 576px) {
         #animacion .serieCompleta .infoModalAnim {
           font-size: .9rem; } }
       @media (min-width: 960px) {
@@ -1077,7 +1083,7 @@ body {
           font-size: 1rem; } }
     #animacion .serieCompleta .serieHeader {
       display: none; }
-      @media (min-width: 540px) {
+      @media (min-width: 576px) {
         #animacion .serieCompleta .serieHeader {
           display: flex;
           justify-content: center;
@@ -1116,16 +1122,15 @@ body {
           height: 220px; }
           #animacion .serieCompleta .serieHeader .overlay {
             display: block;
-            height: 100%;
-            width: 100%;
             position: absolute;
             top: 0;
-            margin: 0;
+            width: 100%;
+            height: auto;
             z-index: 2;
-            background: rgba(122, 0, 0, 0.8);
+            opacity: .8;
             transition: all 500ms ease-in-out; }
           #animacion .serieCompleta .serieHeader:hover .overlay {
-            background: rgba(122, 0, 0, 0.1);
+            opacity: .1;
             transition: all 500ms ease-in-out; }
           #animacion .serieCompleta .serieHeader .serieTitle {
             width: 100%;
@@ -1145,7 +1150,7 @@ body {
     color: #E33D47;
     opacity: 2;
     text-shadow: 0 1px 0 #591216; }
-  @media (min-width: 540px) {
+  @media (min-width: 576px) {
     #animacion .modal-dialog {
       max-width: 700px; } }
   @media (min-width: 960px) {
@@ -1497,7 +1502,7 @@ body {
       padding-bottom: .5em;
       text-align: right;
       color: #E33D47; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       .headTextos .quotes {
         width: 80%;
         font-size: 1.2em; } }
@@ -1533,7 +1538,7 @@ body {
     bottom: 1em;
     right: .5em;
     bottom: 11em; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       .headTextos .notaPie {
         bottom: 9em; } }
     @media (min-width: 960px) {
@@ -1579,7 +1584,7 @@ body {
           color: rgba(255, 122, 122, 0.8);
           font-weight: 300;
           transition: all 500ms ease-in-out; }
-    @media (min-width: 540px) {
+    @media (min-width: 576px) {
       .headTextos .categorias {
         margin-bottom: .5em;
         padding: .2em 1%; }
@@ -1605,7 +1610,7 @@ body {
           .headTextos .categorias ul button {
             font-size: 1.3em;
             margin: .2em 1em; } }
-  @media (min-width: 540px) {
+  @media (min-width: 576px) {
     .headTextos {
       justify-content: space-around; } }
 
@@ -1664,7 +1669,7 @@ body {
     animation-iteration-count: 1;
     animation-duration: 250ms;
     amimation-timing-function: ease-in-out; }
-  @media (min-width: 540px) {
+  @media (min-width: 576px) {
     .contTextos .cuento, .contTextos .ensayo {
       padding: 3em 10%; }
       .contTextos .cuento p, .contTextos .ensayo p {
@@ -1688,6 +1693,355 @@ body {
       .contTextos .lirica p {
         font-size: 1.1rem;
         padding-left: 33%; } }
+
+#proyectos {
+  margin-top: 90px;
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  #proyectos .headProyectos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../media/headProyectos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 200px; }
+    #proyectos .headProyectos .titleOverlay {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background: rgba(0, 0, 0, 0);
+      margin: 0;
+      z-index: 2; }
+    @media (min-width: 960px) {
+      #proyectos .headProyectos .titleOverlay {
+        background: rgba(0, 0, 0, 0.8);
+        transition: all 500ms ease-in-out; }
+      #proyectos .headProyectos:hover .titleOverlay {
+        background: rgba(0, 0, 0, 0);
+        transition: all 500ms ease-in-out; } }
+    @media (min-width: 576px) {
+      #proyectos .headProyectos {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-image: url("../media/headProyectos.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 250px; }
+        #proyectos .headProyectos .titleOverlay {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          background: rgba(0, 0, 0, 0);
+          margin: 0;
+          z-index: 2; } }
+  @media (min-width: 576px) and (min-width: 960px) {
+    #proyectos .headProyectos .titleOverlay {
+      background: rgba(0, 0, 0, 0.8);
+      transition: all 500ms ease-in-out; }
+    #proyectos .headProyectos:hover .titleOverlay {
+      background: rgba(0, 0, 0, 0);
+      transition: all 500ms ease-in-out; } }
+    @media (min-width: 960px) {
+      #proyectos .headProyectos {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-image: url("../media/headProyectos.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: calc(100vh - 90px); }
+        #proyectos .headProyectos .titleOverlay {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          background: rgba(0, 0, 0, 0);
+          margin: 0;
+          z-index: 2; } }
+  @media (min-width: 960px) and (min-width: 960px) {
+    #proyectos .headProyectos .titleOverlay {
+      background: rgba(0, 0, 0, 0.8);
+      transition: all 500ms ease-in-out; }
+    #proyectos .headProyectos:hover .titleOverlay {
+      background: rgba(0, 0, 0, 0);
+      transition: all 500ms ease-in-out; } }
+    #proyectos .headProyectos:hover {
+      color: #d8cbff;
+      transition: all 500ms ease-in-out; }
+      #proyectos .headProyectos:hover h1 {
+        color: rgba(131, 27, 33, 0.8);
+        transition: all 500ms ease-in-out; }
+      #proyectos .headProyectos:hover .quotesTexto--especial {
+        color: #6e6292;
+        transition: all 500ms ease-in-out; }
+  #proyectos .title-sd-serie {
+    display: block;
+    width: 100%;
+    border: bottom 2px; }
+    #proyectos .title-sd-serie img {
+      width: 100%; }
+    @media (min-width: 576px) {
+      #proyectos .title-sd-serie {
+        display: none; } }
+    @media (min-width: 960px) {
+      #proyectos .title-sd-serie {
+        display: none; } }
+  #proyectos .serieHeader {
+    display: none; }
+    @media (min-width: 576px) {
+      #proyectos .serieHeader {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 125px;
+        overflow: hidden; }
+        #proyectos .serieHeader .serieBg {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+          transition: all 500ms ease-in-out; }
+        #proyectos .serieHeader .overlay {
+          display: none; }
+        #proyectos .serieHeader .serieTitle {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: auto;
+          z-index: 3;
+          opacity: 1;
+          transition: all 500ms ease-in-out; } }
+    @media (min-width: 960px) {
+      #proyectos .serieHeader {
+        height: 142px;
+        width: 100%; }
+        #proyectos .serieHeader .serieBg {
+          width: 100%;
+          height: auto; }
+        #proyectos .serieHeader .overlay {
+          display: none; } }
+    @media (min-width: 1140px) {
+      #proyectos .serieHeader {
+        height: 220px; }
+        #proyectos .serieHeader .overlay {
+          display: block;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: auto;
+          z-index: 2;
+          opacity: .8;
+          transition: all 500ms ease-in-out; }
+        #proyectos .serieHeader:hover .overlay {
+          opacity: .1;
+          transition: all 500ms ease-in-out; }
+        #proyectos .serieHeader .serieTitle {
+          width: 100%;
+          height: auto;
+          opacity: .5; }
+          #proyectos .serieHeader .serieTitle:hover {
+            opacity: 1; } }
+  #proyectos .infoProyectos {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    padding: 1.2em .5em;
+    font-size: 1rem;
+    line-height: 1.1;
+    text-align: center; }
+    @media (min-width: 576px) {
+      #proyectos .infoProyectos {
+        font-size: 1.1rem;
+        padding: 1.2em 5%; } }
+    @media (min-width: 960px) {
+      #proyectos .infoProyectos {
+        font-size: 1.2rem;
+        padding: 1.2em 20%;
+        transition: all 500ms ease-in-out; } }
+    #proyectos .infoProyectos .title {
+      display: inline-block;
+      font-weight: 700;
+      padding: 0;
+      margin-bottom: .5em;
+      text-align: center;
+      letter-spacing: .5rem; }
+    #proyectos .infoProyectos p {
+      margin-bottom: 0.4em; }
+  #proyectos .seccionPersonajes {
+    width: 100%;
+    overflow: hidden; }
+    #proyectos .seccionPersonajes .personajesTitle {
+      height: 150px;
+      display: flex;
+      display-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #proyectos .seccionPersonajes .personajesTitle p {
+        display: inline-block;
+        padding: 1em .5em;
+        padding-right: 0;
+        /*border-bottom: solid 2px;*/
+        font-family: "Rock Salt", cursive;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: .5em;
+        line-height: 2; }
+    #proyectos .seccionPersonajes .fichaPersonaje {
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
+        padding: 1em 2em;
+        text-align: left;
+        padding: 1.2em 0;
+        font-size: 1rem;
+        line-height: 1.1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 {
+          width: auto;
+          display: inline-block;
+          padding: 1em;
+          padding-bottom: .8em;
+          margin: 0 auto 1em auto;
+          font-size: 1.5rem;
+          font-weight: 700;
+          text-align: center;
+          line-height: 1;
+          border: solid 2px; }
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span {
+            display: block; }
+        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p {
+          width: 100%;
+          display: block;
+          padding: .7em .5em; }
+      #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 100%; }
+        #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile img {
+          position: absolute;
+          top: 0;
+          width: 100%; }
+      #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices {
+        display: none; }
+      @media (min-width: 576px) {
+        #proyectos .seccionPersonajes .fichaPersonaje {
+          flex-direction: row; }
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
+            padding: 0;
+            font-size: 1rem; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 {
+              font-size: 1.5rem; }
+              #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span {
+                display: inline; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p {
+              padding: .5em 1em; }
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: 450px;
+            width: auto;
+            padding-top: 0;
+            bottom: 0; }
+            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices img {
+              position: static;
+              width: auto; }
+            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices.visible {
+              overflow: visible; }
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile {
+            display: none; } }
+      @media (min-width: 960px) {
+        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
+          padding: 1.2em 0;
+          font-size: 1.1rem; }
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 {
+            font-size: 1.7rem; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span {
+              display: inline; }
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p {
+            padding: .5em 0; }
+        #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje {
+          padding-top: 0; }
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje.visible {
+            overflow: hidden; } }
+    #proyectos .seccionPersonajes .centrado {
+      padding: 0;
+      font-size: 1rem;
+      line-height: 1.1; }
+      @media (min-width: 576px) {
+        #proyectos .seccionPersonajes .centrado {
+          font-size: 1.1rem;
+          padding: 0 5%; } }
+      @media (min-width: 960px) {
+        #proyectos .seccionPersonajes .centrado {
+          font-size: 1.2rem;
+          padding: 0 20%;
+          transition: all 500ms ease-in-out; } }
+  @media (min-width: 960px) {
+    #proyectos {
+      margin-right: 0;
+      width: 100%;
+      transition: all 500ms ease-in-out; }
+      #proyectos.active {
+        margin-right: 400px;
+        width: calc(100% - ( calc(250px * 1.6 ) ));
+        transition: all 500ms ease-in-out; }
+        #proyectos.active .serieHeader .serieBg, #proyectos.active .serieHeader .serieTitle, #proyectos.active .serieHeader .overlay {
+          width: 133.33%;
+          transition: all 500ms ease-in-out; }
+        #proyectos.active .seccionPersonajes .centrado, #proyectos.active .infoProyectos {
+          padding-left: 10%;
+          padding-right: 10%;
+          transition: all 500ms ease-in-out; } }
+
+#heartz {
+  background-color: #FFF; }
+  #heartz h3 {
+    color: #831B21;
+    background-color: #FF7A7A; }
+  #heartz .infoProyectos {
+    color: #831B21; }
+    #heartz .infoProyectos span {
+      color: #831B21; }
+    #heartz .infoProyectos .title {
+      color: #E33D47; }
+  #heartz .seccionPersonajes .personajesTitle {
+    background-color: #201B30;
+    color: #E33D47; }
+  #heartz .seccionPersonajes .fichaPersonaje.red {
+    color: #FFF;
+    background-color: #591216; }
+    #heartz .seccionPersonajes .fichaPersonaje.red h5 {
+      color: #E33D47; }
+  #heartz .seccionPersonajes .fichaPersonaje.black {
+    color: #FFF;
+    background-color: #0F0F0F; }
+    #heartz .seccionPersonajes .fichaPersonaje.black h5 {
+      color: #E33D47; }
 
 #variedad {
   margin-top: 90px; }

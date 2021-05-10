@@ -202,18 +202,17 @@
 				height: 220px;					
 				.overlay {
 					display: block;
-					height: 100%;
-				    width: 100%;
-				    position: absolute;
-				    top: 0;	
-				    margin: 0;
+					position: absolute;
+					top: 0;				
+					width: $ancho;
+					height: auto;			   
 				    z-index: 2;	
-				 	background: rgba(darken($salmon, 50%), .8);
+				    opacity: .8;			 	
 				 	transition: all 500ms ease-in-out;	
 				}
 			 	&:hover .overlay {
-			 		background: rgba(darken($salmon, 50%), .1);
-			 		transition: all 500ms ease-in-out;				 		
+			 		opacity:.1;
+			 		transition: all 500ms ease-in-out;		
 			 	}				
 				.serieTitle {					
 					width: $ancho;					
@@ -294,7 +293,6 @@
 	}
 }
 
-
 #cortos, #musicales, #series {
 	h3 {
 		color: saturate($text-bg-dk-1, 15%);
@@ -313,10 +311,9 @@
 			}
 			.title {
 				color: $text-especial;			
+			}	
 		}	
-	}	
-}
-	
+	}		
 	#gallery-Cortos, #gallery-Musica, #gallery-Mono, #gallery-Fort, #gallery-Gamarra, #gallery-Cyber {	
 		background-color: darken($violet-lgt-1, 36%);
 		.caption .captionContent {				

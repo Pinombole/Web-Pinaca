@@ -1,4 +1,337 @@
+#proyectos{
+	margin-top: $alto-header;
+	margin-bottom: 0;
+	padding-bottom: 0;	
+	.headProyectos {
+		@include bannerSection (200px, url("../media/headProyectos.jpg"), $primary-color);					
+		@include media(sm) {
+			@include bannerSection (250px, url("../media/headProyectos.jpg"), $primary-color);					
+		}		
+		@include media(lg) {
+			@include bannerSection (calc(100vh - #{$alto-header}), url("../media/headProyectos.jpg"), $primary-color);	
+		}
+		&:hover {
+			@include hoverOverlay ($text-bg-dk-2, $red-dk, $text-bg-dk-1);	
+		}			
+	}
+	.title-sd-serie {
+		display: block;
+		width: $ancho;
+		border: bottom 2px;
+		img {
+			width: $ancho;
+		}
+		@include media(sm) {
+			display: none;
+		}		
+		@include media(lg) {
+			display: none;
+		}		
+	}	
+	.serieHeader {
+		display: none;
+		@include media(sm) {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			width: $ancho;
+			height: 125px;
+			overflow: hidden;	
+			.serieBg {
+			    position: absolute;
+				top: 0;				
+				width: $ancho;
+				height: auto;
+				z-index: 1;	
+				transition: all 500ms ease-in-out;		
+			}
+			.overlay {
+				display: none;					   			    					   
+			}
+			.serieTitle {
+				position: absolute;
+				top: 0;				
+				width: $ancho;
+				height: auto;
+				z-index: 3;
+				opacity: 1;
+				transition: all 500ms ease-in-out;		
+			}			
+		}			
+		@include media(lg) {
+			height: 142px;			
+			width: $ancho;
+			.serieBg { 
+				width: $ancho;				
+				height: auto;										
+			}
+			.overlay {
+				display: none;
+			}	
+		}
+		@include media(xl) {
+			height: 220px;					
+			.overlay {
+				display: block;
+				position: absolute;
+				top: 0;				
+				width: $ancho;
+				height: auto;			   
+			    z-index: 2;	
+			    opacity: .8;			 	
+			 	transition: all 500ms ease-in-out;	
+			}
+		 	&:hover .overlay {
+		 		opacity:.1;
+		 		transition: all 500ms ease-in-out;				 		
+		 	}				
+			.serieTitle {					
+				width: $ancho;					
+				height: auto;				
+				opacity: .5;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}						
+	}
+	.infoProyectos {
+		width: $ancho;
+		overflow: hidden;
+		display: block;
+		padding: 1.2em .5em;
+		font-size: 1rem;
+		line-height: 1.1;
+		text-align: center;	
+		@include media(sm) {
+			font-size: 1.1rem;
+			padding: 1.2em 5%;
+		}			
+		@include media(lg) {				
+			font-size: 1.2rem;
+			padding: 1.2em 20%;
+			transition: all 500ms ease-in-out;
+		}
+		.title {
+			display: inline-block;
+			font-weight: $font-bold;
+			padding: 0;
+			margin-bottom: .5em;
+		    text-align: center;
+			letter-spacing: .5rem;
+		}
+		p { 
+			margin-bottom: 0.4em; 
+		}							
+	}
+	.seccionPersonajes { 
+		width: $ancho;
+		overflow: hidden;	
+		.personajesTitle {
+			height: 150px;
+			display: flex;
+			display-direction: column;
+			justify-content: center;
+			align-items: center;
+			p {	
+				display: inline-block;			
+				padding: 1em .5em;
+				padding-right: 0;
+				/*border-bottom: solid 2px;*/
+				font-family: $font-title;
+				font-weight: $font-regular;
+				font-size: 1.5rem;
+				text-align: center;
+				letter-spacing:.5em;
+				line-height: 2;
+			}
+		}
+		.fichaPersonaje {
+			min-height: 450px;	
+			display: flex;
+			flex-direction: column; 
+			justify-content: center;	
+			align-items: center;		
+			.infoPersonaje {				
+				padding: 1em 2em; 
+				text-align: left;
+				padding: 1.2em 0;
+				font-size: 1rem;
+				line-height: 1.1;
+				display: flex;
+				flex-direction: column; 				
+				justify-content: center;
+				align-items: center;
+				h5 {
+					width: auto;
+					display: inline-block;
+					padding: 1em;
+					padding-bottom: .8em;
+					margin: 0 auto 1em auto;
+					font-size: 1.5rem;
+					font-weight: $font-bold;
+					text-align: center;
+					line-height: 1;
+					border: solid 2px;
+					span { 
+						display: block;
+					}
+				}
+				p {
+					width: 100%;
+					display: block;
+					padding: .7em .5em;					
+				}
+			}			
+			.fotoPersonaje-mobile {
+				display: block;
+			    position: relative;
+			    overflow: hidden;
+			    width: 100%;
+			    padding-top: 100%; 
+			    img {
+			    	position: absolute;
+       			    top: 0;	      
+       			    width: $ancho;		           
+			    }			
+			}
+			.fotoPersonaje-lg-devices {
+				display: none;
+			}
+			@include media(sm) {
+				flex-direction: row; 
+				.infoPersonaje {
+					padding: 0;
+					font-size: 1rem;			
+					h5	{
+						font-size: 1.5rem;
+						span { 							
+							display: inline;
+						}
+					}
+					p {						
+						padding: .5em 1em;		
+					}			
+				}
+				.fotoPersonaje-lg-devices {
+					display: flex;
+				    justify-content: center;					
+					position: relative;
+					height: 450px;
+					width: auto;	
+					padding-top: 0;	
+					bottom: 0;			
+					img {
+						position: static;	
+						width: auto; 						
+					}
+					&.visible {
+						overflow: visible;
+					}
+				}	
+				.fotoPersonaje-mobile {
+					display: none;
+				}							
+			}			
+			@include media(lg) {				
+				.infoPersonaje {
+					padding: 1.2em 0;
+					font-size: 1.1rem;						
+					h5	{
+						font-size: 1.7rem;
+						span { 							
+							display: inline;
+						}
+					}
+					p {						
+						padding: .5em 0;		
+					}
+				}
+				.fotoPersonaje {						
+					padding-top: 0;	
+					&.visible {
+						overflow: hidden;
+					}								
+				}									
+			}
+
+		}
+		.centrado {
+			padding: 0;
+			font-size: 1rem;
+			line-height: 1.1;	
+			@include media(sm) {
+				font-size: 1.1rem;
+				padding: 0 5%;
+			}			
+			@include media(lg) {				
+				font-size: 1.2rem;
+				padding: 0 20%;
+				transition: all 500ms ease-in-out;
+			}
+		}
+	}
+	@include media(lg) {
+		margin-right: 0;
+		width: $ancho;
+		transition: all 500ms ease-in-out;
+		&.active {
+			margin-right: $ancho-menu * 1.6;
+			width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+			transition: all 500ms ease-in-out;
+			.serieHeader .serieBg , .serieHeader .serieTitle, .serieHeader .overlay {
+				width: 133.33%;
+				transition: all 500ms ease-in-out;
+			}
+			.seccionPersonajes .centrado, .infoProyectos {
+				padding-left: 10%;
+				padding-right: 10%;
+				transition: all 500ms ease-in-out;
+			}
+		}
+	}
+}	
 
 
+//Colores según Serie //
 
+#heartz {	
+	background-color: $bg-color-lgt;
+	h3 {
+		color: $text-bg-lgt-1; 
+		background-color: $salmon;		
+	}
+	.infoProyectos {
+		color: $text-bg-lgt-1;
+		span {
+			color: $text-bg-lgt-1;
+		}		
+		.title {
+			color: $text-especial;			
+		}
+	}
+	.seccionPersonajes {
+		.personajesTitle {
+			background-color: $primary-color;
+			color: $text-especial;	    	
+	    }	   
+	    .fichaPersonaje {
+	    	&.red {
+				color: $white; 
+				background-color: darken($red-dk, 10%);
+				h5 {
+					color: $red-lgt;
+			    }
+		    }
+		    &.black{
+				color: $white; 
+				background-color: $bg-color-dk;
+				h5 {
+					color: $red-lgt;
+			    }
+		    }
+		}
+	}	
+}
 
+#superComando {}

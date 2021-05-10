@@ -261,26 +261,34 @@ body {
 		}
 		&:hover {	
 			background-color: lighten( $primary-color, 10% );
-		}
-	}
-	#flechaMenu-1, #flechaMenu-2, #flechaMenu-3 {
-		margin: 0;
-		padding: 0;
-		line-height: 0;
-		transform: rotateX(0deg);
-		transition: all 500ms ease-in-out;
-		i {
+		}		
+		.flecha {
 			font-size: 1.5rem;
-		}	
-		&:hover {
-			transform: scale(1.5); 
-			color: lighten( $text-especial, 10% );
-			transition: all 0ms linear;	
+			line-height: 1;
+			display: inline-block;
+			width: 20px;
+			text-align: center;		
+			border-radius: 50%;
+			color: $text-bg-lgt-1;
+			transition: all 250ms ease-in-out;
+			&:hover {
+				transform: scale(1.5); 
+				color: lighten( $text-especial, 10% );
+				transition: all 250ms linear;	
+			}
+			@include media(lg) {
+				line-height: 1.5;
+			}
 		}
-		&.active {
-			transform: rotateX(180deg);
-			transition: all 500ms ease-in-out;	
-		}	
+		  
+		.flecha::after {
+			content: "\f107";			
+			font-family: "FontAwesome"
+		}
+
+		.flecha[aria-expanded="true"]::after {
+			content: "\f106";
+		}
 	}
 	.redesNav ul {
 		width: $ancho;
@@ -307,15 +315,14 @@ body {
 		}
 	}
 	.fa {
-		width: 20px;
-		text-align: center;
-		text-decoration: none;
-		border-radius: 50%;
 		color: $text-bg-lgt-1;
+		transition: all 250ms ease-in-out;
 		&:hover {
-			color: lighten( $text-bg-lgt-1, 20% );
+			transform: scale(1.5); 
+			color: lighten( $text-especial, 10% );
+			transition: all 250ms linear;	
 		}
-	}
+	}	
 }
 
 //Footer
@@ -388,9 +395,9 @@ body {
 
 #acerca {
 	margin-top: $alto-header;		
-	min-height: calc( 80vh - $alto-header);	
+	min-height: calc(100vh - #{$alto-header});	
 	.bloqueAcerca {
-		min-height: 100vh;
+		min-height: calc(100vh - #{$alto-header});
 		@include media(sm) { 
 			background-image: url("../media/pinacaCircularDer.png");
 			background-repeat: no-repeat;
@@ -414,6 +421,7 @@ body {
 }
 
 #contacto {
+	min-height: calc(100vh - #{$alto-header});	
 	width: 100%;
 	overflow: hidden;
 	font-size: 1.1rem;

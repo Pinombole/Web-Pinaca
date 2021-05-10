@@ -26,13 +26,13 @@
 </head> 
 <body class="bgBlack">
 	<header id="header" class="navbar align-items-center">
-		<a href="index.html" class="logo wow animate__animated animate__flash">
+		<a href="index.html" class="logo animate__animated animate__flash">
 			<img src="media/logo-pinaca-header-violeta.png" alt="Home">
 		</a>
-		<div class="logoCentral border rounded-circle wow animate__animated animate__pulse">
+		<div class="logoCentral border rounded-circle animate__animated animate__pulse">
 			<a href="personal.html#acerca"><img src="media/pinaca-circular.png" alt="Creador Visual"></a>
 		</div>
-		<div class="botonMenu navbar-toggler first-button violetNeutro" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation" onclick="myClick('menu'); myClick('portfolio'); myClick('footer')">
+		<div class="botonMenu navbar-toggler first-button violetNeutro" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation" onclick="myClick('menu'); myClick('proyectos'); myClick('footer')">
 			<div class="animated-icon1"><span></span><span></span><span></span></div>		 	
 		</div>
 	</header>
@@ -44,8 +44,8 @@
 					<div>
 						<a href="animacion.html"><h3>Fantasias Animadas</h3></a>
 					</div>
-					<div id="flechaMenu-1">
-						<i class="fa fa-angle-down" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="myClick('flechaMenu-1')"></i>
+					<div>
+						<div class="flecha" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></div>
 					</div>
 				</div>
 
@@ -66,20 +66,20 @@
 			<div>
 				<div class="buttonMenu d-flex justify-content-between" id="headingTwo">
 					<div>
-						<a href="proyectos.html"><h3>Proyectos del Averno</h3></a>
+						<a href="proyectos.html"><h3>Proyectos Somel-Films</h3></a>
 					</div>
-					<div id="flechaMenu-2">
-						<i class="fa fa-angle-down" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="myClick('flechaMenu-2')"></i>
+					<div>
+						<div class="flecha" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></div>
 					</div>
 				</div>
 
 				<div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo" data-parent="#accordionMenu">
 					<div>
 						<ul>
-							<li><a href="proyectos.html#Heartz">Heartz</a></li>
+							<li><a href="proyectos.html#heartz">Heartz</a></li>
 				   		    <li><a href="proyectos.html#superComando">Super Comando X</a></li>
-				   		    <li><a href="proyectos.html#somelKalaHuam">Capitan Kal</a></li>
-				   		    <li><a href="proyectos.html#DosEntes">Dos Entes</a></li>
+				   		    <li><a href="proyectos.html#kalaHuam">Capitan Kal</a></li>
+				   		    <li><a href="proyectos.html#dosEntes">Dos Entes</a></li>
 						</ul>
 					</div>
 				</div>
@@ -90,8 +90,8 @@
 					<div>
 						<a href="varios.html"><h3>Varieté Audiovisual</h3></a>
 					</div>
-					<div id="flechaMenu-3">
-						<i class="fa fa-angle-down rojoClaro p-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="myClick('flechaMenu-3')"></i>				
+					<div>
+						<div class="flecha" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></div>				
 					</div>
 				</div>
 				<div id="collapseThree" class="collapse in" aria-labelledby="headingThree" data-parent="#accordionMenu">
@@ -134,8 +134,161 @@
 		</div>
  	</div>
 
- 	<main id="somel">
- 		
+ 	<main id="proyectos" class="container-fluid px-0">
+		<div class="headProyectos">
+			<div class="titleOverlay"></div>					
+		</div>
+
+		<article id="heartz" class="row no-gutters">
+			<div class="title-sd-serie"> 
+				<img src="media/head-Heartz-SD.jpg" alt="Heartz" class="serieTitle">
+			</div>
+			<div class="serieHeader">
+				<img src="media/head-Overlay.jpg" class="overlay">			
+				<img src="media/head-Heartz-letras.png" alt="Heartz" class="serieTitle">
+				<img src="media/head-Heartz-fondo.jpg" alt="Heartz" class="serieBg">
+			</div>
+			<div class="infoProyectos">
+				<p class="title">LA HISTORIA</p>						
+				<p><span class="type-bold">LA</span> es un joven proveniente del Planeta Sono, un Universo Musical, que haciendose pasar por Alumno de la Academia Multidisciplinaria de <strong>Arte</strong> busca recuperar las Partículas Armónicas que se han fusionado con sus compañeros, dotándolos de habilidades artísticas mágicas. Solo así podrá reconstruir la Melodía Inter-Dimensional del <span class="type-bold">UNUG, su instrumento mágico</span> y abrir el portal de vuelta a su mundo. En el camino, LA vivirá aventuras, despertará amores o rivalidades e integrará la <strong>banda de rock Heartz</strong>, quienes junto a Tiresias, su misterioso mentor vagabundo, le enseñaran a valorar y proteger el arte de la Tierra antes de que Omega y las fuerzas del Limbo acaben con la creatividad del universo para siempre...</p>
+			</div>
+			<div class="seccionPersonajes">
+				<div class="personajesTitle centrado">
+					<p>HEARTZ: INTEGRANTES</p>
+				</div>
+				<!--Ficha Personaje 1-->
+				<div class="fichaPersonaje centrado row no-gutters red">
+					<div class="col-12 col-sm-8 infoPersonaje">
+						<h5>LA (Lautaro Ardente) <span>- Voz y Composición -</span></h5>
+						<div class="fotoPersonaje-mobile">
+							<img src="media/somel-films/heartz-personajes-LA.png" alt="LA">
+						</div>				
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div class="fotoPersonaje-lg-devices visible">
+							<img src="media/somel-films/heartz-personajes-LA.png" alt="LA">
+						</div>
+					</div>										
+				</div>
+				<!--Ficha Personaje 2-->
+				<div class="fichaPersonaje centrado row no-gutters black">
+					<div class="col-12 col-sm-4">
+						<div class="fotoPersonaje-lg-devices visible">
+							<img src="media/somel-films/heartz-personajes-Sol.png" alt="LA">
+						</div>
+					</div>	
+					<div class="col-12 col-sm-8 infoPersonaje">
+						<h5>Solange Bauer <span>- Bajista -</span></h5>
+						<div class="fotoPersonaje-mobile">
+							<img src="media/somel-films/heartz-personajes-Sol.png" alt="LA">
+						</div>				
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>														
+				</div>
+				<!--Ficha Personaje 3-->
+				<div class="fichaPersonaje centrado row no-gutters red">
+					<div class="col-12 col-sm-8 infoPersonaje">
+						<h5>Micaela Isis <span>- Voz y Piano -</span></h5>
+						<div class="fotoPersonaje-mobile">
+							<img src="media/somel-films/heartz-personajes-Mica.png" alt="LA">
+						</div>				
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div class="fotoPersonaje-lg-devices visible">
+							<img src="media/somel-films/heartz-personajes-Mica.png" alt="LA">
+						</div>
+					</div>										
+				</div>
+				<!--Ficha Personaje 4-->
+				<div class="fichaPersonaje centrado row no-gutters black">
+					<div class="col-12 col-sm-4">
+						<div class="fotoPersonaje-lg-devices visible">
+							<img src="media/somel-films/heartz-personajes-Fabri.png" alt="LA">
+						</div>
+					</div>	
+					<div class="col-12 col-sm-8 infoPersonaje">
+						<h5>Fabricio Aristola <span>- Guitarra Líder -</span></h5>
+						<div class="fotoPersonaje-mobile">
+							<img src="media/somel-films/heartz-personajes-Fabri.png" alt="LA">
+						</div>				
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>														
+				</div>
+				<!--Ficha Personaje 5-->
+				<div class="fichaPersonaje centrado row no-gutters red">
+					<div class="col-12 col-sm-8 infoPersonaje">
+						<h5>Donato Oviedo <span>- Bateria -</span></h5>
+						<div class="fotoPersonaje-mobile">
+							<img src="media/somel-films/heartz-personajes-Donato.png" alt="LA">
+						</div>				
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div class="fotoPersonaje-lg-devices visible">
+							<img src="media/somel-films/heartz-personajes-Donato.png" alt="LA">
+						</div>
+					</div>										
+				</div>
+				<!--Ficha Personaje 6-->
+				<div class="fichaPersonaje centrado row no-gutters black">
+					<div class="col-12 col-sm-4">
+						<div class="fotoPersonaje-lg-devices visible">
+							<img src="media/somel-films/heartz-personajes-Rex.png" alt="LA">
+						</div>
+					</div>	
+					<div class="col-12 col-sm-8 infoPersonaje">
+						<h5>Regina "Rex" Engels <span>- Guitarra Rítmica -</span></h5>
+						<div class="fotoPersonaje-mobile">
+							<img src="media/somel-films/heartz-personajes-Rex.png" alt="LA">
+						</div>				
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>														
+				</div>
+				<div class="fichaPersonaje centrado row no-gutters red">
+					<div class="col-12 col-sm-8 infoPersonaje">
+						<h5>Santino Iturbe <span>- Sonidista y Plomo -</span></h5>
+						<div class="fotoPersonaje-mobile">
+							<img src="media/somel-films/heartz-personajes-Santi.png" alt="LA">
+						</div>				
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div class="fotoPersonaje-lg-devices visible">
+							<img src="media/somel-films/heartz-personajes-Santi.png" alt="LA">
+						</div>
+					</div>										
+				</div>
+			</div>
+			<div class="infoProyectos">
+				<p><span class="type-bold">Productora:</span> Somel-Films</p>
+	 			<p><span class="type-bold">Idea Original y Piloto:</span> Emmanuel Carmona y Juan P. Lupo</p>		
+	 			<p><span class="type-bold">Desarrollo, biblia y guiones:</span> Emmanuel Carmona</p>	 	
+	 			<p><span class="type-bold">Realización del Teaser: </span>Emmanuel Carmona y Juan P. Lupo</p>	
+			</div>			
+		</article>
  	</main>
 
  	<footer id="footer" class="container-fluid">
