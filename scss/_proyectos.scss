@@ -146,17 +146,19 @@
 				line-height: 2;
 			}
 		}
-		.fichaPersonaje {
-			min-height: 450px;	
+		.fichaPersonaje {	
+			min-height: 760px;	
 			display: flex;
 			flex-direction: column; 
 			justify-content: center;	
 			align-items: center;		
-			.infoPersonaje {				
-				padding: 1em 2em; 
+			.infoPersonaje {	
+				position: absolute;	
+				top: 15px;	
+				z-index: 2;	
 				text-align: left;
-				padding: 1.2em 0;
-				font-size: 1rem;
+				padding: 0 0 1.2em 0;
+				font-size: .9rem;
 				line-height: 1.1;
 				display: flex;
 				flex-direction: column; 				
@@ -167,8 +169,8 @@
 					display: inline-block;
 					padding: 1em;
 					padding-bottom: .8em;
-					margin: 0 auto 1em auto;
-					font-size: 1.5rem;
+					margin: 0 auto 0 auto;
+					font-size: 1.3rem;
 					font-weight: $font-bold;
 					text-align: center;
 					line-height: 1;
@@ -187,8 +189,9 @@
 				display: block;
 			    position: relative;
 			    overflow: hidden;
-			    width: 100%;
-			    padding-top: 100%; 
+			    z-index: 1;
+			    width: 60%;
+			    padding-top: 60%; 
 			    img {
 			    	position: absolute;
        			    top: 0;	      
@@ -198,13 +201,16 @@
 			.fotoPersonaje-lg-devices {
 				display: none;
 			}
-			@include media(sm) {
+			@include media(sm) {					
+				min-height: 550px;	
 				flex-direction: row; 
 				.infoPersonaje {
+					position: static;						
 					padding: 0;
 					font-size: 1rem;			
 					h5	{
 						font-size: 1.5rem;
+						margin: 0 auto 1em auto;
 						span { 							
 							display: inline;
 						}
@@ -217,12 +223,14 @@
 					display: flex;
 				    justify-content: center;					
 					position: relative;
-					height: 450px;
+					z-index: 1;
+					height: 550px;
 					width: auto;	
 					padding-top: 0;	
 					bottom: 0;			
 					img {
 						position: static;	
+						min-height: 550px;	
 						width: auto; 						
 					}
 					&.visible {
@@ -254,7 +262,6 @@
 					}								
 				}									
 			}
-
 		}
 		.centrado {
 			padding: 0;
@@ -289,6 +296,30 @@
 				transition: all 500ms ease-in-out;
 			}
 		}
+	}
+	.carousel-control-prev, .carousel-control-next {
+		width: 15%;
+		top: -80px;
+		bottom: 80px;	
+		z-index: 3;
+		i {
+			color: $text-especial;
+			font-size: 45px;
+			&:hover {
+				color: lighten( $text-especial, 15% );
+			}		
+	    }
+	    @include media(sm) {
+	    	width: 8%;
+			top: 0;
+			bottom: 0		
+		}			
+		@include media(lg) {
+			width: 15%;		
+			top: 0;
+			bottom: 0;
+		}
+	  
 	}
 }	
 

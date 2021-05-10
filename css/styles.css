@@ -1903,16 +1903,18 @@ body {
         letter-spacing: .5em;
         line-height: 2; }
     #proyectos .seccionPersonajes .fichaPersonaje {
-      min-height: 450px;
+      min-height: 760px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
       #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
-        padding: 1em 2em;
+        position: absolute;
+        top: 15px;
+        z-index: 2;
         text-align: left;
-        padding: 1.2em 0;
-        font-size: 1rem;
+        padding: 0 0 1.2em 0;
+        font-size: .9rem;
         line-height: 1.1;
         display: flex;
         flex-direction: column;
@@ -1923,8 +1925,8 @@ body {
           display: inline-block;
           padding: 1em;
           padding-bottom: .8em;
-          margin: 0 auto 1em auto;
-          font-size: 1.5rem;
+          margin: 0 auto 0 auto;
+          font-size: 1.3rem;
           font-weight: 700;
           text-align: center;
           line-height: 1;
@@ -1939,8 +1941,9 @@ body {
         display: block;
         position: relative;
         overflow: hidden;
-        width: 100%;
-        padding-top: 100%; }
+        z-index: 1;
+        width: 60%;
+        padding-top: 60%; }
         #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile img {
           position: absolute;
           top: 0;
@@ -1949,12 +1952,15 @@ body {
         display: none; }
       @media (min-width: 576px) {
         #proyectos .seccionPersonajes .fichaPersonaje {
+          min-height: 550px;
           flex-direction: row; }
           #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
+            position: static;
             padding: 0;
             font-size: 1rem; }
             #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 {
-              font-size: 1.5rem; }
+              font-size: 1.5rem;
+              margin: 0 auto 1em auto; }
               #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span {
                 display: inline; }
             #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p {
@@ -1963,12 +1969,14 @@ body {
             display: flex;
             justify-content: center;
             position: relative;
-            height: 450px;
+            z-index: 1;
+            height: 550px;
             width: auto;
             padding-top: 0;
             bottom: 0; }
             #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices img {
               position: static;
+              min-height: 550px;
               width: auto; }
             #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices.visible {
               overflow: visible; }
@@ -2017,6 +2025,26 @@ body {
           padding-left: 10%;
           padding-right: 10%;
           transition: all 500ms ease-in-out; } }
+  #proyectos .carousel-control-prev, #proyectos .carousel-control-next {
+    width: 15%;
+    top: -80px;
+    bottom: 80px;
+    z-index: 3; }
+    #proyectos .carousel-control-prev i, #proyectos .carousel-control-next i {
+      color: #E33D47;
+      font-size: 45px; }
+      #proyectos .carousel-control-prev i:hover, #proyectos .carousel-control-next i:hover {
+        color: #ed8086; }
+    @media (min-width: 576px) {
+      #proyectos .carousel-control-prev, #proyectos .carousel-control-next {
+        width: 8%;
+        top: 0;
+        bottom: 0; } }
+    @media (min-width: 960px) {
+      #proyectos .carousel-control-prev, #proyectos .carousel-control-next {
+        width: 15%;
+        top: 0;
+        bottom: 0; } }
 
 #heartz {
   background-color: #FFF; }
