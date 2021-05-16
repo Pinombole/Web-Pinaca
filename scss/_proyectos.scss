@@ -4,10 +4,13 @@
 	padding-bottom: 0;	
 	.headProyectos {
 		@include bannerSection (200px, url("../media/headProyectos.jpg"), $primary-color);					
-		@include media(sm) {
+		@include media(md) {
 			@include bannerSection (250px, url("../media/headProyectos.jpg"), $primary-color);					
-		}		
+		}
 		@include media(lg) {
+			@include bannerSection (350px, url("../media/headProyectos.jpg"), $primary-color);	
+		}		
+		@include media(xl) {
 			@include bannerSection (calc(100vh - #{$alto-header}), url("../media/headProyectos.jpg"), $primary-color);	
 		}
 		&:hover {
@@ -21,7 +24,7 @@
 		img {
 			width: $ancho;
 		}
-		@include media(sm) {
+		@include media(md) {
 			display: none;
 		}		
 		@include media(lg) {
@@ -30,12 +33,12 @@
 	}	
 	.serieHeader {
 		display: none;
-		@include media(sm) {
+		@include media(md) {
 			display: flex;
 			justify-content: center;
 			position: relative;
 			width: $ancho;
-			height: 125px;
+			height: 140px;
 			overflow: hidden;	
 			.serieBg {
 			    position: absolute;
@@ -59,7 +62,7 @@
 			}			
 		}			
 		@include media(lg) {
-			height: 142px;			
+			height: 185px;			
 			width: $ancho;
 			.serieBg { 
 				width: $ancho;				
@@ -70,7 +73,7 @@
 			}	
 		}
 		@include media(xl) {
-			height: 220px;					
+			height: 285px;					
 			.overlay {
 				display: block;
 				position: absolute;
@@ -88,7 +91,7 @@
 			.serieTitle {					
 				width: $ancho;					
 				height: auto;				
-				opacity: .5;
+				opacity: .2;
 				&:hover {
 					opacity: 1;
 				}
@@ -103,14 +106,25 @@
 		font-size: 1rem;
 		line-height: 1.1;
 		text-align: center;	
-		@include media(sm) {
+		@include media(md) {
 			font-size: 1.1rem;
 			padding: 1.2em 5%;
 		}			
 		@include media(lg) {				
+			font-size: 1.1rem;
+			padding: 1.2em 10%;
+			transition: all 500ms ease-in-out;
+		}
+		@include media(xl) {				
 			font-size: 1.2rem;
 			padding: 1.2em 20%;
 			transition: all 500ms ease-in-out;
+			&.sinopsis {				
+				min-height: calc(100vh - #{$alto-header} - 285px);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
 		}
 		.title {
 			display: inline-block;
@@ -124,11 +138,11 @@
 			margin-bottom: 0.4em; 
 		}							
 	}
-	.seccionPersonajes { 
+	.seccionPersonajes, .seccionConcept { 
 		width: $ancho;
 		overflow: hidden;	
-		.personajesTitle {
-			height: 150px;
+		.personajesTitle, .conceptTitle {
+			height: 120px;
 			display: flex;
 			display-direction: column;
 			justify-content: center;
@@ -140,10 +154,16 @@
 				/*border-bottom: solid 2px;*/
 				font-family: $font-title;
 				font-weight: $font-regular;
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 				text-align: center;
 				letter-spacing:.5em;
 				line-height: 2;
+				@include media(md) {
+					font-size: 1.4rem;
+				}
+				@include media(xl) {
+					font-size: 1.5rem;					
+				}
 			}
 		}
 		.fichaPersonaje {	
@@ -202,6 +222,37 @@
 				display: none;
 			}
 			@include media(sm) {					
+				min-height: 600px;				
+				flex-direction: column; 					
+				.infoPersonaje {	
+					position: absolute;	
+					top: 15px;	
+					padding: 0 0 1.2em 0;
+					font-size: .9rem;				
+					h5 {					
+						margin: 0 auto 0 auto;
+						font-size: 1.3rem;
+						span { 
+							display: inline;
+						}
+					}
+					p {
+						width: 100%;
+						display: block;
+						padding: .7em .5em;					
+					}
+				}			
+				.fotoPersonaje-mobile {
+					display: block;
+				    position: relative;				   
+				    width: 35%;
+				    padding-top: 35%;				  		
+				}
+				.fotoPersonaje-lg-devices {
+					display: none;
+				}		
+			}
+			@include media(md) {					
 				min-height: 550px;	
 				flex-direction: row; 
 				.infoPersonaje {
@@ -212,7 +263,7 @@
 						font-size: 1.5rem;
 						margin: 0 auto 1em auto;
 						span { 							
-							display: inline;
+							display: block;
 						}
 					}
 					p {						
@@ -241,18 +292,58 @@
 					display: none;
 				}							
 			}			
-			@include media(lg) {				
+			@include media(lg) {					
+				min-height: 550px;	
+				flex-direction: row; 
+				.infoPersonaje {
+					position: static;						
+					padding: 0;
+					font-size: 1rem;			
+					h5	{
+						font-size: 1.5rem;
+						margin: 0 auto 1em auto;
+						span { 							
+							display: block;
+						}
+					}
+					p {						
+						padding: .5em 1em;		
+					}			
+				}
+				.fotoPersonaje-lg-devices {
+					display: flex;
+				    justify-content: center;					
+					position: relative;
+					z-index: 1;
+					height: 550px;
+					width: auto;	
+					padding-top: 0;	
+					bottom: 0;			
+					img {
+						position: static;	
+						min-height: 550px;	
+						width: auto; 						
+					}
+					&.visible {
+						overflow: visible;
+					}
+				}	
+				.fotoPersonaje-mobile {
+					display: none;
+				}							
+			}
+			@include media(xl) {				
 				.infoPersonaje {
 					padding: 1.2em 0;
 					font-size: 1.1rem;						
 					h5	{
-						font-size: 1.7rem;
+						font-size: 1.5rem;
 						span { 							
 							display: inline;
 						}
 					}
 					p {						
-						padding: .5em 0;		
+						padding: .5em .5%;		
 					}
 				}
 				.fotoPersonaje {						
@@ -261,21 +352,33 @@
 						overflow: hidden;
 					}								
 				}									
-			}
+			}				
 		}
 		.centrado {
 			padding: 0;
 			font-size: 1rem;
 			line-height: 1.1;	
-			@include media(sm) {
+			@include media(md) {
 				font-size: 1.1rem;
 				padding: 0 5%;
-			}			
+			}
 			@include media(lg) {				
+				font-size: 1.1rem;
+				padding: 0 10%;
+				transition: all 500ms ease-in-out;
+			}			
+			@include media(xl) {				
 				font-size: 1.2rem;
 				padding: 0 20%;
 				transition: all 500ms ease-in-out;
 			}
+		}				
+	}
+	.separador {
+		display: none;		
+		@include media(md) {
+			height: 100px;
+			background-color: $primary-color;			
 		}
 	}
 	@include media(lg) {
@@ -299,8 +402,8 @@
 	}
 	.carousel-control-prev, .carousel-control-next {
 		width: 15%;
-		top: -80px;
-		bottom: 80px;	
+		top: -110px;
+		bottom: 110px;	
 		z-index: 3;
 		i {
 			color: $text-especial;
@@ -309,7 +412,7 @@
 				color: lighten( $text-especial, 15% );
 			}		
 	    }
-	    @include media(sm) {
+	    @include media(md) {
 	    	width: 8%;
 			top: 0;
 			bottom: 0		
@@ -318,8 +421,61 @@
 			width: 15%;		
 			top: 0;
 			bottom: 0;
+		}	  
+	}
+	#carouselConceptComando {
+		max-height: calc(100vh - #{$alto-header} - 120px);
+		.carousel-inner {		  
+		    position: relative;
+		    max-height: calc(100vh - #{$alto-header} - 120px);
+		    width: 100%;
+		    padding-top: 150%;		  
+		    .carousel-item {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    bottom: 0;
+			    right: 0;
+			    background-size: contain;
+			    background-repeat: no-repeat;
+			    background-position: center center;			    
+			    max-height: calc(100vh - #{$alto-header} - 120px);
+			}			  
 		}
-	  
+		.carousel-control-prev, .carousel-control-next {
+			top: 0;
+			bottom: 0;
+		}			
+		@include media(sm) {
+			max-height: calc(100vh - #{$alto-header});
+			.carousel-inner {
+				max-height: calc(100vh - #{$alto-header});
+	    		padding-top: 55%;
+	    		.carousel-item {
+	    			max-height: calc(100vh - #{$alto-header});
+	    		}
+	    	}
+	    }
+	    @include media(md) {
+			max-height: calc(100vh - #{$alto-header} - 120px);
+			.carousel-inner {
+				max-height: calc(100vh - #{$alto-header} - 120px);
+	    		padding-top: 100%;
+	    		.carousel-item {
+	    			max-height: calc(100vh - #{$alto-header} - 120px);
+	    		}
+	    	}
+	    }				
+	    @include media(lg) {
+	    	max-height: calc(100vh - #{$alto-header} - 120px);
+			.carousel-inner {
+				max-height: calc(100vh - #{$alto-header} - 120px);
+	    		padding-top: 55%;
+	    		.carousel-item {
+	    			max-height: calc(100vh - #{$alto-header} - 120px);
+	    		}
+	    	}
+	    }    
 	}
 }	
 
@@ -362,7 +518,72 @@
 			    }
 		    }
 		}
-	}	
+	}
+	.seccionConcept {
+		.conceptTitle {
+			background-color: $primary-color;
+			color: $text-especial;	    	
+	    }
+	    .carousel-item {
+	    	background-color: $black; 
+	    }
+    }		
+}
+#superComando {
+	background-color: $bg-color-lgt;
+	h3 {
+		color: $text-bg-lgt-1; 
+		background-color: $salmon;		
+	}
+	.infoProyectos {
+		color: $text-bg-lgt-1;
+		span {
+			color: $text-bg-lgt-1;
+		}		
+		.title {
+			color: $text-especial;			
+		}
+	}
+	.seccionPersonajes {
+		.personajesTitle {
+			background-color: $primary-color;
+			color: $text-especial;	    	
+	    }	   
+	    .fichaPersonaje {
+	    	&.red {
+				color: $white; 
+				background-color: darken($red-dk, 10%);
+				background-color: $bg-color-dk;
+				background-image: url("../media/somel-films/comando-fondo-red.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				h5 {
+					color: $red-lgt;
+			    }
+		    }
+		    &.space{
+				color: $text-bg-dk-2; 
+				background-color: $bg-color-dk;
+				background-image: url("../media/somel-films/comando-fondo-space.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				h5 {
+					color: $text-especial;
+			    }
+		    }
+		}
+	}
+	.seccionConcept {
+		.conceptTitle {
+			background-color: darken($red-dk, 10%);
+			color: $text-bg-lgt-2;	    	
+	    }
+	    .carousel-item {
+	    	background-color: $black; 
+	    }
+    }	
 }
 
-#superComando {}
+#kalaHuam {}
+
+#dosEntes {}

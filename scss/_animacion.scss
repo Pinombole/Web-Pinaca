@@ -39,13 +39,7 @@
             margin-right: 0;       		     	
 	    	img {
 	    		width: 100%;	    		
-	    	}
-	    	@include media(sm) {
-
-			}
-			@include media(lg) {
-
-			}		
+	    	}	    			
 	    }
 	    .caption {
 	    	@include caption-img(); 
@@ -59,10 +53,10 @@
 			    	font-weight: 500;
 			    	line-height: .8;
 			    	letter-spacing: .5px;
-			    	@include media(sm) {
+			    	@include media(md) {
 						font-size: 1.15rem;
 					}
-					@include media(lg) {
+					@include media(xl) {
 						font-size: 1.2rem;
 					}   
 			    }
@@ -91,13 +85,15 @@
 		max-width: $ancho;
 		overflow: hidden;
 		height: auto;		
-		@include media(lg) {
+		@include media(xl) {
 			min-height: calc(100vh - 100px);			
 		}
-		@include media(sm) {
+		@include media(md) {
 			min-height: auto;
 		}
 		h3 {
+			margin: .5em 0;
+			line-height: 1;
 			display: block;
 			width: $ancho;
 			border: bottom 2px;
@@ -105,7 +101,7 @@
 			@include media(sm) {
 				display: none;
 			}		
-			@include media(lg) {
+			@include media(xl) {
 				display: none;
 			}		
 		}
@@ -117,11 +113,11 @@
 			font-size: 1rem;
 			line-height: 1.1;
 			text-align: center;	
-			@include media(sm) {
+			@include media(md) {
 				font-size: 1.1rem;
 				padding: 1.2em 5%;
 			}			
-			@include media(lg) {				
+			@include media(xl) {				
 				font-size: 1.2rem;
 				padding: 1.2em 20%;
 			}
@@ -149,10 +145,10 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			@include media(sm) {
+			@include media(md) {
 				font-size: .9rem;				
 			}			
-			@include media(lg) {				
+			@include media(xl) {				
 				font-size: 1rem;
 
 			}					
@@ -164,7 +160,7 @@
 				justify-content: center;
 				position: relative;
 				width: $ancho;
-				height: 125px;
+				height: 92px;
 				overflow: hidden;	
 				.serieBg {
 				    position: absolute;
@@ -186,9 +182,12 @@
 					opacity: 1;
 					transition: all 500ms ease-in-out;		
 				}			
-			}			
+			}
+			@include media(md) {
+				height: 125px;
+			}
 			@include media(lg) {
-				height: 142px;			
+				height: 142px;
 				width: $ancho;
 				.serieBg { 
 					width: $ancho;				
@@ -240,14 +239,14 @@
 			opacity: 2;
 			text-shadow: 0 1px 0 darken( $third-color, 10% );			
 		}
-		@include media(sm) {
+		@include media(md) {
 			max-width: 700px;
 		}
-		@include media(lg) {
+		@include media(xl) {
 			max-width: 800px;
 		}
 	}
-	@include media(lg) {
+	@include media(xl) {
 		margin-right: 0;
 		width: $ancho;
 		transition: all 500ms ease-in-out;
@@ -255,7 +254,7 @@
 			margin-right: $ancho-menu * 1.6;
 			width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
 			transition: all 500ms ease-in-out;
-			.serieHeader .serieBg , .serieHeader .serieTitle, {
+			.serieHeader .serieBg , .serieHeader .serieTitle, .serieHeader .overlay {
 				width: 133.33%;
 				transition: all 500ms ease-in-out;
 			}
@@ -303,7 +302,7 @@
 			color: $text-bg-dk-2;
 			background-color: $primary-color;
 			span {
-				color: $text-bg-dk-1;
+				color: $text-especial;
 			}
 			a {
 				color: $text-especial;
@@ -386,7 +385,7 @@
 }
 #cortos, #musicales, #comerciales {
 	.serieCompleta {
-		@include media(lg) {
+		@include media(xl) {
 			min-height: auto;
 			padding-bottom: 50px;			
 		}

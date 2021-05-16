@@ -2,7 +2,7 @@
 @mixin media($size) {
 	$bp-xs:"max-width:539px";
 	$bp-sm:"min-width:576px";
-	$bp-md:"min-width:720px";
+	$bp-md:"min-width:768px";
 	$bp-lg:"min-width:960px";
 	$bp-xl:"min-width:1140px";
 
@@ -55,7 +55,7 @@
 	    margin: 0;
 	    z-index: 2;
 	}
-	@include media(lg) {
+	@include media(xl) {
 		.titleOverlay {
 		    background: rgba(darken($bg-overlay, 25%), .8);
 		    transition: all 500ms ease-in-out;
@@ -93,11 +93,11 @@
 		text-align: right;
 		color: $color-firma-head;
 	}
-	@include media(sm) {
+	@include media(md) {
 		width: $ancho * .8;
 		font-size: 1.2em;
 	}
-	@include media(lg) {
+	@include media(xl) {
 		width: $ancho * .5;
 		color: rgba($color-quote-head, .25);
 		transition: all 500ms ease-in-out;
@@ -175,10 +175,10 @@
             text-align: center;
             font-size: 1.2rem;
             padding: 0 .2em;
-            @include media(sm) {
+            @include media(md) {
                 font-size: 1.2rem;
             }
-            @include media(lg) {
+            @include media(xl) {
                 font-size: 1.2rem;
             }      
         }
@@ -202,6 +202,7 @@
     img {
         position: absolute;
         top: 0;
+        width: 100%;
     }
     iframe{
         display: flex;

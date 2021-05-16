@@ -74,7 +74,7 @@ body {
     @media (min-width: 576px) {
       body h1 {
         font-size: 1.9rem; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       body h1 {
         font-size: 2rem; } }
   body h2 {
@@ -85,7 +85,7 @@ body {
     @media (min-width: 576px) {
       body h2 {
         font-size: 1.5rem; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       body h2 {
         font-size: 1.6rem; } }
   body h3 {
@@ -94,7 +94,7 @@ body {
     @media (min-width: 576px) {
       body h3 {
         font-size: 1.6rem; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       body h3 {
         font-size: 1.75rem; } }
   body h5 {
@@ -103,7 +103,7 @@ body {
     @media (min-width: 576px) {
       body h5 {
         font-size: 1.3rem; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       body h5 {
         font-size: 1.4rem; } }
 
@@ -225,6 +225,11 @@ body {
       transform: translate(325px); } }
   @media (min-width: 960px) {
     #menu {
+      width: 350px;
+      transform: translate(350px);
+      background-color: #201B30; } }
+  @media (min-width: 1140px) {
+    #menu {
       width: 400px;
       transform: translate(400px);
       background-color: #201B30; } }
@@ -239,7 +244,7 @@ body {
       @media (min-width: 576px) {
         #menu #accordionMenu ul li {
           font-size: 1.2rem; } }
-      @media (min-width: 960px) {
+      @media (min-width: 1140px) {
         #menu #accordionMenu ul li {
           font-size: 1.3rem; } }
       #menu #accordionMenu ul li:hover {
@@ -348,6 +353,13 @@ body {
       padding: auto 0;
       transition: all 500ms ease-in-out; }
       #footer.active {
+        padding-right: 350px;
+        transition: all 500ms ease-in-out; } }
+  @media (min-width: 1140px) {
+    #footer {
+      padding: auto 0;
+      transition: all 500ms ease-in-out; }
+      #footer.active {
         padding-right: 400px;
         transition: all 500ms ease-in-out; } }
 
@@ -359,6 +371,13 @@ body {
       width: 100%;
       transition: width 500ms ease-in-out; }
       #personal.active {
+        width: calc(100% - ( calc(250px * 1.4 ) ));
+        transition: width 500ms ease-in-out; } }
+  @media (min-width: 1140px) {
+    #personal {
+      width: 100%;
+      transition: width 500ms ease-in-out; }
+      #personal.active {
         width: calc(100% - ( calc(250px * 1.6 ) ));
         transition: width 500ms ease-in-out; } }
   #personal h2 {
@@ -366,9 +385,10 @@ body {
     color: #E33D47;
     background-color: #201B30;
     font-size: 1rem;
+    text-align: center;
     border-bottom: solid 2px;
     padding: .4em; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #personal h2 {
         font-size: 1.1rem; } }
 
@@ -377,24 +397,37 @@ body {
   min-height: calc(100vh - 90px); }
   #acerca .bloqueAcerca {
     min-height: calc(100vh - 90px); }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #acerca .bloqueAcerca {
         background-image: url("../media/pinacaCircularDer.png");
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: auto 80%; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       #acerca .bloqueAcerca {
         background-size: auto 90%; } }
   #acerca .parrafoAcerca {
     width: 100%;
-    display: inline-block; }
-    @media (min-width: 576px) {
+    display: inline-block;
+    padding: .5em; }
+    @media (min-width: 768px) {
       #acerca .parrafoAcerca {
+        padding-left: 5%;
         width: 75%; } }
+    @media (min-width: 960px) {
+      #acerca .parrafoAcerca {
+        padding-left: 10%; } }
+    @media (min-width: 1140px) {
+      #acerca .parrafoAcerca {
+        padding-left: 15%; } }
   @media (min-width: 960px) {
+    #acerca h2 {
+      padding-top: 2em; } }
+  @media (min-width: 1140px) {
     #acerca {
-      font-size: 1.1rem; } }
+      font-size: 1.1rem; }
+      #acerca h2 {
+        padding-top: 2em; } }
 
 #contacto {
   min-height: calc(100vh - 90px);
@@ -405,14 +438,21 @@ body {
   background-color: #2C2743; }
   #contacto h2 {
     background-color: #831B21; }
+  #contacto #comentarioProyecto {
+    resize: none; }
 
 .btn {
   cursor: pointer; }
+
+.violetPorfolio {
+  background-color: #1b1824; }
 
 #portfolio {
   width: 100%;
   margin-top: 90px;
   background-color: #1b1824; }
+  #portfolio .row {
+    justify-content: center !important; }
   #portfolio .portfolioItem {
     display: block;
     position: relative;
@@ -456,17 +496,18 @@ body {
           text-align: center;
           font-size: 1.2rem;
           padding: 0 .2em; }
-          @media (min-width: 576px) {
+          @media (min-width: 768px) {
             #portfolio .portfolioItem .caption .captionContent h4 {
               font-size: 1.2rem; } }
-          @media (min-width: 960px) {
+          @media (min-width: 1140px) {
             #portfolio .portfolioItem .caption .captionContent h4 {
               font-size: 1.2rem; } }
         #portfolio .portfolioItem .caption .captionContent p {
           line-height: 1; }
     #portfolio .portfolioItem img {
       position: absolute;
-      top: 0; }
+      top: 0;
+      width: 100%; }
     #portfolio .portfolioItem iframe {
       display: flex;
       height: 100%;
@@ -487,38 +528,60 @@ body {
   @media (min-width: 960px) {
     #portfolio {
       width: 100%;
-      margin-right: 0px;
-      padding-right: 15px !important;
-      padding-left: 15px !important;
-      margin-left: 0px !important;
-      transition-delay: 0ms; }
+      margin-right: 0px; }
+      #portfolio.container-fluid {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        margin-left: 0px !important;
+        transition-delay: 0ms; }
+      #portfolio .row {
+        justify-content: center !important;
+        transition-delay: 0ms; }
       #portfolio .portfolioItem.hidden {
         display: none; }
-      #portfolio .portfolioItem img {
-        transition: all 500ms ease-in-out; }
-      #portfolio .portfolioItem:hover img {
-        transform: scale(1.1); }
       #portfolio.active {
-        width: calc(100% - ( calc(250px * 1.6 ) ));
-        margin-right: 400px;
+        width: calc(100% - ( calc(250px * 1.42 ) ));
+        margin-right: 355px;
         transition-delay: 500ms; }
         #portfolio.active.container-fluid {
           padding-right: 5px !important;
           padding-left: 0 !important;
           margin-left: 10px !important;
           transition-delay: 500ms; }
+        #portfolio.active .row {
+          justify-content: flex-start !important;
+          transition-delay: 500ms; }
         #portfolio.active .portfolioItem.hidden {
           display: block;
           transition-delay: 500ms; }
-        #portfolio.active .col-lg-3 {
-          flex: 0 0 33%;
-          max-width: 33%;
+        #portfolio.active .col-lg-4 {
+          flex: 0 0 50%;
+          max-width: 50%;
           transition-delay: 500ms; } }
+  @media (min-width: 1140px) {
+    #portfolio.active {
+      width: calc(100% - ( calc(250px * 1.6 ) ));
+      margin-right: 400px; }
+      #portfolio.active.container-fluid {
+        padding-right: 5px !important;
+        padding-left: 0 !important;
+        margin-left: 10px !important;
+        transition-delay: 500ms; }
+      #portfolio.active .col-xl-3 {
+        flex: 0 0 33%;
+        max-width: 33%;
+        transition-delay: 500ms; }
+    #portfolio img {
+      transition: all 500ms ease-in-out; }
+    #portfolio:hover img {
+      transform: scale(1.1); } }
 
 #ilustraciones {
   width: 100%;
   margin-top: 90px;
   background-color: #1b1824; }
+  #ilustraciones .row {
+    justify-content: center !important; }
   #ilustraciones .portfolioItem {
     display: block;
     position: relative;
@@ -565,17 +628,18 @@ body {
           text-align: center;
           font-size: 1.2rem;
           padding: 0 .2em; }
-          @media (min-width: 576px) {
+          @media (min-width: 768px) {
             #ilustraciones .portfolioItem .caption .captionContent h4 {
               font-size: 1.2rem; } }
-          @media (min-width: 960px) {
+          @media (min-width: 1140px) {
             #ilustraciones .portfolioItem .caption .captionContent h4 {
               font-size: 1.2rem; } }
         #ilustraciones .portfolioItem .caption .captionContent p {
           line-height: 1; }
     #ilustraciones .portfolioItem img {
       position: absolute;
-      top: 0; }
+      top: 0;
+      width: 100%; }
     #ilustraciones .portfolioItem iframe {
       display: flex;
       height: 100%;
@@ -596,6 +660,19 @@ body {
   #ilustraciones h4 {
     color: #E33D47; }
   @media (min-width: 960px) {
+    #ilustraciones {
+      width: 100%;
+      margin-right: 0px;
+      transition: all 500ms ease-in-out; }
+      #ilustraciones .portfolioItem.hidden {
+        display: none; }
+      #ilustraciones.active {
+        width: calc(100% - ( calc(250px * 1.4 ) ));
+        margin-right: 350px;
+        transition: all 500ms ease-in-out; }
+        #ilustraciones.active .portfolioItem.hidden {
+          display: block; } }
+  @media (min-width: 1140px) {
     #ilustraciones {
       width: 100%;
       margin-right: 0px;
@@ -668,7 +745,7 @@ body {
       background: rgba(0, 0, 0, 0);
       margin: 0;
       z-index: 2; }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       #animacion .headAnimacion .titleOverlay {
         background: rgba(0, 0, 0, 0.8);
         transition: all 500ms ease-in-out; }
@@ -698,11 +775,11 @@ body {
         padding-bottom: .5em;
         text-align: right;
         color: #6E6292; }
-      @media (min-width: 576px) {
+      @media (min-width: 768px) {
         #animacion .headAnimacion .quotes {
           width: 80%;
           font-size: 1.2em; } }
-      @media (min-width: 960px) {
+      @media (min-width: 1140px) {
         #animacion .headAnimacion .quotes {
           width: 50%;
           color: rgba(216, 203, 255, 0.25);
@@ -794,10 +871,10 @@ body {
           text-align: center;
           font-size: 1.2rem;
           padding: 0 .2em; }
-          @media (min-width: 576px) {
+          @media (min-width: 768px) {
             #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.2rem; } }
-          @media (min-width: 960px) {
+          @media (min-width: 1140px) {
             #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.2rem; } }
         #animacion #gallery-Cortos .caption .captionContent p, #animacion #gallery-LuluChiqui .caption .captionContent p, #animacion #gallery-Markitos .caption .captionContent p, #animacion #gallery-Musica .caption .captionContent p, #animacion #gallery-Comerciales .caption .captionContent p, #animacion #gallery-Mono .caption .captionContent p, #animacion #gallery-Fort .caption .captionContent p, #animacion #gallery-Gamarra .caption .captionContent p, #animacion #gallery-Cyber .caption .captionContent p {
@@ -812,10 +889,10 @@ body {
           font-weight: 500;
           line-height: .8;
           letter-spacing: .5px; }
-          @media (min-width: 576px) {
+          @media (min-width: 768px) {
             #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.15rem; } }
-          @media (min-width: 960px) {
+          @media (min-width: 1140px) {
             #animacion #gallery-Cortos .caption .captionContent h4, #animacion #gallery-LuluChiqui .caption .captionContent h4, #animacion #gallery-Markitos .caption .captionContent h4, #animacion #gallery-Musica .caption .captionContent h4, #animacion #gallery-Comerciales .caption .captionContent h4, #animacion #gallery-Mono .caption .captionContent h4, #animacion #gallery-Fort .caption .captionContent h4, #animacion #gallery-Gamarra .caption .captionContent h4, #animacion #gallery-Cyber .caption .captionContent h4 {
               font-size: 1.2rem; } }
     #animacion #gallery-Cortos .carousel-control-prev, #animacion #gallery-LuluChiqui .carousel-control-prev, #animacion #gallery-Markitos .carousel-control-prev, #animacion #gallery-Musica .carousel-control-prev, #animacion #gallery-Comerciales .carousel-control-prev, #animacion #gallery-Mono .carousel-control-prev, #animacion #gallery-Fort .carousel-control-prev, #animacion #gallery-Gamarra .carousel-control-prev, #animacion #gallery-Cyber .carousel-control-prev {
@@ -1021,13 +1098,15 @@ body {
     max-width: 100%;
     overflow: hidden;
     height: auto; }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       #animacion .serieCompleta {
         min-height: calc(100vh - 100px); } }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #animacion .serieCompleta {
         min-height: auto; } }
     #animacion .serieCompleta h3 {
+      margin: .5em 0;
+      line-height: 1;
       display: block;
       width: 100%;
       border: bottom 2px;
@@ -1035,7 +1114,7 @@ body {
       @media (min-width: 576px) {
         #animacion .serieCompleta h3 {
           display: none; } }
-      @media (min-width: 960px) {
+      @media (min-width: 1140px) {
         #animacion .serieCompleta h3 {
           display: none; } }
     #animacion .serieCompleta .infoAnim {
@@ -1046,11 +1125,11 @@ body {
       font-size: 1rem;
       line-height: 1.1;
       text-align: center; }
-      @media (min-width: 576px) {
+      @media (min-width: 768px) {
         #animacion .serieCompleta .infoAnim {
           font-size: 1.1rem;
           padding: 1.2em 5%; } }
-      @media (min-width: 960px) {
+      @media (min-width: 1140px) {
         #animacion .serieCompleta .infoAnim {
           font-size: 1.2rem;
           padding: 1.2em 20%; } }
@@ -1075,10 +1154,10 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center; }
-      @media (min-width: 576px) {
+      @media (min-width: 768px) {
         #animacion .serieCompleta .infoModalAnim {
           font-size: .9rem; } }
-      @media (min-width: 960px) {
+      @media (min-width: 1140px) {
         #animacion .serieCompleta .infoModalAnim {
           font-size: 1rem; } }
     #animacion .serieCompleta .serieHeader {
@@ -1089,7 +1168,7 @@ body {
           justify-content: center;
           position: relative;
           width: 100%;
-          height: 125px;
+          height: 92px;
           overflow: hidden; }
           #animacion .serieCompleta .serieHeader .serieBg {
             position: absolute;
@@ -1108,6 +1187,9 @@ body {
             z-index: 3;
             opacity: 1;
             transition: all 500ms ease-in-out; } }
+      @media (min-width: 768px) {
+        #animacion .serieCompleta .serieHeader {
+          height: 125px; } }
       @media (min-width: 960px) {
         #animacion .serieCompleta .serieHeader {
           height: 142px;
@@ -1150,13 +1232,13 @@ body {
     color: #E33D47;
     opacity: 2;
     text-shadow: 0 1px 0 #591216; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     #animacion .modal-dialog {
       max-width: 700px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #animacion .modal-dialog {
       max-width: 800px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #animacion {
       margin-right: 0;
       width: 100%;
@@ -1165,7 +1247,7 @@ body {
         margin-right: 400px;
         width: calc(100% - ( calc(250px * 1.6 ) ));
         transition: all 500ms ease-in-out; }
-        #animacion.active .serieHeader .serieBg, #animacion.active .serieHeader .serieTitle {
+        #animacion.active .serieHeader .serieBg, #animacion.active .serieHeader .serieTitle, #animacion.active .serieHeader .overlay {
           width: 133.33%;
           transition: all 500ms ease-in-out; } }
 
@@ -1188,7 +1270,7 @@ body {
     background: rgba(0, 0, 0, 0);
     margin: 0;
     z-index: 2; }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #cortos .animaTitleBox .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1215,7 +1297,7 @@ body {
     background: rgba(0, 0, 0, 0);
     margin: 0;
     z-index: 2; }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #series .animaTitleBox .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1242,7 +1324,7 @@ body {
     background: rgba(0, 0, 0, 0);
     margin: 0;
     z-index: 2; }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #musicales .animaTitleBox .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1269,7 +1351,7 @@ body {
     background: rgba(0, 0, 0, 0);
     margin: 0;
     z-index: 2; }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #infantiles .animaTitleBox .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1296,7 +1378,7 @@ body {
     background: rgba(0, 0, 0, 0);
     margin: 0;
     z-index: 2; }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #comerciales .animaTitleBox .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1312,7 +1394,7 @@ body {
   color: #D8CBFF;
   background-color: #201B30; }
   #cortos .serieCompleta .infoAnim span, #cortos .serieCompleta .infoModalAnim span, #musicales .serieCompleta .infoAnim span, #musicales .serieCompleta .infoModalAnim span, #series .serieCompleta .infoAnim span, #series .serieCompleta .infoModalAnim span {
-    color: #6E6292; }
+    color: #E33D47; }
   #cortos .serieCompleta .infoAnim a, #cortos .serieCompleta .infoModalAnim a, #musicales .serieCompleta .infoAnim a, #musicales .serieCompleta .infoModalAnim a, #series .serieCompleta .infoAnim a, #series .serieCompleta .infoModalAnim a {
     color: #E33D47;
     font-weight: 700; }
@@ -1368,7 +1450,7 @@ body {
       #comerciales #gallery-Comerciales .caption .captionContent h4 {
         color: #FCE9E9; }
 
-@media (min-width: 960px) {
+@media (min-width: 1140px) {
   #cortos .serieCompleta, #musicales .serieCompleta, #comerciales .serieCompleta {
     min-height: auto;
     padding-bottom: 50px; } }
@@ -1431,7 +1513,7 @@ body {
     position: relative;
     bottom: 10px;
     right: 0; }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     #textos {
       width: 100%;
       transition: all 500ms ease-in-out; }
@@ -1472,7 +1554,7 @@ body {
     background: rgba(25, 5, 6, 0);
     margin: 0;
     z-index: 2; }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     .headTextos .titleOverlay {
       background: rgba(25, 5, 6, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1502,11 +1584,11 @@ body {
       padding-bottom: .5em;
       text-align: right;
       color: #E33D47; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       .headTextos .quotes {
         width: 80%;
         font-size: 1.2em; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       .headTextos .quotes {
         width: 50%;
         color: rgba(131, 27, 33, 0.25);
@@ -1538,10 +1620,10 @@ body {
     bottom: 1em;
     right: .5em;
     bottom: 11em; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       .headTextos .notaPie {
         bottom: 9em; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       .headTextos .notaPie {
         bottom: 11em; } }
   .headTextos .categorias {
@@ -1584,7 +1666,7 @@ body {
           color: rgba(255, 122, 122, 0.8);
           font-weight: 300;
           transition: all 500ms ease-in-out; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       .headTextos .categorias {
         margin-bottom: .5em;
         padding: .2em 1%; }
@@ -1599,7 +1681,7 @@ body {
             text-align: center; }
           .headTextos .categorias ul span {
             display: block; } }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       .headTextos .categorias {
         margin-bottom: .5em;
         padding: .5em 20%; }
@@ -1610,7 +1692,7 @@ body {
           .headTextos .categorias ul button {
             font-size: 1.3em;
             margin: .2em 1em; } }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .headTextos {
       justify-content: space-around; } }
 
@@ -1669,7 +1751,7 @@ body {
     animation-iteration-count: 1;
     animation-duration: 250ms;
     amimation-timing-function: ease-in-out; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .contTextos .cuento, .contTextos .ensayo {
       padding: 3em 10%; }
       .contTextos .cuento p, .contTextos .ensayo p {
@@ -1681,7 +1763,7 @@ body {
         padding-left: 30%; }
       .contTextos .lirica h3 {
         padding-left: 30%; } }
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     .contTextos .cuento, .contTextos .ensayo {
       padding: 3em 20%; }
       .contTextos .cuento p, .contTextos .ensayo p {
@@ -1717,14 +1799,14 @@ body {
       background: rgba(0, 0, 0, 0);
       margin: 0;
       z-index: 2; }
-    @media (min-width: 960px) {
+    @media (min-width: 1140px) {
       #proyectos .headProyectos .titleOverlay {
         background: rgba(0, 0, 0, 0.8);
         transition: all 500ms ease-in-out; }
       #proyectos .headProyectos:hover .titleOverlay {
         background: rgba(0, 0, 0, 0);
         transition: all 500ms ease-in-out; } }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #proyectos .headProyectos {
         position: relative;
         display: flex;
@@ -1744,7 +1826,7 @@ body {
           background: rgba(0, 0, 0, 0);
           margin: 0;
           z-index: 2; } }
-  @media (min-width: 576px) and (min-width: 960px) {
+  @media (min-width: 768px) and (min-width: 1140px) {
     #proyectos .headProyectos .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1752,6 +1834,33 @@ body {
       background: rgba(0, 0, 0, 0);
       transition: all 500ms ease-in-out; } }
     @media (min-width: 960px) {
+      #proyectos .headProyectos {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-image: url("../media/headProyectos.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 350px; }
+        #proyectos .headProyectos .titleOverlay {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          background: rgba(0, 0, 0, 0);
+          margin: 0;
+          z-index: 2; } }
+  @media (min-width: 960px) and (min-width: 1140px) {
+    #proyectos .headProyectos .titleOverlay {
+      background: rgba(0, 0, 0, 0.8);
+      transition: all 500ms ease-in-out; }
+    #proyectos .headProyectos:hover .titleOverlay {
+      background: rgba(0, 0, 0, 0);
+      transition: all 500ms ease-in-out; } }
+    @media (min-width: 1140px) {
       #proyectos .headProyectos {
         position: relative;
         display: flex;
@@ -1771,7 +1880,7 @@ body {
           background: rgba(0, 0, 0, 0);
           margin: 0;
           z-index: 2; } }
-  @media (min-width: 960px) and (min-width: 960px) {
+  @media (min-width: 1140px) and (min-width: 1140px) {
     #proyectos .headProyectos .titleOverlay {
       background: rgba(0, 0, 0, 0.8);
       transition: all 500ms ease-in-out; }
@@ -1793,7 +1902,7 @@ body {
     border: bottom 2px; }
     #proyectos .title-sd-serie img {
       width: 100%; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #proyectos .title-sd-serie {
         display: none; } }
     @media (min-width: 960px) {
@@ -1801,13 +1910,13 @@ body {
         display: none; } }
   #proyectos .serieHeader {
     display: none; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #proyectos .serieHeader {
         display: flex;
         justify-content: center;
         position: relative;
         width: 100%;
-        height: 125px;
+        height: 140px;
         overflow: hidden; }
         #proyectos .serieHeader .serieBg {
           position: absolute;
@@ -1828,7 +1937,7 @@ body {
           transition: all 500ms ease-in-out; } }
     @media (min-width: 960px) {
       #proyectos .serieHeader {
-        height: 142px;
+        height: 185px;
         width: 100%; }
         #proyectos .serieHeader .serieBg {
           width: 100%;
@@ -1837,7 +1946,7 @@ body {
           display: none; } }
     @media (min-width: 1140px) {
       #proyectos .serieHeader {
-        height: 220px; }
+        height: 285px; }
         #proyectos .serieHeader .overlay {
           display: block;
           position: absolute;
@@ -1853,7 +1962,7 @@ body {
         #proyectos .serieHeader .serieTitle {
           width: 100%;
           height: auto;
-          opacity: .5; }
+          opacity: .2; }
           #proyectos .serieHeader .serieTitle:hover {
             opacity: 1; } }
   #proyectos .infoProyectos {
@@ -1864,15 +1973,25 @@ body {
     font-size: 1rem;
     line-height: 1.1;
     text-align: center; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #proyectos .infoProyectos {
         font-size: 1.1rem;
         padding: 1.2em 5%; } }
     @media (min-width: 960px) {
       #proyectos .infoProyectos {
+        font-size: 1.1rem;
+        padding: 1.2em 10%;
+        transition: all 500ms ease-in-out; } }
+    @media (min-width: 1140px) {
+      #proyectos .infoProyectos {
         font-size: 1.2rem;
         padding: 1.2em 20%;
-        transition: all 500ms ease-in-out; } }
+        transition: all 500ms ease-in-out; }
+        #proyectos .infoProyectos.sinopsis {
+          min-height: calc(100vh - 90px - 285px);
+          display: flex;
+          flex-direction: column;
+          justify-content: center; } }
     #proyectos .infoProyectos .title {
       display: inline-block;
       font-weight: 700;
@@ -1882,33 +2001,39 @@ body {
       letter-spacing: .5rem; }
     #proyectos .infoProyectos p {
       margin-bottom: 0.4em; }
-  #proyectos .seccionPersonajes {
+  #proyectos .seccionPersonajes, #proyectos .seccionConcept {
     width: 100%;
     overflow: hidden; }
-    #proyectos .seccionPersonajes .personajesTitle {
-      height: 150px;
+    #proyectos .seccionPersonajes .personajesTitle, #proyectos .seccionPersonajes .conceptTitle, #proyectos .seccionConcept .personajesTitle, #proyectos .seccionConcept .conceptTitle {
+      height: 120px;
       display: flex;
       display-direction: column;
       justify-content: center;
       align-items: center; }
-      #proyectos .seccionPersonajes .personajesTitle p {
+      #proyectos .seccionPersonajes .personajesTitle p, #proyectos .seccionPersonajes .conceptTitle p, #proyectos .seccionConcept .personajesTitle p, #proyectos .seccionConcept .conceptTitle p {
         display: inline-block;
         padding: 1em .5em;
         padding-right: 0;
         /*border-bottom: solid 2px;*/
         font-family: "Rock Salt", cursive;
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-align: center;
         letter-spacing: .5em;
         line-height: 2; }
-    #proyectos .seccionPersonajes .fichaPersonaje {
+        @media (min-width: 768px) {
+          #proyectos .seccionPersonajes .personajesTitle p, #proyectos .seccionPersonajes .conceptTitle p, #proyectos .seccionConcept .personajesTitle p, #proyectos .seccionConcept .conceptTitle p {
+            font-size: 1.4rem; } }
+        @media (min-width: 1140px) {
+          #proyectos .seccionPersonajes .personajesTitle p, #proyectos .seccionPersonajes .conceptTitle p, #proyectos .seccionConcept .personajesTitle p, #proyectos .seccionConcept .conceptTitle p {
+            font-size: 1.5rem; } }
+    #proyectos .seccionPersonajes .fichaPersonaje, #proyectos .seccionConcept .fichaPersonaje {
       min-height: 760px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
+      #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje {
         position: absolute;
         top: 15px;
         z-index: 2;
@@ -1920,7 +2045,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 {
+        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 {
           width: auto;
           display: inline-block;
           padding: 1em;
@@ -1931,41 +2056,66 @@ body {
           text-align: center;
           line-height: 1;
           border: solid 2px; }
-          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span {
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 span {
             display: block; }
-        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p {
+        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje p {
           width: 100%;
           display: block;
           padding: .7em .5em; }
-      #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile {
+      #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-mobile {
         display: block;
         position: relative;
         overflow: hidden;
         z-index: 1;
         width: 60%;
         padding-top: 60%; }
-        #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile img {
+        #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile img, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-mobile img {
           position: absolute;
           top: 0;
           width: 100%; }
-      #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices {
+      #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices {
         display: none; }
       @media (min-width: 576px) {
-        #proyectos .seccionPersonajes .fichaPersonaje {
+        #proyectos .seccionPersonajes .fichaPersonaje, #proyectos .seccionConcept .fichaPersonaje {
+          min-height: 600px;
+          flex-direction: column; }
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje {
+            position: absolute;
+            top: 15px;
+            padding: 0 0 1.2em 0;
+            font-size: .9rem; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 {
+              margin: 0 auto 0 auto;
+              font-size: 1.3rem; }
+              #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 span {
+                display: inline; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje p {
+              width: 100%;
+              display: block;
+              padding: .7em .5em; }
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-mobile {
+            display: block;
+            position: relative;
+            width: 35%;
+            padding-top: 35%; }
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices {
+            display: none; } }
+      @media (min-width: 768px) {
+        #proyectos .seccionPersonajes .fichaPersonaje, #proyectos .seccionConcept .fichaPersonaje {
           min-height: 550px;
           flex-direction: row; }
-          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje {
             position: static;
             padding: 0;
             font-size: 1rem; }
-            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 {
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 {
               font-size: 1.5rem;
               margin: 0 auto 1em auto; }
-              #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span {
-                display: inline; }
-            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p {
+              #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 span {
+                display: block; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje p {
               padding: .5em 1em; }
-          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices {
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices {
             display: flex;
             justify-content: center;
             position: relative;
@@ -1974,41 +2124,84 @@ body {
             width: auto;
             padding-top: 0;
             bottom: 0; }
-            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices img {
+            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices img, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices img {
               position: static;
               min-height: 550px;
               width: auto; }
-            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices.visible {
+            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices.visible, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices.visible {
               overflow: visible; }
-          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile {
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-mobile {
             display: none; } }
       @media (min-width: 960px) {
-        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje {
+        #proyectos .seccionPersonajes .fichaPersonaje, #proyectos .seccionConcept .fichaPersonaje {
+          min-height: 550px;
+          flex-direction: row; }
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje {
+            position: static;
+            padding: 0;
+            font-size: 1rem; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 {
+              font-size: 1.5rem;
+              margin: 0 auto 1em auto; }
+              #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 span {
+                display: block; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje p {
+              padding: .5em 1em; }
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            height: 550px;
+            width: auto;
+            padding-top: 0;
+            bottom: 0; }
+            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices img, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices img {
+              position: static;
+              min-height: 550px;
+              width: auto; }
+            #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-lg-devices.visible, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-lg-devices.visible {
+              overflow: visible; }
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje-mobile, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje-mobile {
+            display: none; } }
+      @media (min-width: 1140px) {
+        #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje {
           padding: 1.2em 0;
           font-size: 1.1rem; }
-          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 {
-            font-size: 1.7rem; }
-            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span {
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 {
+            font-size: 1.5rem; }
+            #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje h5 span, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje h5 span {
               display: inline; }
-          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p {
-            padding: .5em 0; }
-        #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje {
+          #proyectos .seccionPersonajes .fichaPersonaje .infoPersonaje p, #proyectos .seccionConcept .fichaPersonaje .infoPersonaje p {
+            padding: .5em .5%; }
+        #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje {
           padding-top: 0; }
-          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje.visible {
+          #proyectos .seccionPersonajes .fichaPersonaje .fotoPersonaje.visible, #proyectos .seccionConcept .fichaPersonaje .fotoPersonaje.visible {
             overflow: hidden; } }
-    #proyectos .seccionPersonajes .centrado {
+    #proyectos .seccionPersonajes .centrado, #proyectos .seccionConcept .centrado {
       padding: 0;
       font-size: 1rem;
       line-height: 1.1; }
-      @media (min-width: 576px) {
-        #proyectos .seccionPersonajes .centrado {
+      @media (min-width: 768px) {
+        #proyectos .seccionPersonajes .centrado, #proyectos .seccionConcept .centrado {
           font-size: 1.1rem;
           padding: 0 5%; } }
       @media (min-width: 960px) {
-        #proyectos .seccionPersonajes .centrado {
+        #proyectos .seccionPersonajes .centrado, #proyectos .seccionConcept .centrado {
+          font-size: 1.1rem;
+          padding: 0 10%;
+          transition: all 500ms ease-in-out; } }
+      @media (min-width: 1140px) {
+        #proyectos .seccionPersonajes .centrado, #proyectos .seccionConcept .centrado {
           font-size: 1.2rem;
           padding: 0 20%;
           transition: all 500ms ease-in-out; } }
+  #proyectos .separador {
+    display: none; }
+    @media (min-width: 768px) {
+      #proyectos .separador {
+        height: 100px;
+        background-color: #201B30; } }
   @media (min-width: 960px) {
     #proyectos {
       margin-right: 0;
@@ -2027,15 +2220,15 @@ body {
           transition: all 500ms ease-in-out; } }
   #proyectos .carousel-control-prev, #proyectos .carousel-control-next {
     width: 15%;
-    top: -80px;
-    bottom: 80px;
+    top: -110px;
+    bottom: 110px;
     z-index: 3; }
     #proyectos .carousel-control-prev i, #proyectos .carousel-control-next i {
       color: #E33D47;
       font-size: 45px; }
       #proyectos .carousel-control-prev i:hover, #proyectos .carousel-control-next i:hover {
         color: #ed8086; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       #proyectos .carousel-control-prev, #proyectos .carousel-control-next {
         width: 8%;
         top: 0;
@@ -2045,6 +2238,50 @@ body {
         width: 15%;
         top: 0;
         bottom: 0; } }
+  #proyectos #carouselConceptComando {
+    max-height: calc(100vh - 90px - 120px); }
+    #proyectos #carouselConceptComando .carousel-inner {
+      position: relative;
+      max-height: calc(100vh - 90px - 120px);
+      width: 100%;
+      padding-top: 150%; }
+      #proyectos #carouselConceptComando .carousel-inner .carousel-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        max-height: calc(100vh - 90px - 120px); }
+    #proyectos #carouselConceptComando .carousel-control-prev, #proyectos #carouselConceptComando .carousel-control-next {
+      top: 0;
+      bottom: 0; }
+    @media (min-width: 576px) {
+      #proyectos #carouselConceptComando {
+        max-height: calc(100vh - 90px); }
+        #proyectos #carouselConceptComando .carousel-inner {
+          max-height: calc(100vh - 90px);
+          padding-top: 55%; }
+          #proyectos #carouselConceptComando .carousel-inner .carousel-item {
+            max-height: calc(100vh - 90px); } }
+    @media (min-width: 768px) {
+      #proyectos #carouselConceptComando {
+        max-height: calc(100vh - 90px - 120px); }
+        #proyectos #carouselConceptComando .carousel-inner {
+          max-height: calc(100vh - 90px - 120px);
+          padding-top: 100%; }
+          #proyectos #carouselConceptComando .carousel-inner .carousel-item {
+            max-height: calc(100vh - 90px - 120px); } }
+    @media (min-width: 960px) {
+      #proyectos #carouselConceptComando {
+        max-height: calc(100vh - 90px - 120px); }
+        #proyectos #carouselConceptComando .carousel-inner {
+          max-height: calc(100vh - 90px - 120px);
+          padding-top: 55%; }
+          #proyectos #carouselConceptComando .carousel-inner .carousel-item {
+            max-height: calc(100vh - 90px - 120px); } }
 
 #heartz {
   background-color: #FFF; }
@@ -2070,6 +2307,48 @@ body {
     background-color: #0F0F0F; }
     #heartz .seccionPersonajes .fichaPersonaje.black h5 {
       color: #E33D47; }
+  #heartz .seccionConcept .conceptTitle {
+    background-color: #201B30;
+    color: #E33D47; }
+  #heartz .seccionConcept .carousel-item {
+    background-color: #0F0F0F; }
+
+#superComando {
+  background-color: #FFF; }
+  #superComando h3 {
+    color: #831B21;
+    background-color: #FF7A7A; }
+  #superComando .infoProyectos {
+    color: #831B21; }
+    #superComando .infoProyectos span {
+      color: #831B21; }
+    #superComando .infoProyectos .title {
+      color: #E33D47; }
+  #superComando .seccionPersonajes .personajesTitle {
+    background-color: #201B30;
+    color: #E33D47; }
+  #superComando .seccionPersonajes .fichaPersonaje.red {
+    color: #FFF;
+    background-color: #591216;
+    background-color: #0F0F0F;
+    background-image: url("../media/somel-films/comando-fondo-red.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #superComando .seccionPersonajes .fichaPersonaje.red h5 {
+      color: #E33D47; }
+  #superComando .seccionPersonajes .fichaPersonaje.space {
+    color: #D8CBFF;
+    background-color: #0F0F0F;
+    background-image: url("../media/somel-films/comando-fondo-space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #superComando .seccionPersonajes .fichaPersonaje.space h5 {
+      color: #E33D47; }
+  #superComando .seccionConcept .conceptTitle {
+    background-color: #591216;
+    color: #FF7A7A; }
+  #superComando .seccionConcept .carousel-item {
+    background-color: #0F0F0F; }
 
 #variedad {
   margin-top: 90px; }
