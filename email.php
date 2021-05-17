@@ -15,16 +15,16 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Port       = 465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->Host       = 'c2230929.ferozo.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication      
+    $mail->Username   = 'no-reply@c2230929.ferozo.com';                 //SMTP username
+    $mail->Password   = 'U9T/nSb5aT';                         //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Username   = 'pinombole.usa@gmail.com';                 //SMTP username
-    $mail->Password   = 'putoelquelee127';                         //SMTP password
+    $mail->Port       = 465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
 
     //Recipients
-    $mail->setFrom('pinombole.usa@gmail.com', 'Pinaca Usa'); // Hacer coincidir con el username. (preferentemente)
+    $mail->setFrom('no-reply@c2230929.ferozo.com', 'Host Pinaca'); // Hacer coincidir con el username. (preferentemente)
     $mail->addAddress('pinombole@gmail.com', 'Pinaca');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
