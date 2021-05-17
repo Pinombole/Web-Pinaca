@@ -465,13 +465,71 @@ jQuery(document).ready(function() {
             var videoURL = videoIFrame.attr('src');
             videoIFrame.attr('src', videoURL);
         }
-    });
- 
+    }); 
 });
 
+/* Carousel Multi Item Motion Graphics*/	
+jQuery(document).ready(function() {		
+	$('#gallery-Motion').on('slide.bs.carousel', function (e) {
+	    /*
+	        CC 2.0 License Iatek LLC 2018
+	        Attribution required
+	    */
+	    var $e = $(e.relatedTarget);
+	    var idx = $e.index();
+	    var itemsPerSlide = 4;
+	    var totalItems = $('#gallery-Motion .carousel-item').length;
+	    
+	    if (idx >= totalItems-(itemsPerSlide-1)) {
+	        var it = itemsPerSlide - (totalItems - idx);
+	        for (var i=0; i<it; i++) {
+	            // append slides to end
+	            if (e.direction=="left") {
+	                $('#gallery-Motion .carousel-item').eq(i).appendTo('#gallery-Motion .carousel-inner');
+	            }
+	            else {
+	                $('#gallery-Motion .carousel-item').eq(0).appendTo('#gallery-Motion .carousel-inner');
+	            }
+	        }
+	    }
+	});	
+});
+
+//Carrousel Modal Motion Graphics//
+jQuery(document).ready(function() { 
+    /*
+        Stop video playing when the MODAL is being closed (has finished closing)
+    */
+    $('#modal-Motion').on('hidden.bs.modal', function(e) {
+        $('#modal-Motion iframe').each(function() {
+            var videoURL = $(this).attr('src');
+            $(this).attr('src', videoURL);
+        });
+    }); 
+});
+
+jQuery(document).ready(function() { 
+    /*
+        Stop video playing when the CAROUSEL slides to another element
+    */
+    $('#carousel-Motion').on('slid.bs.carousel', function(e) {
+        var currentSlide = $('#carousel-Motion .carousel-item').eq(e.from);
+        var currentSlideEmbed = currentSlide.children('.embed-responsive');
+        if(currentSlideEmbed.length > 0) {
+            var videoIFrame = currentSlideEmbed.children('iframe');
+            var videoURL = videoIFrame.attr('src');
+            videoIFrame.attr('src', videoURL);
+        }
+    }); 
+});
+
+
+
+//Portfolio Galeria de Imagenes en Modal//
 $('a.portfolioItem').click(function (e) {
 	    $('#modal-Portfolio img').attr('src', $(this).attr('data-img-url'));
 });
+
 
 
 //Textos Read More//

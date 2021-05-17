@@ -74,12 +74,13 @@
                 transition-delay: 500ms;
             }
         }
-        img {
+        .portfolioItem img {
             transition: all 500ms ease-in-out;
+             &:hover {
+                transform: scale(1.1);
+            }
         }
-        &:hover img{
-            transform: scale(1.1);
-        }
+       
     }
 }
 
@@ -160,12 +161,12 @@
                     transition: all 250ms ease-in-out;                   
                 }
             }
-            img {
+            .portfolioItem img {
                 transition: all 500ms ease-in-out;
-            }
-            &:hover img{
-                transform: scale(1.1);
-            }
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }            
         }
         &.active {
             width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
@@ -189,6 +190,9 @@
         color: $text-especial;
         opacity: 2;
         text-shadow: 0 1px 0 darken( $third-color, 10% );           
+    }
+    .img-fluid {
+        width: 100%;
     }
 }
     

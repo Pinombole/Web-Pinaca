@@ -137,7 +137,6 @@
 			width: $ancho;
 			min-height: 130px;
 			overflow: hidden;
-			display: block;
 			padding: 1em .5em;
 			font-size: .8rem;
 			line-height: 1.2;			
@@ -397,11 +396,11 @@
 		.carousel-indicators {
 		    bottom: -20px;
 	    	li {
-			    width: 16px;
+			    width: 32px;
 			    margin-left: 5px;
 			    margin-right: 5px;
 			    border-radius: 10%;
-			    background-color: #5a6268;
+			    background-color: lighten( $text-especial, 15% );
 			}			 
 			.carousel-inner {
 			    padding-bottom: 0px;

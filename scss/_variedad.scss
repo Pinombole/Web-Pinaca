@@ -1,12 +1,366 @@
 #variedad {
 	margin-top: $alto-header;
-	h1 {
-		color: white;
-		text-align: center;
+    .headVariedad {
+		@include bannerSection (250px, url("../media/headAnim.jpg"), $primary-color);
+		.quotes {
+			@include quotesBox (200px, $red-dk, $text-bg-dk-2, $text-bg-dk-1, $text-bg-dk-1);
+		}
+		&:hover .quotes {
+			@include hoverOverlay ($text-bg-dk-2, $red-dk, $text-bg-dk-1);	
+		}
+		.notaPie {
+			@include notaPieQuote ($text-bg-dk-1);
+		}
 	}
+	.titleVariedad {	
+		width: $ancho;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		text-align: center;
+		margin: 0;
+		span {
+			display: block;
+			@include media(xl) {
+				display: inline; 	
+			}
+		}
+	}
+	.infoVariedad {
+		width: $ancho;
+		overflow: hidden;
+		display: block;
+		padding: 1.2em .5em;
+		font-size: 1rem;
+		line-height: 1.1;
+		text-align: center;			
+		.title {
+			display: inline-block;
+			font-weight: $font-bold;
+			padding: 0;
+			margin-bottom: .5em;
+		    text-align: center;
+			letter-spacing: .5rem;
+		}
+		p { 
+			margin-bottom: 0.4em; 
+		}		
+		@include media(md) {
+			font-size: 1.1rem;
+			padding: 1.2em 5%;
+		}			
+		@include media(xl) {				
+			font-size: 1.2rem;
+			padding: 1.2em 20%;
+		}						
+	}
+	.infoModalVariedad {
+		width: $ancho;
+		min-height: 100px;
+		overflow: hidden;
+		display: block;
+		padding: 1em .5em;
+		font-size: .8rem;
+		line-height: 1.2;			
+		text-align: center;	
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include media(md) {
+			font-size: .9rem;				
+		}			
+		@include media(xl) {				
+			font-size: 1rem;
 
+		}					
+	}  
+	@include media(lg) {
+        width: $ancho;
+        margin-right: $ancho-menu * 0;
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.42 ) ) );
+            margin-right: $ancho-menu * 1.42;
+            transition: all 500ms ease-in-out;
+        }
+    }
+    @include media(xl) {
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+            margin-right: $ancho-menu * 1.6;
+            transition: all 500ms ease-in-out;
+        }
+    }
+}
+
+
+#vfx {
+	width: $ancho;
+    margin-right: $ancho-menu * 0;
+    .titleVariedad {
+		color: $text-especial;
+		background-color: $primary-color;
+	}
+	.infoVariedad {
+		color: $text-bg-dk-2;
+		background-color: $primary-color;
+		span {
+			color: $text-especial;
+		}
+		a {
+			color: $text-especial;
+			font-weight: $font-bold;			
+		}
+		.title {
+			color: $text-especial;			
+		}	
+	}	
+    @include media(lg) {
+        width: $ancho;
+        margin-right: $ancho-menu * 0;
+        transition: all 500ms ease-in-out;
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.42 ) ) );
+            margin-right: $ancho-menu * 1.42;
+            transition: all 500ms ease-in-out;
+        }
+    }
+    @include media(xl) {
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+            margin-right: $ancho-menu * 1.6;
+            transition: all 500ms ease-in-out;
+        }
+    }
+
+}
+
+#motion {
+	width: $ancho;
+    margin-right: $ancho-menu * 0;
+    .titleVariedad {
+		color:$text-bg-lgt-2;
+		background-color: $third-color;
+	}
+	.infoVariedad, .infoModalVariedad {	
+		background-color: $bg-color-lgt;
+		color: $text-bg-lgt-1;
+		span {
+			color: $text-especial;
+		}
+		a {
+			color: $text-bg-lgt-1;
+			font-weight: $font-bold;			
+		}
+		.title {
+			color: $text-especial;			
+		}	
+	}		
+    @include media(lg) {
+        width: $ancho;
+        margin-right: $ancho-menu * 0;
+        transition: all 500ms ease-in-out;
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.42 ) ) );
+            margin-right: $ancho-menu * 1.42;
+            transition: all 500ms ease-in-out;
+        }
+    }
+    @include media(xl) {
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+            margin-right: $ancho-menu * 1.6;
+            transition: all 500ms ease-in-out;
+        }
+    }
+    #gallery-Motion {
+		background-color: $third-color;
+		padding: 20px 15px;
+		@include carousel-gallery;	
+		.carousel-item {
+        	padding: 0 5px;
+            margin-right: 0;       		     	
+	    	img {
+	    		width: 100%;	    		
+	    	}	    			
+	    }
+	    .caption {
+	    	@include caption-img(); 
+	    	.captionContent {
+	      		text-align: center;
+	      		max-width: 97.5%;	      		
+			    h4 {
+			    	padding: .1em .15em;
+			    	margin: 0;
+			    	font-size: 1.2rem;
+			    	font-weight: 500;
+			    	line-height: .8;
+			    	letter-spacing: .5px;
+			    	@include media(md) {
+						font-size: 1.15rem;
+					}
+					@include media(xl) {
+						font-size: 1.2rem;
+					}   
+			    }
+			}
+		}
+	    .carousel-control-prev {
+		    width: min-content;
+		    margin-left: 1px;
+		    z-index: 5;
+	    }
+	    .carousel-control-next {
+		    width: min-content;
+		    margin-right: 1px;
+		    z-index: 5;
+	    }
+	    i {
+			color: $text-especial;
+			font-size: 45px;
+			&:hover {
+				color: lighten( $text-especial, 15% );
+			}		
+	    }
+	}
+    #carousel-Motion {
+		&.carousel {
+			.carousel-indicators {
+			    bottom: 130px;
+		    	li {
+				    width: 32px;
+				    margin-left: 5px;
+				    margin-right: 5px;
+				    border-radius: 10%;
+				    background-color: lighten( $text-especial, 15% );
+				}			 
+				.carousel-inner {
+				    padding-bottom: 0px;
+				}
+			}
+			.carousel-control-prev, .carousel-control-next {
+				bottom: auto;
+				height: 65%;
+				span {
+					margin-top: 50px;
+				}
+				i {
+					color: $text-especial;
+					font-size: 45px;
+					&:hover {
+						color: lighten( $text-especial, 15% );
+					}		
+			    }
+			}		
+		}		
+	}
+	.modal-dialog {		
+		.modal-body {
+			position: relative;	
+			background-color: $bg-color-dk;	
+		}
+		.close {
+			position: absolute;
+			right: 0; 
+			top: -35px;
+			z-index: 999;
+			font-size: 3rem;
+			font-weight: normal;
+			color: $text-especial;
+			opacity: 2;
+			text-shadow: 0 1px 0 darken( $third-color, 10% );			
+		}
+		@include media(md) {
+			max-width: 700px;
+		}
+		@include media(xl) {
+			max-width: 800px;
+		}
+	}	
+}
+
+#disGrafico {
+	width: $ancho;
+    margin-right: $ancho-menu * 0;
+   .titleVariedad {
+		color: $text-especial;
+		background-color: $primary-color;
+	}
 	.carousel-video-inner {
 		text-align: center;
 	}
-
+    .row {
+        justify-content: center !important;
+    }
+    .portfolioItem {
+        @include portfolioItem;
+         &.hidden { 
+            display: block;
+        }
+    }   
+	@include media(lg) {
+        width: $ancho;
+        margin-right: $ancho-menu * 0;
+        transition-delay: 500ms;
+        &.container-fluid {  
+            padding-right: 15px !important;
+            padding-left: 15px !important;
+            margin-left: 0px !important;
+            transition-delay: 0ms;
+        }
+        .row {
+            justify-content: center !important;
+            transition-delay: 0ms;
+        }
+        .portfolioItem {
+            &.hidden { 
+                display: none;
+            }            
+        }
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.42 ) ) );
+            margin-right: $ancho-menu * 1.42;
+            transition-delay: 500ms;
+            &.container-fluid {
+                padding-right: 5px !important;
+                padding-left: 0 !important;
+                margin-left: 10px !important;
+                transition-delay: 500ms;
+            }
+            .row {
+                justify-content: flex-start !important;
+                transition-delay: 500ms;
+            }
+            .portfolioItem.hidden { 
+                display: block;
+                transition-delay: 500ms;
+            }
+            .col-lg-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+                transition-delay: 500ms;
+            }            
+        }
+    }
+    @include media(xl) {
+        &.active {
+            width: calc(#{$ancho} - ( calc(#{$ancho-menu} * 1.6 ) ) );
+            margin-right: $ancho-menu * 1.6;
+            &.container-fluid {
+                padding-right: 5px !important;
+                padding-left: 0 !important;
+                margin-left: 10px !important;
+                transition-delay: 500ms;
+            }
+            .col-xl-3 {
+                flex: 0 0 33%;
+                max-width: 33%;
+                transition-delay: 500ms;
+            }
+        }
+        .portfolioItem img {
+            transition: all 500ms ease-in-out;
+            &:hover {
+	            transform: scale(1.1);
+	        }
+        }        
+    }
 }
