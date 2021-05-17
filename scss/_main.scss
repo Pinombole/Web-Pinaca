@@ -383,6 +383,7 @@ body {
 
 #personal {
 	width: $ancho;
+	margin-top: $alto-header;		
 	color: $text-bg-dk-2;
 	@include media(lg) {
 		width: $ancho;
@@ -404,19 +405,16 @@ body {
 		height: min-content;
 		color: $text-especial;
 		background-color: $primary-color;
-		font-size: 1rem;
 		text-align: center;
 		border-bottom: solid 2px;
-		padding: .4em;
-		@include media(md) { 
-			font-size: 1.1rem;						
+		padding: .4em;						
+		@include media(xl) {	
+			padding: 1em 0;
 		}		
 	}
 }
 
-
 #acerca {
-	margin-top: $alto-header;		
 	min-height: calc(100vh - #{$alto-header});	
 	.bloqueAcerca {
 		min-height: calc(100vh - #{$alto-header});
@@ -444,17 +442,9 @@ body {
 		@include media(xl) {
 			padding-left: 15%;
 		}
-	}
-	@include media(lg) {
-		h2 {
-			padding-top: 2em;
-		}
-	}	
+	}		
 	@include media(xl) {
-		font-size: 1.1rem;
-		h2 {
-			padding-top: 2em;
-		}
+		font-size: 1.1rem;		
 	}	
 }
 
@@ -470,6 +460,10 @@ body {
 	}
 	#comentarioProyecto {
 		resize: none;
+	}
+	.invalid-feedback {
+		margin: 0;
+		line-height: 1;
 	}
 }
 
