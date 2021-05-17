@@ -247,7 +247,10 @@
             visibility: visible;
         }
     }
-    @media (min-width: 576px) {		
+    @media (min-width: 576px) {	
+        .carousel-item {
+            margin-right: 0;
+        }	
         
         /* Muestra 2 items */
         .carousel-inner .active + .carousel-item {

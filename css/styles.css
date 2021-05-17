@@ -365,6 +365,7 @@ body {
 
 #personal {
   width: 100%;
+  margin-top: 90px;
   color: #D8CBFF; }
   @media (min-width: 960px) {
     #personal {
@@ -384,16 +385,14 @@ body {
     height: min-content;
     color: #E33D47;
     background-color: #201B30;
-    font-size: 1rem;
     text-align: center;
     border-bottom: solid 2px;
     padding: .4em; }
-    @media (min-width: 768px) {
+    @media (min-width: 1140px) {
       #personal h2 {
-        font-size: 1.1rem; } }
+        padding: 1em 0; } }
 
 #acerca {
-  margin-top: 90px;
   min-height: calc(100vh - 90px); }
   #acerca .bloqueAcerca {
     min-height: calc(100vh - 90px); }
@@ -420,14 +419,9 @@ body {
     @media (min-width: 1140px) {
       #acerca .parrafoAcerca {
         padding-left: 15%; } }
-  @media (min-width: 960px) {
-    #acerca h2 {
-      padding-top: 2em; } }
   @media (min-width: 1140px) {
     #acerca {
-      font-size: 1.1rem; }
-      #acerca h2 {
-        padding-top: 2em; } }
+      font-size: 1.1rem; } }
 
 #contacto {
   min-height: calc(100vh - 90px);
@@ -440,6 +434,9 @@ body {
     background-color: #831B21; }
   #contacto #comentarioProyecto {
     resize: none; }
+  #contacto .invalid-feedback {
+    margin: 0;
+    line-height: 1; }
 
 .btn {
   cursor: pointer; }
@@ -834,10 +831,16 @@ body {
     /* MD */
     /* LG */ }
     #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
-      padding: 0 5px;
-      margin-right: 0; }
+      overflow: hidden;
+      padding: 0 5px; }
       #animacion #gallery-Cortos .carousel-item img, #animacion #gallery-LuluChiqui .carousel-item img, #animacion #gallery-Markitos .carousel-item img, #animacion #gallery-Musica .carousel-item img, #animacion #gallery-Comerciales .carousel-item img, #animacion #gallery-Mono .carousel-item img, #animacion #gallery-Fort .carousel-item img, #animacion #gallery-Gamarra .carousel-item img, #animacion #gallery-Cyber .carousel-item img {
         width: 100%; }
+      @media (min-width: 960px) {
+        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
+          padding: 0 2px; } }
+      @media (min-width: 1140px) {
+        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
+          padding: 0 3.5px; } }
     #animacion #gallery-Cortos .caption, #animacion #gallery-LuluChiqui .caption, #animacion #gallery-Markitos .caption, #animacion #gallery-Musica .caption, #animacion #gallery-Comerciales .caption, #animacion #gallery-Mono .caption, #animacion #gallery-Fort .caption, #animacion #gallery-Gamarra .caption, #animacion #gallery-Cyber .caption {
       display: flex;
       justify-content: center;
@@ -937,6 +940,8 @@ body {
         /* left or forward direction */
         /* farthest right hidden item must be also positioned for animations */
         /* right or prev direction */ }
+        #animacion #gallery-Cortos .carousel-item, #animacion #gallery-LuluChiqui .carousel-item, #animacion #gallery-Markitos .carousel-item, #animacion #gallery-Musica .carousel-item, #animacion #gallery-Comerciales .carousel-item, #animacion #gallery-Mono .carousel-item, #animacion #gallery-Fort .carousel-item, #animacion #gallery-Gamarra .carousel-item, #animacion #gallery-Cyber .carousel-item {
+          margin-right: 0; }
         #animacion #gallery-Cortos .carousel-inner .active + .carousel-item, #animacion #gallery-LuluChiqui .carousel-inner .active + .carousel-item, #animacion #gallery-Markitos .carousel-inner .active + .carousel-item, #animacion #gallery-Musica .carousel-inner .active + .carousel-item, #animacion #gallery-Comerciales .carousel-inner .active + .carousel-item, #animacion #gallery-Mono .carousel-inner .active + .carousel-item, #animacion #gallery-Fort .carousel-inner .active + .carousel-item, #animacion #gallery-Gamarra .carousel-inner .active + .carousel-item, #animacion #gallery-Cyber .carousel-inner .active + .carousel-item {
           display: block; }
         #animacion #gallery-Cortos .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
@@ -2558,6 +2563,8 @@ body {
         /* left or forward direction */
         /* farthest right hidden item must be also positioned for animations */
         /* right or prev direction */ }
+        #motion #gallery-Motion .carousel-item {
+          margin-right: 0; }
         #motion #gallery-Motion .carousel-inner .active + .carousel-item {
           display: block; }
         #motion #gallery-Motion .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
@@ -2638,10 +2645,16 @@ body {
           display: block;
           visibility: visible; } }
     #motion #gallery-Motion .carousel-item {
-      padding: 0 5px;
-      margin-right: 0; }
+      overflow: hidden;
+      padding: 0 5px; }
       #motion #gallery-Motion .carousel-item img {
         width: 100%; }
+      @media (min-width: 576px) {
+        #motion #gallery-Motion .carousel-item {
+          padding: 0 2px; } }
+      @media (min-width: 960px) {
+        #motion #gallery-Motion .carousel-item {
+          padding: 0 3.5px; } }
     #motion #gallery-Motion .caption {
       display: flex;
       justify-content: center;
