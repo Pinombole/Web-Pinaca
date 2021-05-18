@@ -315,8 +315,23 @@ body {
 			font-size: 1rem;
 			line-height: 1.1em;
 		}
-		a {
-			color: $text-bg-dk-1;			
+		button {
+			color: $text-bg-dk-1;	
+			text-decoration: none;	
+			padding: 0;
+			margin: 0;	
+		}
+		.btn {
+			line-height: 1.2;
+			&:focus {
+				outline: none;
+				box-shadow: none;
+				filter: brightness(125%);
+			}
+			&:hover {
+				filter: brightness(150%);
+				transition: all 100ms ease-in-out;
+			}
 		}
 	}
 	.fa {
@@ -412,6 +427,80 @@ body {
 			padding: 1em 0;
 		}		
 	}
+	&.mensaje {
+		min-height: calc(100vh - #{$alto-header});	
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: darken($violet-lgt-1, 36%);
+		padding: 1em 5%;
+		.mensajeTitle {
+			width: auto;
+			display: inline-block;
+			padding: 1em;
+			padding-bottom: .8em;
+			margin: 0 auto 0 auto;
+			font-size: 1.5rem;	
+			text-align: center;
+			line-height: 1.2;
+			color: $text-especial;
+			border: solid 2px;
+			span { 
+				display: block;
+			}
+			@include media(sm) {
+				margin: 0 auto 0 auto;
+				font-size: 1.6rem;
+				span { 
+					display: inline;
+				}
+			}	
+			@include media(md) {
+				font-size: 1.7rem;
+				margin: 0 auto 1em auto;
+				span { 							
+					display: inline;
+				}
+			}
+			@include media(lg) {
+				font-size: 1.8rem;
+				margin: 0 auto 1em auto;
+				span { 							
+					display: inline;
+				}				
+			}
+			@include media(xl) {
+				font-size: 1.9rem;
+				span { 							
+					display: inline;
+				}						
+			}			
+		}
+		a {
+			display: block;
+			width: max-content;
+		}		
+		p{			
+			font-size: 1.2rem;
+			text-align: center;
+			padding: 2em 0;
+			span {
+				color: $text-especial;				
+			}
+		}
+		@include media(md) {
+			padding: 2em 10%;		
+			p{
+				font-size: 1.5rem;				
+			}					
+		}
+		@include media(xl) {
+			padding: 2em 20%;	
+			p{				
+				font-size: 1.5rem;	
+			}		
+		}
+	}
 }
 
 #acerca {
@@ -466,6 +555,7 @@ body {
 		line-height: 1;
 	}
 }
+
 
 .btn {
 	cursor: pointer;

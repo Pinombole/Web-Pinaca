@@ -551,6 +551,7 @@ function leerMas(titulo) {
 }
 
 
+//Textos Filtro//
 
 var ensayos = document.querySelectorAll('.ensayo');
 var cuentos = document.querySelectorAll('.cuento');

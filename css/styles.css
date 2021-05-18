@@ -312,8 +312,20 @@ body {
       padding: 0 .2em;
       font-size: 1rem;
       line-height: 1.1em; }
-    #menu .filtrosNav a {
-      color: #6E6292; }
+    #menu .filtrosNav button {
+      color: #6E6292;
+      text-decoration: none;
+      padding: 0;
+      margin: 0; }
+    #menu .filtrosNav .btn {
+      line-height: 1.2; }
+      #menu .filtrosNav .btn:focus {
+        outline: none;
+        box-shadow: none;
+        filter: brightness(125%); }
+      #menu .filtrosNav .btn:hover {
+        filter: brightness(150%);
+        transition: all 100ms ease-in-out; }
   #menu .fa {
     color: #831B21;
     transition: all 250ms ease-in-out; }
@@ -391,6 +403,68 @@ body {
     @media (min-width: 1140px) {
       #personal h2 {
         padding: 1em 0; } }
+  #personal.mensaje {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1b1824;
+    padding: 1em 5%; }
+    #personal.mensaje .mensajeTitle {
+      width: auto;
+      display: inline-block;
+      padding: 1em;
+      padding-bottom: .8em;
+      margin: 0 auto 0 auto;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 1.2;
+      color: #E33D47;
+      border: solid 2px; }
+      #personal.mensaje .mensajeTitle span {
+        display: block; }
+      @media (min-width: 576px) {
+        #personal.mensaje .mensajeTitle {
+          margin: 0 auto 0 auto;
+          font-size: 1.6rem; }
+          #personal.mensaje .mensajeTitle span {
+            display: inline; } }
+      @media (min-width: 768px) {
+        #personal.mensaje .mensajeTitle {
+          font-size: 1.7rem;
+          margin: 0 auto 1em auto; }
+          #personal.mensaje .mensajeTitle span {
+            display: inline; } }
+      @media (min-width: 960px) {
+        #personal.mensaje .mensajeTitle {
+          font-size: 1.8rem;
+          margin: 0 auto 1em auto; }
+          #personal.mensaje .mensajeTitle span {
+            display: inline; } }
+      @media (min-width: 1140px) {
+        #personal.mensaje .mensajeTitle {
+          font-size: 1.9rem; }
+          #personal.mensaje .mensajeTitle span {
+            display: inline; } }
+    #personal.mensaje a {
+      display: block;
+      width: max-content; }
+    #personal.mensaje p {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 2em 0; }
+      #personal.mensaje p span {
+        color: #E33D47; }
+    @media (min-width: 768px) {
+      #personal.mensaje {
+        padding: 2em 10%; }
+        #personal.mensaje p {
+          font-size: 1.5rem; } }
+    @media (min-width: 1140px) {
+      #personal.mensaje {
+        padding: 2em 20%; }
+        #personal.mensaje p {
+          font-size: 1.5rem; } }
 
 #acerca {
   min-height: calc(100vh - 90px); }
@@ -1488,7 +1562,7 @@ body {
         transition: all 500ms ease-in-out; }
         #textos.active .categorias button {
           margin: 0 .1em; }
-          #textos.active .categorias button button span {
+          #textos.active .categorias button span {
             font-size: .9em; } }
   #textos .btn {
     line-height: 1.2; }
@@ -1980,7 +2054,6 @@ body {
         display: inline-block;
         padding: 1em .5em;
         padding-right: 0;
-        /*border-bottom: solid 2px;*/
         font-family: "Rock Salt", cursive;
         font-weight: 400;
         font-size: 1.3rem;
